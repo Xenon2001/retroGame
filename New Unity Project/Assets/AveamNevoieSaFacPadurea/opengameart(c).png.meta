@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: 7bf5c8ea398396c4892e9ff20aac9356
+guid: b1ff1826e89f77d4fa3bbe8480be14a9
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4019855842385877665
+    second: opengameart(c)_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.49676996, y: 0.41602054}
-  spritePixelsToUnits: 16
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -85,7 +88,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: opengameart(c)_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 48
+        width: 42
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5061989, y: 0.09861485}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa50bd279569c730800000000000000
+      internalID: 4019855842385877665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
