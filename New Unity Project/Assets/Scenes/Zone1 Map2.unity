@@ -131,7 +131,6 @@ GameObject:
   m_Component:
   - component: {fileID: 586260007}
   - component: {fileID: 586260006}
-  - component: {fileID: 586260005}
   - component: {fileID: 586260008}
   m_Layer: 0
   m_Name: Main Camera
@@ -140,14 +139,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &586260005
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586260004}
-  m_Enabled: 1
 --- !u!20 &586260006
 Camera:
   m_ObjectHideFlags: 0
@@ -218,7 +209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 763889215}
-  smoothing: 1
   minPosition: {x: -16.82, y: -12.06}
   maxPosition: {x: 23.75, y: 13.02}
 --- !u!1 &763889213
@@ -235,7 +225,7 @@ GameObject:
   - component: {fileID: 763889216}
   - component: {fileID: 763889218}
   m_Layer: 0
-  m_Name: personaj
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,7 +270,7 @@ SpriteRenderer:
   m_SortingLayerID: 1330073993
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 564821204b6011c4694c50bb4821c2d8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ff6a687400c97b048870ca38d2d072a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
