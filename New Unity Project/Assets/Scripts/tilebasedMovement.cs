@@ -8,6 +8,7 @@ public class tilebasedMovement : MonoBehaviour
     public Animator animator;
     public Transform followedPoint;
     private Vector3 movement;
+
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -20,12 +21,13 @@ public class tilebasedMovement : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, followedPoint.position, movementSpeed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, followedPoint.position) <=0.1f)
+        if (Vector3.Distance(transform.position, followedPoint.position) <= 0.05f)
         {
             if (!Physics2D.OverlapCircle(followedPoint.position + movement, 0.3f))
             {
-                followedPoint.position += movement;
+                followedPoint.position += 0.95f * movement;
             }
         }
+
     }
 }

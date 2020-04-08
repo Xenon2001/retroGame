@@ -9,6 +9,7 @@ public class playerMovement : MonoBehaviour {
     public Animator animator;
     Vector2 movement;
     void Update() {
+
         movement.x = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Horizontal", movement.x);
 
@@ -16,10 +17,16 @@ public class playerMovement : MonoBehaviour {
         animator.SetFloat("Vertical", movement.y);
 
         animator.SetFloat("Speed", movement.sqrMagnitude);
+
+        if (movement.sqrMagnitude > 1)
+            movement = movement.normalized;
+
     }
 
     void FixedUpdate() {
+        
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+
     }
 
 
