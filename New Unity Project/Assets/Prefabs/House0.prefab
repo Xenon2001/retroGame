@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7573119082930021186}
   - component: {fileID: 7573119082930021187}
   m_Layer: 0
-  m_Name: House2_0
+  m_Name: House0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -349712091
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -6871032511782127585, guid: 86b17b848ccb9f346964159a9d118301,
     type: 3}
