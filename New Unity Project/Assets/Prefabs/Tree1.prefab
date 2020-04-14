@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3131265943783722199}
   - component: {fileID: 3131265943783722196}
   m_Layer: 0
-  m_Name: AppleTree
+  m_Name: Tree1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ed910a22fe4c599458c36f94a17029f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6bded4c7974a7e24882fe725cc52ded2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,8 +97,8 @@ PolygonCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.1875, y: 0.125, z: 0.1875, w: 0.3125}
-    pivot: {x: 0.4918302, y: 0.2}
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.2}
     oldSize: {x: 3, y: 3}
     newSize: {x: 3, y: 3}
     adaptiveTilingThreshold: 0.5
