@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!60 &3558886144147878479
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.05}
+    pivot: {x: 0.5, y: 0.24}
     oldSize: {x: 9, y: 7}
     newSize: {x: 1.44, y: 1.12}
     adaptiveTilingThreshold: 0.5
@@ -107,10 +107,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -3, y: 0.63}
-      - {x: 3, y: 0.63}
-      - {x: 3.55, y: 1.2}
-      - {x: 3.55, y: 3.1}
-      - {x: 3.55, y: 3.2}
-      - {x: -3.55, y: 3.2}
-      - {x: -3.55, y: 1.2}
+    - - {x: -3, y: -0.67999995}
+      - {x: -3.625, y: -0.054999948}
+      - {x: -3.625, y: 0.94500005}
+      - {x: 3.625, y: 0.94500005}
+      - {x: 3.625, y: -0.054999948}
+      - {x: 3, y: -0.67999995}
