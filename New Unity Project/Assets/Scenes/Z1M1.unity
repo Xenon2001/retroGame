@@ -1320,7 +1320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326086201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.09, y: 9.15, z: -10}
+  m_LocalPosition: {x: 32.54, y: 13.99, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1339,8 +1339,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1612298946}
-  minPosition: {x: -4.26, y: -10.98}
-  maxPosition: {x: 35.29, y: 13.92}
+  minPosition: {x: -7.1, y: -11}
+  maxPosition: {x: 38, y: 13.9}
 --- !u!4 &333493888 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2783630007413539407, guid: f28d2d8c56d6bb641a6ad9cb89f7e335,
@@ -26651,7 +26651,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 15.399765, y: 21.795315}
+  m_Offset: {x: 15.399765, y: 22.4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -26677,7 +26677,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 52.01557, y: -0.2564659}
+  m_Offset: {x: 51.95, y: -0.2564659}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -28162,12 +28162,12 @@ PrefabInstance:
     - target: {fileID: 2783630007413539407, guid: f28d2d8c56d6bb641a6ad9cb89f7e335,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.33
+      value: 50.29
       objectReference: {fileID: 0}
     - target: {fileID: 2783630007413539407, guid: f28d2d8c56d6bb641a6ad9cb89f7e335,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.37
+      value: 6.7
       objectReference: {fileID: 0}
     - target: {fileID: 2783630007413539407, guid: f28d2d8c56d6bb641a6ad9cb89f7e335,
         type: 3}
