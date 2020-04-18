@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3873919330988207101}
   - component: {fileID: 3873919330988207098}
-  - component: {fileID: 3888287442015654847}
+  - component: {fileID: 3873919330988207099}
   m_Layer: 0
   m_Name: Shop
   m_TagString: Untagged
@@ -82,8 +82,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!60 &3888287442015654847
-PolygonCollider2D:
+--- !u!61 &3873919330988207099
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -95,21 +95,16 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.026385307, y: 0.8592167}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.1}
+    pivot: {x: 0.5, y: 0.05}
     oldSize: {x: 6, y: 6}
     newSize: {x: 0.96, y: 0.96}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -2.4375, y: -0.1624999}
-      - {x: -2.625, y: 0.025000095}
-      - {x: -2.625, y: 0.9625001}
-      - {x: 2.625, y: 0.9625001}
-      - {x: 2.625, y: 0.025000095}
-      - {x: 2.4375, y: -0.1624999}
+  serializedVersion: 2
+  m_Size: {x: 5.102873, y: 1.4213066}
+  m_EdgeRadius: 0
