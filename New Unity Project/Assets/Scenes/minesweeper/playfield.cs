@@ -17,7 +17,7 @@ public class playfield : MonoBehaviour
     public static void uncoverMines()
     {
         foreach (element elem in elements)
-            if (elem.isMine)
+            if (elem.isMine && !elem.flag)
                 elem.loadTexture(0);
       
     }

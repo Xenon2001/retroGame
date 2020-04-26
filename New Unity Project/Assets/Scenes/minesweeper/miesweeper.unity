@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -164,6 +165,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &13345727
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -286,6 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -297,6 +301,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &21918101
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -419,6 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -430,6 +437,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &43770571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -552,6 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -563,6 +573,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &72649746
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -685,6 +697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -696,6 +709,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &72838017
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -818,6 +833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -829,6 +845,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &78450500
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -951,6 +969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -962,6 +981,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &91287302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1084,6 +1105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -1095,6 +1117,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &106415130
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1217,6 +1241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -1228,6 +1253,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &113916726
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1350,6 +1377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -1361,6 +1389,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &117371857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1483,6 +1513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -1494,6 +1525,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &126211859
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1616,6 +1649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -1627,6 +1661,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &145838652
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1749,6 +1785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -1760,6 +1797,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &188354000
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1882,6 +1921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -1893,6 +1933,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &216846110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2015,6 +2057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -2026,6 +2069,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &231172879
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2148,6 +2193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -2159,6 +2205,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &240093628
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2281,6 +2329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -2292,6 +2341,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &253266572
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2414,6 +2465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -2425,6 +2477,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &270215445
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2630,6 +2684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -2641,6 +2696,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &300930410
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2763,6 +2820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -2774,6 +2832,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &317484949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2896,6 +2956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -2907,6 +2968,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &336615952
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3029,6 +3092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -3040,6 +3104,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &362934575
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3162,6 +3228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -3173,6 +3240,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &366911061
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3295,6 +3364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -3306,6 +3376,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &376778953
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3428,6 +3500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -3439,6 +3512,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &377342289
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3561,6 +3636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -3572,6 +3648,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &407078763
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3694,6 +3772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -3705,6 +3784,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &415903290
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3827,6 +3908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -3838,6 +3920,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &426360782
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3960,6 +4044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -3971,6 +4056,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &437396227
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4093,6 +4180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -4104,6 +4192,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &457152022
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4194,6 +4284,83 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &477194951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 477194952}
+  - component: {fileID: 477194954}
+  - component: {fileID: 477194953}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &477194952
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477194951}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 572208284}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -142.79, y: -118.08}
+  m_SizeDelta: {x: 5, y: 10}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &477194953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477194951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.063545756, g: 0.7924528, b: 0.28542852, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 56
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 5
+    m_MaxSize: 56
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: fgdfgdfgdfgfdgfdg
+--- !u!222 &477194954
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477194951}
+  m_CullTransparentMesh: 0
 --- !u!1 &491417180
 GameObject:
   m_ObjectHideFlags: 0
@@ -4226,6 +4393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -4237,6 +4405,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &491417182
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4359,6 +4529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -4370,6 +4541,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &493980707
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4492,6 +4665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -4503,6 +4677,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &508371746
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4625,6 +4801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -4636,6 +4813,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &516595469
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4758,6 +4937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -4769,6 +4949,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &520524908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4891,6 +5073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -4902,6 +5085,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &523400790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5024,6 +5209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -5035,6 +5221,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &555286227
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5125,6 +5313,105 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 84
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &572208280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 572208284}
+  - component: {fileID: 572208283}
+  - component: {fileID: 572208282}
+  - component: {fileID: 572208281}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &572208281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572208280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &572208282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572208280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &572208283
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572208280}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &572208284
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572208280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 477194952}
+  m_Father: {fileID: 0}
+  m_RootOrder: 131
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &619856053
 GameObject:
   m_ObjectHideFlags: 0
@@ -5157,6 +5444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -5168,6 +5456,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &619856055
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5290,6 +5580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -5301,6 +5592,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &628779205
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5423,6 +5716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -5434,6 +5728,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &629062764
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5556,6 +5852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -5567,6 +5864,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &643659519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5689,6 +5988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -5700,6 +6000,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &652345667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5822,6 +6124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -5833,6 +6136,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &746457887
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5955,6 +6260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -5966,6 +6272,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &762320248
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6088,6 +6396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -6099,6 +6408,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &802035861
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6221,6 +6532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -6232,6 +6544,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &808650009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6354,6 +6668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -6365,6 +6680,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &814818232
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6487,6 +6804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -6498,6 +6816,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &842822274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6620,6 +6940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -6631,6 +6952,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &847450010
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6753,6 +7076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -6764,6 +7088,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &863254697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6886,6 +7212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -6897,6 +7224,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &902709772
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7019,6 +7348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -7030,6 +7360,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &908623491
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7152,6 +7484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -7163,6 +7496,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &913252282
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7285,6 +7620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -7296,6 +7632,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &926332472
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7418,6 +7756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -7429,6 +7768,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &930158541
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7551,6 +7892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -7562,6 +7904,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &935090605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7684,6 +8028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -7695,6 +8040,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &937118116
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7817,6 +8164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -7828,6 +8176,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &954646609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7950,6 +8300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -7961,6 +8312,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &998472143
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8083,6 +8436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -8094,6 +8448,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1000005874
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8216,6 +8572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -8227,6 +8584,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1007048303
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8349,6 +8708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -8360,6 +8720,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1014071461
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8482,6 +8844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -8493,6 +8856,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1016877130
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8615,6 +8980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -8626,6 +8992,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1025244613
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8748,6 +9116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -8759,6 +9128,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1034674447
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8881,6 +9252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -8892,6 +9264,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1038137651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9014,6 +9388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -9025,6 +9400,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1057780287
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9147,6 +9524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -9158,6 +9536,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1082038290
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9280,6 +9660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -9291,6 +9672,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1098204259
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9413,6 +9796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -9424,6 +9808,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1104369678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9546,6 +9932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -9557,6 +9944,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1120102620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9679,6 +10068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -9690,6 +10080,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1139273202
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9812,6 +10204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -9823,6 +10216,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1160281411
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9945,6 +10340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -9956,6 +10352,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1161633606
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10078,6 +10476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -10089,6 +10488,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1183456985
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10211,6 +10612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -10222,6 +10624,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1192269797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10344,6 +10748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -10355,6 +10760,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1201847765
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10477,6 +10884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -10488,6 +10896,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1208237234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10610,6 +11020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -10621,6 +11032,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1266786272
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10743,6 +11156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -10754,6 +11168,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1313178528
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10876,6 +11292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -10887,6 +11304,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1335620565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11009,6 +11428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -11020,6 +11440,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1355151023
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11142,6 +11564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -11153,6 +11576,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1373967145
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11275,6 +11700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -11286,6 +11712,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1383884717
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11408,6 +11836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -11419,6 +11848,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1418970398
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11541,6 +11972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -11552,6 +11984,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1425527221
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11674,6 +12108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -11685,6 +12120,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1428469146
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11807,6 +12244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -11818,6 +12256,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1432707675
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11940,6 +12380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -11951,6 +12392,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1452791715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12073,6 +12516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -12084,6 +12528,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1466422794
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12206,6 +12652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -12217,6 +12664,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1506419302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12339,6 +12788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -12350,6 +12800,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1506961943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12472,6 +12924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -12483,6 +12936,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1546624998
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12605,6 +13060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -12616,6 +13072,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1588506608
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12738,6 +13196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -12749,6 +13208,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1595832492
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12871,6 +13332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -12882,6 +13344,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1596729293
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13004,6 +13468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -13015,6 +13480,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1677023934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13137,6 +13604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -13148,6 +13616,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1679529834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13270,6 +13740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -13281,6 +13752,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1680591919
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13403,6 +13876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -13414,6 +13888,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1691682895
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13536,6 +14012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -13547,6 +14024,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1700215442
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13669,6 +14148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -13680,6 +14160,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1749326593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13802,6 +14284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -13813,6 +14296,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1757972193
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13935,6 +14420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -13946,6 +14432,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1759206588
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14068,6 +14556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -14079,6 +14568,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1759275218
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14201,6 +14692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -14212,6 +14704,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1784704943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14334,6 +14828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -14345,6 +14840,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1785028702
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14467,6 +14964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -14478,6 +14976,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1792292620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14600,6 +15100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -14611,6 +15112,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1805990836
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14733,6 +15236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -14744,6 +15248,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1821017819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14866,6 +15372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -14877,6 +15384,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1825876099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14999,6 +15508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -15010,6 +15520,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1888113884
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15132,6 +15644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -15143,6 +15656,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1901006308
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15265,6 +15780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -15276,6 +15792,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1907691188
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15398,6 +15916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -15409,6 +15928,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1931921850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15531,6 +16052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -15542,6 +16064,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1934475575
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15664,6 +16188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -15675,6 +16200,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1950968987
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15797,6 +16324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -15808,6 +16336,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1968763139
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15930,6 +16460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -15941,6 +16472,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1986308906
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16063,6 +16596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -16074,6 +16608,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &1998894601
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16196,6 +16732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -16207,6 +16744,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &2004130213
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16329,6 +16868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -16340,6 +16880,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &2006468104
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16462,6 +17004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -16473,6 +17016,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &2014019087
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16595,6 +17140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -16606,6 +17152,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &2015836164
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16728,6 +17276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -16739,6 +17288,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &2080320651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16861,6 +17412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -16872,6 +17424,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &2101121519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16994,6 +17548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -17005,6 +17560,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &2102721614
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17127,6 +17684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -17138,6 +17696,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &2107025084
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17260,6 +17820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -17271,6 +17832,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &2109540210
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17393,6 +17956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMine: 0
+  flag: 0
   emptyTextures:
   - {fileID: 21300000, guid: 9048cb6c94d94ab438ffda9d5eb94b8d, type: 3}
   - {fileID: 21300000, guid: 0de7654ac4dbce8428c407320fbe7f27, type: 3}
@@ -17404,6 +17968,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0abec47faa97e7e47bc4aefe7c708bde, type: 3}
   - {fileID: 21300000, guid: 4799eb4dfdc2e9b43a8636c4118baba8, type: 3}
   mineTexture: {fileID: 21300000, guid: 0fda4d8e9de70fe47ac8655624f24e6b, type: 3}
+  flagTexture: {fileID: 21300000, guid: cbe17fcefb14c77429fb5457780bfe30, type: 3}
+  defaultTexture: {fileID: 21300000, guid: e879dfcd46ddcf34bba7939f718caf7e, type: 3}
 --- !u!61 &2120856336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17493,4 +18059,70 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 93
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2128388434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2128388437}
+  - component: {fileID: 2128388436}
+  - component: {fileID: 2128388435}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2128388435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128388434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &2128388436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128388434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &2128388437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128388434}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 132
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

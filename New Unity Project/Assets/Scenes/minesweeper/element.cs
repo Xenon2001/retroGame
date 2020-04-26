@@ -5,11 +5,18 @@ using UnityEngine;
 public class element : MonoBehaviour
 {
     public bool isMine;
+    public bool flag;
+    public static bool fsClick = true;
 
     public Sprite[] emptyTextures;
     public Sprite mineTexture;
-    public static int noOfMines = 25;
+    public Sprite flagTexture;
+    public Sprite defaultTexture;
+    public static int noMaxOfMines = 25;
+    public static int noOfMines = 0;
+    public static int noOfFlags = 0;
     public static bool ok = true;
+
 
     void Start()
     {
@@ -19,9 +26,9 @@ public class element : MonoBehaviour
         {
             isMine = Random.value < 0.5;
             if (isMine)
-                noOfMines--;
+                noOfMines++;
         }
-        if (noOfMines == 0)
+        if (noOfMines >= noMaxOfMines)
             ok = false;
        
         int x = (int)transform.position.x;
@@ -37,31 +44,70 @@ public class element : MonoBehaviour
          GetComponent<SpriteRenderer>().sprite = (isMine)? mineTexture : emptyTextures[count];
     }
 
-    void OnMouseUpAsButton()
+    void OnMouseOver()
     {
-        // It's a mine
-        if (isMine)
+        if (Input.GetMouseButtonDown(1))
         {
-            playfield.uncoverMines();
-            print("you lose");
+            if(flag || isCovered())
+            {
+                GetComponent<SpriteRenderer>().sprite = (flag) ? defaultTexture : flagTexture;
+                flag = !flag;
+                if (flag)
+                    noOfFlags++;
+                else
+                    noOfFlags--;
+            }
+               
         }
-        else
+        if (Input.GetMouseButtonDown(0) && !flag)
         {
-            int x = (int)transform.position.x;
-            int y = (int)transform.position.y;
+            if (fsClick)
+            {
+                if (isMine)
+                {
+                    int newX = (int)transform.position.x;
+                    int newY = (int)transform.position.y;
 
-            loadTexture(playfield.adjacentMines(x, y));
+                    while (playfield.elements[newX, newY].isMine)
+                    {
+                        newX = Random.Range(0, playfield.w);
+                        newY = Random.Range(0, playfield.h);
+                    }
+
+                    isMine = false;
+                    playfield.elements[newX, newY].isMine = true;
+
+                }
+
+                fsClick = false;
+            }
+            
+
+            if (isMine)
+            {
+                playfield.uncoverMines();
+                print("you lose");
+            }
+            else
+            {
+                int x = (int)transform.position.x;
+                int y = (int)transform.position.y;
+
+                loadTexture(playfield.adjacentMines(x, y));
 
 
-            //Debug.Log("click on: "+ x);
-            //Debug.Log("click on: " + y);
-            playfield.fill(x, y, new bool[playfield.w, playfield.h]);
+                //Debug.Log("click on: "+ x);
+                //Debug.Log("click on: " + y);
+                playfield.fill(x, y, new bool[playfield.w, playfield.h]);
 
-            if (playfield.isFinished())
-                Debug.Log("you win");
+                if (playfield.isFinished())
+                    Debug.Log("you win");
+            }
         }
+
+        print("mines :" +  (noOfMines - noOfFlags));
+            
     }
-    
 
     public bool isCovered()
     {

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Block
   - Square
+  - block_destroyable
+  - block_undestroyable
   layers:
   - Default
   - TransparentFX
