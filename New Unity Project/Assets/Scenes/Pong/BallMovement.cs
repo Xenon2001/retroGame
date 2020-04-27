@@ -9,16 +9,20 @@ public class BallMovement : MonoBehaviour
     private float nr1=0f;
     private float nr2=0f;
 
+    //calculeaza pozitia unde mingea loveste paleta(sup sau peste centru)
     float hitFactor(Vector2 ballPos, Vector2 racketPos, float racketHeight)
     {
         return (ballPos.y - racketPos.y) / racketHeight;
     }
-    // Start is called before the first frame update
+    
+    
     void Start()
     {
-        //GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
+        
         StartCoroutine(Pause());
     }
+
+    //schimba unghiul de miscare a mingi
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.name == "Player1_Pong")
@@ -37,41 +41,39 @@ public class BallMovement : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = dir * speed;
         }
     }
-    void Update ()
+
+    //reseteaza speedul si pozitia
+    void FixedUpdate ()
     {
-        if(this.transform.position.x >= 14f)
+        if(this.transform.position.x >= 14f && nr1 <= 5)
         {
+            
             nr1++;
-            if (nr1 < 5)
-            {
-                this.transform.position = new Vector3(0f, 0.3f, 0f);
-                k = !k;
-                speed = 15f;
-                StartCoroutine(Pause());
-            }
+            this.transform.position = new Vector3(0f, 0.3f, 0f);
+            k = !k;
+            speed = 15f;
+            StartCoroutine(Pause());
         }
-        if(this.transform.position.x <= -14f)
+        if(this.transform.position.x <= -14f && nr2 <= 5)
         {
             nr2++;
-            if (nr2 < 5)
-            {
-                speed = 15f;
-                this.transform.position = new Vector3(0f, 0.3f, 0f);
-                k = !k;
-                StartCoroutine(Pause());
-            }
+            speed = 15f;
+            this.transform.position = new Vector3(0f, 0.3f, 0f);
+            k = !k;
+            StartCoroutine(Pause());
+
         }
     }
     IEnumerator Pause ()
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
-       yield return new WaitForSeconds(2);
+       yield return new WaitForSeconds(1f);
         if(k)
             GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
         else
             GetComponent<Rigidbody2D>().velocity = Vector2.left * speed;
     }
-    
+    //creste speedul
     private void OnTriggerEnter2D(Collider2D collider)
     {
         speed++;
