@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class BallMovement : MonoBehaviour
 {
-    public float speed;
+    private float speed = 15f;
+    private bool k;
+    private float nr1=0f;
+    private float nr2=0f;
 
     float hitFactor(Vector2 ballPos, Vector2 racketPos, float racketHeight)
     {
@@ -13,7 +16,8 @@ public class BallMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
+        //GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
+        StartCoroutine(Pause());
     }
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -35,15 +39,42 @@ public class BallMovement : MonoBehaviour
     }
     void Update ()
     {
-        if(this.transform.position.x >= 13.5f)
+        if(this.transform.position.x >= 14f)
         {
-            this.transform.position = new Vector3(0f, 0f, 0f);
+            nr1++;
+            if (nr1 < 5)
+            {
+                this.transform.position = new Vector3(0f, 0.3f, 0f);
+                k = !k;
+                speed = 15f;
+                StartCoroutine(Pause());
+            }
         }
-        if(this.transform.position.x <= -13.5f)
+        if(this.transform.position.x <= -14f)
         {
-            this.transform.position = new Vector3(0f, 0f, 0f);
+            nr2++;
+            if (nr2 < 5)
+            {
+                speed = 15f;
+                this.transform.position = new Vector3(0f, 0.3f, 0f);
+                k = !k;
+                StartCoroutine(Pause());
+            }
         }
     }
-
+    IEnumerator Pause ()
+    {
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+       yield return new WaitForSeconds(2);
+        if(k)
+            GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
+        else
+            GetComponent<Rigidbody2D>().velocity = Vector2.left * speed;
+    }
+    
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        speed++;
+    }
     // Update is called once per frame
 }
