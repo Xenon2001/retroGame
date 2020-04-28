@@ -10,6 +10,8 @@ TagManager:
   - block_undestroyable
   - Apple
   - SnakeHead
+  - Border
+  - Body
   layers:
   - Default
   - TransparentFX
