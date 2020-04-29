@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattMove : MonoBehaviour
+public class SpInControl : MonoBehaviour
 {
     public float speed = 5f;
     string input;
@@ -17,6 +17,6 @@ public class BattMove : MonoBehaviour
     void FixedUpdate()
     {
         float move = Input.GetAxisRaw(input);
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0, move) * speed;
+        GetComponent<Rigidbody2D>().velocity = new Vector2(move, 0) * speed;
     }
-}
+   }

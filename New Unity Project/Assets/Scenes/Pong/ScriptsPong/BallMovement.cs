@@ -45,7 +45,7 @@ public class BallMovement : MonoBehaviour
     //reseteaza speedul si pozitia
     void FixedUpdate ()
     {
-        if(this.transform.position.x >= 14f && nr1 <= 5)
+        if(this.transform.position.x >= 14f && nr1 < 4)
         {
             
             nr1++;
@@ -54,7 +54,7 @@ public class BallMovement : MonoBehaviour
             speed = 15f;
             StartCoroutine(Pause());
         }
-        if(this.transform.position.x <= -14f && nr2 <= 5)
+        if(this.transform.position.x <= -14f && nr2 < 4)
         {
             nr2++;
             speed = 15f;

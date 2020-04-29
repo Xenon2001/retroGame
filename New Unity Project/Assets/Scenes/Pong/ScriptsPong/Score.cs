@@ -9,6 +9,8 @@ public class Score : MonoBehaviour
     private GameObject minge;
     private int Bat_1_Score = 0;
     private int Bat_2_Score = 0;
+    private bool ok;
+    private bool ook;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,16 +21,25 @@ public class Score : MonoBehaviour
     void Update()
     {
         Debug.Log(minge.transform.position.x);
-        if (minge.transform.position.x >= 14f && Bat_1_Score<5)
+        if (minge.transform.position.x >= 14f && Bat_1_Score < 5)
         {
-            Bat_1_Score++;
-           
+            if (!ok)
+            {
+                Bat_1_Score++;
+                ok = true;
+            }
+
         }
-        if (minge.transform.position.x <= -14f&& Bat_2_Score<5)
+        else ok = false;
+        if (minge.transform.position.x <= -14f && Bat_2_Score < 5)
         {
-            Bat_2_Score++;
-          
+            if (!ook)
+            {
+                Bat_2_Score++;
+                ook = true;
+            }
         }
+        else ook = false;
 
         if (Bat_1_Score < 5 && Bat_2_Score < 5)
         {

@@ -8,8 +8,6 @@ TagManager:
   - Square
   - block_destroyable
   - block_undestroyable
-  - Apple
-  - SnakeHead
   layers:
   - Default
   - TransparentFX
@@ -20,8 +18,8 @@ TagManager:
   - 
   - 
   - Player
-  - 
-  - 
+  - SpInPlayer
+  - SpInEnemy
   - 
   - 
   - 
