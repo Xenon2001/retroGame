@@ -76,6 +76,7 @@ public class BallMovement : MonoBehaviour
     //creste speedul
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        if(speed < 35)
         speed++;
     }
     // Update is called once per frame

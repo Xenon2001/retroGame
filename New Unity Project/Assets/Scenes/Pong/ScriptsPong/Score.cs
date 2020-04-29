@@ -20,7 +20,6 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(minge.transform.position.x);
         if (minge.transform.position.x >= 14f && Bat_1_Score < 5)
         {
             if (!ok)
