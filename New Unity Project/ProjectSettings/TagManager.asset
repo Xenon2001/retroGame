@@ -8,6 +8,8 @@ TagManager:
   - Square
   - block_destroyable
   - block_undestroyable
+  - empty
+  - enemy
   layers:
   - Default
   - TransparentFX
