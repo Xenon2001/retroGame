@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Apple
+  - SnakeHead
   - Block
   - Square
-  - block_destroyable
-  - block_undestroyable
   layers:
   - Default
   - TransparentFX
@@ -17,9 +17,9 @@ TagManager:
   - UI
   - 
   - 
-  - Player
-  - SpInPlayer
-  - SpInEnemy
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -42,21 +42,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: background
-    uniqueID: 942348835
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: UnderPlayer
-    uniqueID: 28953541
-    locked: 0
-  - name: Player
-    uniqueID: 3945255205
-    locked: 0
-  - name: OverPlayer
-    uniqueID: 2318400811
-    locked: 0
-  - name: foreground
-    uniqueID: 1330073993
     locked: 0
