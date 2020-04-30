@@ -18,15 +18,17 @@ public class SpInEnemyShooting : MonoBehaviour
 
 
    void Update()
-    {
-        cooldownTimer -= Time.deltaTime;
-        if (cooldownTimer <= 0 )
-          if( enemys.Length >= 0)
-        {
-            cooldownTimer = fireDelay;
-            fire();
+   {
+
+    cooldownTimer -= Time.deltaTime;
+    if (cooldownTimer <= 0 )
+        if( enemys.Length >= 0)
+        {  
+          
+         cooldownTimer = fireDelay;
+         fire();
         }
-    }
+   }
     void fire ()
     {
         enemys = GameObject.FindGameObjectsWithTag("SpInEnemy");
