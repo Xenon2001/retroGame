@@ -16378,8 +16378,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minRange: 10
+  dir: 1
+  lastMove: 0.3
   onX: 1
   onY: 0
+  player: {fileID: 0}
 --- !u!61 &500411070
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31451,8 +31454,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minRange: 10
+  dir: 1
+  lastMove: 0.3
   onX: 0
-  onY: 0
+  onY: 1
+  player: {fileID: 0}
 --- !u!61 &978985031
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35135,8 +35141,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minRange: 10
-  onX: 0
+  dir: 1
+  lastMove: 0.3
+  onX: 1
   onY: 0
+  player: {fileID: 0}
 --- !u!61 &1117790775
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42607,8 +42616,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minRange: 10
+  dir: 1
+  lastMove: 0.3
   onX: 1
   onY: 0
+  player: {fileID: 0}
 --- !u!61 &1342082618
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45665,8 +45677,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minRange: 10
+  dir: 1
+  lastMove: 0.3
   onX: 0
-  onY: 0
+  onY: 1
+  player: {fileID: 0}
 --- !u!61 &1457953705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56898,8 +56913,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minRange: 10
+  dir: 1
+  lastMove: 0.3
   onX: 1
   onY: 0
+  player: {fileID: 0}
 --- !u!61 &1815742767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60676,7 +60694,7 @@ PrefabInstance:
     - target: {fileID: 9036423035059420090, guid: 07ad7df1e0729bc4ebf12f7241432db0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.15
+      value: 2.976
       objectReference: {fileID: 0}
     - target: {fileID: 9036423035059420090, guid: 07ad7df1e0729bc4ebf12f7241432db0,
         type: 3}
@@ -60737,6 +60755,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9036423035059420091, guid: 07ad7df1e0729bc4ebf12f7241432db0,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9036423035059420103, guid: 07ad7df1e0729bc4ebf12f7241432db0, type: 3}
@@ -63882,6 +63905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5583b2eee27cb844b893815b5047f12b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!4 &2041780211
 Transform:
   m_ObjectHideFlags: 0
