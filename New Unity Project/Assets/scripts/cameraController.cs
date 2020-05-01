@@ -60,7 +60,7 @@ public class cameraController : MonoBehaviour
 
         Vector2 playerPosition = target.position;
         
-        for(int i = 0; i < 5; i++)
+        for(int i = 0; i < 10; i++)
         {
             if (player[i, 0] <= playerPosition.x && playerPosition.x <= player[i,2] &&
                 player[i, 1] <= playerPosition.y && playerPosition.y <= player[i,3] )
