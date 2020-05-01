@@ -18,7 +18,7 @@ public class PacManMovement : MonoBehaviour
     {
         T = 0;
         score = 0;
-        endScore = 318;
+        endScore = 317;
         killed = false;
         dir = new Vector2(1, 0);
         isSuperPlayer = false;
@@ -40,6 +40,13 @@ public class PacManMovement : MonoBehaviour
                 if (T >= superPlayerDuration)
                 { isSuperPlayer = false;T = 0; }
             }
+        }
+        else
+        {
+            if (score == endScore )//|| killed)
+                scenesChange.gameToArcade("PacMan", true);
+            else
+                scenesChange.gameToArcade("PacMan", false);
         }
 
     }
