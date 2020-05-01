@@ -40,28 +40,28 @@ public class GameScript : MonoBehaviour
 
     void MoveInput()
     {
-        if (Input.GetAxisRaw("Horizontal") > 0 && snakeRotation.z != 180) //right 
+        if (Input.GetAxis("Horizontal") > 0 && snakeRotation.z != 180) //right 
         {
             dir = new Vector2(1, 0);
             snakeRotation = transform.rotation.eulerAngles;
             snakeRotation.z = 0;
             transform.rotation = Quaternion.Euler(snakeRotation);
         }
-        else if (Input.GetAxisRaw("Vertical") > 0 && snakeRotation.z != 270) //up
+        else if (Input.GetAxis("Vertical") > 0 && snakeRotation.z != 270) //up
         {
             dir = new Vector2(0, 1);
             snakeRotation = transform.rotation.eulerAngles;
             snakeRotation.z = 90;
             transform.rotation = Quaternion.Euler(snakeRotation);
         }
-        else if (Input.GetAxisRaw("Horizontal") < 0 && snakeRotation.z != 0) //left
+        else if (Input.GetAxis("Horizontal") < 0 && snakeRotation.z != 0) //left
         {
             dir = new Vector2(-1, 0);
             snakeRotation = transform.rotation.eulerAngles;
             snakeRotation.z = 180;
             transform.rotation = Quaternion.Euler(snakeRotation);
         }
-        else if (Input.GetAxisRaw("Vertical") < 0 && snakeRotation.z != 90) //down
+        else if (Input.GetAxis("Vertical") < 0 && snakeRotation.z != 90) //down
         {
             dir = new Vector2(0, -1);
             snakeRotation = transform.rotation.eulerAngles;

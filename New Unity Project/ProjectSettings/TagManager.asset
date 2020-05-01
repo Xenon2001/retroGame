@@ -11,6 +11,9 @@ TagManager:
   - empty
   - enemy
   - block_destroyable
+  - pmApple
+  - pmPineapple
+  - pmEnemy
   layers:
   - Default
   - TransparentFX
