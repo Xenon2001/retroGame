@@ -54,6 +54,9 @@ public class map : MonoBehaviour
         return true;
     }
 
+
+    
+
     public static void removeDestroyableWall(int x, int y)
     {
    
@@ -78,6 +81,40 @@ public class map : MonoBehaviour
         int[] dx = new int[4] { 1, 0, -1, 0 };
         int[] dy = new int[4] { 0, 1, 0, -1 };
 
+
+        Mathf.RoundToInt(player.transform.position.y);
+
+        foreach (enemy Enemy in enemies)
+        {
+            if (Enemy != null)
+            {
+                int x = (int)Enemy.transform.position.x;
+                int y = (int)Enemy.transform.position.y;
+
+                if (x == (int)v.x && y == (int)v.y)
+                {
+                    Destroy(Enemy);
+
+                    Enemy.GetComponent<SpriteRenderer>().sprite = null;
+                    Enemy.GetComponent<CircleCollider2D>().enabled = false;
+                    Enemy.GetComponent<BoxCollider2D>().enabled = false;
+
+                    GameController.noOfEnemies--;
+                    if (GameController.noOfEnemies == 0 && GameController.gameTime > 0)
+                    {
+                        GameController.gameOver = true;
+                        GameController.win = true;
+                    }
+
+                }
+            }
+
+        }
+        if(Mathf.RoundToInt(player.transform.position.x) == (int)v.x && Mathf.RoundToInt(player.transform.position.y) == (int)v.y)
+        {
+            GameController.gameOver = true;
+            GameController.win = false;
+        }
         for (int i = 0; i < 4; ++i)
         {
             for(int j = 1; j <= 2; ++j)
@@ -98,6 +135,11 @@ public class map : MonoBehaviour
                     }
                     else
                     {
+                        if (Mathf.RoundToInt(player.transform.position.x) == newX && Mathf.RoundToInt(player.transform.position.y) == newY)
+                        {
+                            GameController.gameOver = true;
+                            GameController.win = false;
+                        }
                         foreach (enemy Enemy in enemies)
                         {
                             if (Enemy != null)
@@ -114,6 +156,12 @@ public class map : MonoBehaviour
                                     Enemy.GetComponent<BoxCollider2D>().enabled = false;
                                     
                                     GameController.noOfEnemies--;
+                                    if(GameController.noOfEnemies == 0 && GameController.gameTime > 0)
+                                    {
+                                        GameController.gameOver = true;
+                                        GameController.win = true;
+                                    }
+                                      
                                 }
                             }
 

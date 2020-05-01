@@ -30,7 +30,7 @@ public class scenesChange : MonoBehaviour
         data Date = JsonUtility.FromJson<data>(json);
 
 
-        SceneManager.LoadScene("ZONA I");
+        SceneManager.LoadScene("GameScene");
     }
 
     public static void gameToArcade(string name, bool win)
@@ -52,7 +52,7 @@ public class scenesChange : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
         print(col.name);
-        if (scene.name == "ZONA I" && col.name == "Player")
+        if (scene.name == "GameScene" && col.name == "Player")
         {
             mapToArcade();
         }

@@ -110,7 +110,7 @@ public class enemy : MonoBehaviour
             print(move.x + " " + move.y);
             transform.position += move;
 
-            lastMove = 0.35f;
+            lastMove = 0.45f;
         }
 
 

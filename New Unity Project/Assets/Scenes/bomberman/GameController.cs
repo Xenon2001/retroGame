@@ -33,6 +33,9 @@ public class GameController : MonoBehaviour
         if (activBomb)
             bombTimer -= Time.deltaTime;
 
+        if (gameOver)
+            scenesChange.gameToArcade("bomberman", win);
+
         
     }
 }
