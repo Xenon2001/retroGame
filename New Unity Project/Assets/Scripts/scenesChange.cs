@@ -30,7 +30,7 @@ public class scenesChange : MonoBehaviour
         data Date = JsonUtility.FromJson<data>(json);
 
 
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("GamScene");
     }
 
     public static void gameToArcade(string name, bool win)
@@ -50,10 +50,12 @@ public class scenesChange : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        
         Scene scene = SceneManager.GetActiveScene();
-        print(col.name);
-        if (scene.name == "GameScene" && col.name == "Player")
+        print(col.name + " " + scene.name);
+        if (scene.name == "GamScene" && col.name == "Player")
         {
+            
             mapToArcade();
         }
     }
