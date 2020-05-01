@@ -48,9 +48,9 @@ public class Score : MonoBehaviour
         else
         {
             if (Bat_1_Score >= 5)
-                Scoreboard.text = "LEFT WINS";
+                scenesChange.gameToArcade("Pong", true);
             else
-                Scoreboard.text = "RIGHT WINS";
+                scenesChange.gameToArcade("Pong", false);
         }
     }
 }

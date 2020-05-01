@@ -34,7 +34,14 @@ public class GameScript : MonoBehaviour
         {
             MoveInput();
             EatApple();
-        } 
+        }
+        else
+        {
+            if (score == endScore) //|| collided)
+                scenesChange.gameToArcade("snake", true);
+            else
+                scenesChange.gameToArcade("snake", false);
+        }
 
     }
 
