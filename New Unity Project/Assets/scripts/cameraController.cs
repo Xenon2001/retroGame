@@ -8,20 +8,47 @@ public class cameraController : MonoBehaviour
     private Vector2 minPosition;
     private Vector2 maxPosition;
 
-    private float[,] cameraBounds = new float[5,4] {
-        {-4.61f, -10.96f, 35.5f, 13.75f},
-        {18.44f, -45.89f, 58.44f, -21.09f},
-        {83.32f, -60.76f, 123.28f, -36.09f},
-        {133.31f, -25.93f, 173.33f, -1.13f},
-        {198.07f, -3.86f, 238.02f, 20.81f}
+    private float[,] cameraBounds = new float[14,4] {
+        {-7.94f, -10.89f, 38.93f, 13.84f},
+        {14.92f, -45.82f, 61.84f, -21.07f},
+        {79.87f, -60.82f, 126.81f, -36.21f},
+        {129.74f, -25.8f, 176.78f, -1.07f},
+        {194.8f, -3.89f, 241.56f, 20.84f},
+
+        {259.43f, 20.97f, 305.6f, 45.72f},
+        {323.37f, 37.89f, 369.54f, 62.78f},
+        {387.52f, 24.9f, 442.06f, 54.57f},
+        {425.49f, 59.95f, 471.52f, 84.76f},
+        {474.52f, 24.92f, 520.52f, 49.77f},
+
+
+        {538.44f, 32.9f, 584.59f, 57.86f},
+        {562.45f, 67.95f, 608.6f, 92.8f},
+        {524.44f, 102.92f, 570.65f, 125.11f},
+        {397.47f, 102.95f, 506.69f, 127.78f}
     };
 
-    private float[,] player = new float[5,4] {
-        {-16.61f, -15.97f, 47.60f, 18.72f},
-        {6.34f, -50.88f, 70.55f, -15.98f},
-        {71.20f, -65.85f, 135.41f, -31.02f},
-        {121.14f, -31.01f, 185.34f, 3.914f},
-        {185.35f, -8.976f, 250.21f, 25.822f}
+
+
+
+    private float[,] player = new float[14, 4] {
+        {-16.56f, -15.99f, 47.54f, 18.73f},
+        {6.46f, -50.86f, 70.5f, -16.19f},
+        {71.26f, -65.86f, 135.44f, -31.34f},
+        {121.22f, -30.94f, 185.27f, 3.85f},
+        {186.34f, -8.75f, 250.12f, 25.51f},
+
+        {250.93f, 15.87f, 314.17f, 50.57f},
+        {314.9f, 32.92f, 378.2f, 67.64f},
+        {378.9f, 19.92f, 442.06f, 54.57f},
+        {416.9f, 54.9f, 480.16f, 89.69f},
+        {465.9f, 19.9f, 529.23f, 54.73f},
+
+
+        {529.92f, 27.92f, 593.15f, 62.74f},
+        {553.96f, 63.97f, 617.07f, 97.66f},
+        {515.96f, 97.95f, 579.05f, 122.79f},
+        {389.04f, 97.97f, 514.94f, 132.62f}
     };
 
 
@@ -31,7 +58,7 @@ public class cameraController : MonoBehaviour
 
         Vector2 playerPosition = target.position;
         
-        for(int i = 0; i < 5; i++)
+        for(int i = 0; i < 14; i++)
         {
             if (player[i, 0] <= playerPosition.x && playerPosition.x <= player[i,2] &&
                 player[i, 1] <= playerPosition.y && playerPosition.y <= player[i,3] )

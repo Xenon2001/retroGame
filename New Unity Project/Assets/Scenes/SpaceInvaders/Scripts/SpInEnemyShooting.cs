@@ -19,8 +19,9 @@ public class SpInEnemyShooting : MonoBehaviour
 
    void Update()
    {
-
-    cooldownTimer -= Time.deltaTime;
+        if(enemys.Length==0)
+            scenesChange.gameToArcade("SpaceInvaders", true);
+        cooldownTimer -= Time.deltaTime;
     if (cooldownTimer <= 0 )
         if( enemys.Length >= 0)
         {  

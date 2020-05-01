@@ -86,7 +86,7 @@ public class element : MonoBehaviour
             if (isMine)
             {
                 playfield.uncoverMines();
-                print("you lose");
+                scenesChange.gameToArcade("minesweeper", false);
             }
             else
             {
@@ -101,7 +101,7 @@ public class element : MonoBehaviour
                 playfield.fill(x, y, new bool[playfield.w, playfield.h]);
 
                 if (playfield.isFinished())
-                    Debug.Log("you win");
+                    scenesChange.gameToArcade("minesweeper", true);
             }
         }
 
@@ -113,4 +113,11 @@ public class element : MonoBehaviour
     {
         return GetComponent<SpriteRenderer>().sprite.texture.name == "default";
     }
+
+
+    void Update()
+    {
+
+    }
+
 }

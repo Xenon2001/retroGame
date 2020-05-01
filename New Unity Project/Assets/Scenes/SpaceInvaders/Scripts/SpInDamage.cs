@@ -18,6 +18,8 @@ public class SpInDamage : MonoBehaviour
     {
         if (hp <= 0)
         {
+            if(this.name =="SpaceShip")
+                scenesChange.gameToArcade("SpaceInvaders", false);
             Erase();
         }
     }
