@@ -73,6 +73,10 @@ public class block : MonoBehaviour
         {
             isEmpty = true;
         }
+
+        this.gameObject.AddComponent<CircleCollider2D>();
+        this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+
         map.grid[x, y] = this;
     }
 
