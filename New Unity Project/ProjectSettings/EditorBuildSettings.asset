@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpaceInvaders/SpaceInvaders.unity
     guid: a80b35eb6b42a614583a1463eb841b4b
+  - enabled: 1
+    path: Assets/Scenes/BattleScene.unity
+    guid: 2c4a9029fa2485349833417b4174a03f
   m_configObjects: {}
