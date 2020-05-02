@@ -15,7 +15,9 @@ public class SpInEnemyMovement : MonoBehaviour
 
     void Update()
     {
-        if(transform.position.x < 0 || transform.position.x > 4)
+        if (transform.position.y <= -10.5)
+            scenesChange.gameToArcade("SpaceInvaders", false);
+        if (transform.position.x < 0 || transform.position.x > 4)
         {
             if (!ok)
             {
