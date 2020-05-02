@@ -21,8 +21,11 @@ EditorBuildSettings:
     path: Assets/Scenes/bomberman/bomberman.unity
     guid: 8d9cf953002ad984b8682b71f0f27f19
   - enabled: 1
-    path: Assets/Scenes/minesweeper/miesweeper.unity
+    path: Assets/Scenes/minesweeper/minesweeper.unity
     guid: a9f975905a98a454891b7728288a2898
+  - enabled: 1
+    path: Assets/Scenes/pac-man/PacMan.unity
+    guid: eb4e87d208f5a6a47a88036e9bf3426e
   - enabled: 1
     path: Assets/Scenes/Pong/Pong.unity
     guid: f80c4bd73a0d8764886ff2ed3ab7f3a3
@@ -32,7 +35,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpaceInvaders/SpaceInvaders.unity
     guid: a80b35eb6b42a614583a1463eb841b4b
-  - enabled: 1
-    path: Assets/Scenes/BattleScene.unity
-    guid: 2c4a9029fa2485349833417b4174a03f
   m_configObjects: {}

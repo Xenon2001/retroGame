@@ -10,10 +10,10 @@ public class playerMovement : MonoBehaviour {
     public Animator animator;
     static Vector3 initPos = new Vector3(-10, 10, 0);
     public Vector2 movement;
-    public bool canMove,IsPlaying;
+    public GameBegin GameBeginScript;
+    public bool canMove;
     void Start()
     {
-        IsPlaying = false;
         Scene scene = SceneManager.GetActiveScene();
         if(scene.name == "GamScene")
             rb.transform.position = initPos;
@@ -37,7 +37,7 @@ public class playerMovement : MonoBehaviour {
         
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
-        animator.SetBool("IsPlaying", IsPlaying);
+        animator.SetBool("IsPlaying", GameBeginScript.IsPlaying);
         if (movement.y > 0)
             lastVerticalDir = 1;
         else if (movement.y < 0)
