@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.IO;
 public class GameBegin : MonoBehaviour
 {
     public GameObject canvasObject;
-    public bool beginFight,toMoveNext;
+    public bool beginFight,toMoveNext,IsPlaying;
     float T, moveTimer;
     public Transform player;
     public Transform waypoint1;
@@ -14,6 +14,19 @@ public class GameBegin : MonoBehaviour
     private Camera cam;
     public float zoomSpeed;
     public Animator animator;
+
+    public class gameInProgress
+    {
+        public bool IsPlaying;
+    }
+
+    void Awake()
+    {
+        string json = File.ReadAllText(Application.dataPath + "/GameInProgress.json");
+
+        gameInProgress GIP = JsonUtility.FromJson<gameInProgress>(json);
+        IsPlaying = GIP.IsPlaying;
+    }
     void Start()
     {
         cam = Camera.main;
@@ -33,14 +46,22 @@ public class GameBegin : MonoBehaviour
     }
     void Update()
     {
-        animator.SetBool("IsPlaying", moveScript.IsPlaying);
+        animator.SetBool("IsPlaying", IsPlaying);
+        if(IsPlaying)
+        {
+            player.position = waypoint2.position;
+            transform.position = waypoint1.position;
+            cam.transform.position = player.position + new Vector3(-0.5f, 0.5f, -10);
+            cam.orthographicSize = 2;
+        }
+        else
         if (beginFight)
         {  
             moveScript.movement = new Vector2(0, 0);
             moveScript.canMove = false;
             
             T += Time.deltaTime;
-            if (T >= moveTimer)
+            if (T >= moveTimer||IsPlaying)
             {
                 transform.position = Vector3.MoveTowards(transform.position, waypoint1.position, 4f * Time.deltaTime);
                 if (!toMoveNext)
@@ -60,7 +81,14 @@ public class GameBegin : MonoBehaviour
                     else
                     { 
                         moveScript.movement = new Vector2(0, 0);
-                        moveScript.IsPlaying = true;
+
+                        IsPlaying = true;
+                        gameInProgress GIP = new gameInProgress();
+                        GIP.IsPlaying = true;
+
+                        string json = JsonUtility.ToJson(GIP);
+
+                        File.WriteAllText(Application.dataPath + "/GameInProgress.json", json);
                     }
                 }
                 
