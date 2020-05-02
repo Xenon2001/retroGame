@@ -6,15 +6,14 @@ using System.IO;
 public class scenesChange : MonoBehaviour
 {
 
-    public GameObject player;
+    public static GameObject player;
 
     void mapToArcade()
     {
         data Data = new data(); 
-        Data.position = player.transform.position;
-
-        Data.position.x -= 2;
-
+        //Data.position = player.transform.position;
+       
+        //Data.position.y -= 2;
         string json = JsonUtility.ToJson(Data);
 
         File.WriteAllText(Application.dataPath + "/savefile.json", json);
@@ -25,10 +24,10 @@ public class scenesChange : MonoBehaviour
 
     void arcadeToMap()
     {
-        string json = File.ReadAllText(Application.dataPath + "/game.json");
+        string json = File.ReadAllText(Application.dataPath + "/savefile.json");
 
-        data Date = JsonUtility.FromJson<data>(json);
-
+        data Data = JsonUtility.FromJson<data>(json);
+        playerMovement.loadPosition(Data.position);
 
         SceneManager.LoadScene("GamScene");
     }
@@ -47,20 +46,31 @@ public class scenesChange : MonoBehaviour
         SceneManager.LoadScene("Arcade");
         
     }
+    public static void arcadeToGame(string game)
+    {
+        sceneData data = new sceneData();
+
+        data.enemyHP = CombatSystem.enemyHP;
+        data.HP = CombatSystem.HP;
+        data.playerPosition = player.transform.position;
+        data.enemyPosition = CombatSystem.enemy.transform.position;
+
+        string json = JsonUtility.ToJson(data);
+        File.WriteAllText(Application.dataPath + "/gameState.json", json);
+        SceneManager.LoadScene(game);
+    }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         
         Scene scene = SceneManager.GetActiveScene();
-        print(col.name + " " + scene.name);
+        //print(col.name + " " + scene.name);
         if (scene.name == "GamScene" && col.name == "Player")
         {
-            
             mapToArcade();
         }
         if (scene.name == "Arcade" && col.name == "Player")
         {
-
             arcadeToMap();
         }
     }
@@ -74,7 +84,14 @@ public class scenesChange : MonoBehaviour
     {
         public Vector3 position;
     }
-
+    private class sceneData
+    {
+        public int HP;
+        public int enemyHP;
+        public Vector3 playerPosition;
+        public Vector3 enemyPosition;
+        public bool isGameGoing;
+    }
 
 
 }
