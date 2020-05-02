@@ -301,11 +301,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9036423035059420101, guid: 07ad7df1e0729bc4ebf12f7241432db0,
-        type: 3}
-      propertyPath: GameBeginScript
-      value: 
-      objectReference: {fileID: 241785115}
     - target: {fileID: 9036423035059420103, guid: 07ad7df1e0729bc4ebf12f7241432db0,
         type: 3}
       propertyPath: m_Offset.y
@@ -327,16 +322,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 72831999}
-  - component: {fileID: 72832001}
-  - component: {fileID: 72832002}
   - component: {fileID: 72832000}
+  - component: {fileID: 72832001}
   m_Layer: 0
   m_Name: Cardridge1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &72831999
 Transform:
   m_ObjectHideFlags: 0
@@ -345,38 +339,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72831998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.93, y: -0.52, z: 0}
+  m_LocalPosition: {x: -4.079826, y: 0.8449748, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &72832000
-BoxCollider2D:
+--- !u!114 &72832000
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72831998}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 1.5}
-    newSize: {x: 1.5, y: 1.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3abf093fb299f2498e23c2e8faa423b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &72832001
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -427,31 +407,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &72832002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72831998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3abf093fb299f2498e23c2e8faa423b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minesweeperSprite: {fileID: 21300000, guid: 13f94f968ad2084438504568827320ab, type: 3}
-  bombermanSprite: {fileID: 21300000, guid: 3473899977f5df74d84ef4060045bf92, type: 3}
-  snakeSprite: {fileID: 21300000, guid: feee83c9609f42642a80a04b5d9c4953, type: 3}
-  pacmanSprite: {fileID: 21300000, guid: cb834b1cd9bf4e24a9070f2d7ada7072, type: 3}
-  spaceinvadersSprite: {fileID: 21300000, guid: 4f63dad9ce7a0cc4c94bf6214ca5c853,
-    type: 3}
-  pongSprite: {fileID: 21300000, guid: 3a562a04042e622458f5bf3db2a8d625, type: 3}
-  effectUsed: 0
-  wasPlayed: 0
-  GameBeginScript: {fileID: 241785115}
-  playerHP: 0
-  enemyHP: 0
-  scChange: {fileID: 576490314}
 --- !u!1 &144147562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,7 +960,6 @@ MonoBehaviour:
   canvasObject: {fileID: 1109841283}
   beginFight: 0
   toMoveNext: 0
-  IsPlaying: 0
   player: {fileID: 1103171343}
   waypoint1: {fileID: 1659503942}
   waypoint2: {fileID: 179457372}
@@ -1799,7 +1753,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04b1888a2b307945bdc0a01a673c8fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1103171343}
 --- !u!1 &622169569
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,16 +2260,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1084203169}
-  - component: {fileID: 1084203171}
-  - component: {fileID: 1084203172}
   - component: {fileID: 1084203170}
+  - component: {fileID: 1084203171}
   m_Layer: 0
   m_Name: Cardridge2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1084203169
 Transform:
   m_ObjectHideFlags: 0
@@ -2325,38 +2277,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084203168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.09, y: -0.52, z: 0}
+  m_LocalPosition: {x: -5.61, y: 0.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1084203170
-BoxCollider2D:
+--- !u!114 &1084203170
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084203168}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 1.5}
-    newSize: {x: 1.5, y: 1.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3abf093fb299f2498e23c2e8faa423b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &1084203171
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2407,31 +2345,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1084203172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084203168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3abf093fb299f2498e23c2e8faa423b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minesweeperSprite: {fileID: 21300000, guid: 13f94f968ad2084438504568827320ab, type: 3}
-  bombermanSprite: {fileID: 21300000, guid: 3473899977f5df74d84ef4060045bf92, type: 3}
-  snakeSprite: {fileID: 21300000, guid: feee83c9609f42642a80a04b5d9c4953, type: 3}
-  pacmanSprite: {fileID: 21300000, guid: cb834b1cd9bf4e24a9070f2d7ada7072, type: 3}
-  spaceinvadersSprite: {fileID: 21300000, guid: 4f63dad9ce7a0cc4c94bf6214ca5c853,
-    type: 3}
-  pongSprite: {fileID: 21300000, guid: 3a562a04042e622458f5bf3db2a8d625, type: 3}
-  effectUsed: 0
-  wasPlayed: 0
-  GameBeginScript: {fileID: 241785115}
-  playerHP: 0
-  enemyHP: 0
-  scChange: {fileID: 576490314}
 --- !u!1 &1090435711
 GameObject:
   m_ObjectHideFlags: 0
@@ -2749,16 +2662,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1306378287}
-  - component: {fileID: 1306378289}
-  - component: {fileID: 1306378290}
   - component: {fileID: 1306378288}
+  - component: {fileID: 1306378289}
   m_Layer: 0
   m_Name: Cardridge3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1306378287
 Transform:
   m_ObjectHideFlags: 0
@@ -2767,38 +2679,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306378286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2, y: -0.5, z: 0}
+  m_LocalPosition: {x: -2.5, y: 0.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1306378288
-BoxCollider2D:
+--- !u!114 &1306378288
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306378286}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 1.5}
-    newSize: {x: 1.5, y: 1.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3abf093fb299f2498e23c2e8faa423b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &1306378289
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2849,31 +2747,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1306378290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306378286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3abf093fb299f2498e23c2e8faa423b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minesweeperSprite: {fileID: 21300000, guid: 13f94f968ad2084438504568827320ab, type: 3}
-  bombermanSprite: {fileID: 21300000, guid: 3473899977f5df74d84ef4060045bf92, type: 3}
-  snakeSprite: {fileID: 21300000, guid: feee83c9609f42642a80a04b5d9c4953, type: 3}
-  pacmanSprite: {fileID: 21300000, guid: cb834b1cd9bf4e24a9070f2d7ada7072, type: 3}
-  spaceinvadersSprite: {fileID: 21300000, guid: 4f63dad9ce7a0cc4c94bf6214ca5c853,
-    type: 3}
-  pongSprite: {fileID: 21300000, guid: 3a562a04042e622458f5bf3db2a8d625, type: 3}
-  effectUsed: 0
-  wasPlayed: 0
-  GameBeginScript: {fileID: 241785115}
-  playerHP: 0
-  enemyHP: 0
-  scChange: {fileID: 576490314}
 --- !u!1 &1341611823
 GameObject:
   m_ObjectHideFlags: 0
