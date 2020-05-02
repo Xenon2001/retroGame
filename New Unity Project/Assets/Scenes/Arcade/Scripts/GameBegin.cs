@@ -7,7 +7,11 @@ public class GameBegin : MonoBehaviour
     public GameObject canvasObject; 
     void OnTriggerEnter2D()
    {
-        print("yes");
         canvasObject.SetActive(true);
+
+    }
+    void OnTriggerExit2d()
+    {
+        canvasObject.SetActive(false);
     }
 }
