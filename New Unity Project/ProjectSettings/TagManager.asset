@@ -14,6 +14,7 @@ TagManager:
   - pmApple
   - pmPineapple
   - pmEnemy
+  - ArcadeCanvas
   layers:
   - Default
   - TransparentFX

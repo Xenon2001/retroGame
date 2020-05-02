@@ -58,6 +58,11 @@ public class scenesChange : MonoBehaviour
             
             mapToArcade();
         }
+        if (scene.name == "Arcade" && col.name == "Player")
+        {
+
+            arcadeToMap();
+        }
     }
 
     private class game
