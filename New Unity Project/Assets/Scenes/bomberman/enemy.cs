@@ -19,7 +19,7 @@ public class enemy : MonoBehaviour
     }
     void Start()
     {
-        print(this.name + " " + onX + " " + onY);
+       // print(this.name + " " + onX + " " + onY);
         transform.position = new Vector3(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y), 0);
         
     }
@@ -31,7 +31,7 @@ public class enemy : MonoBehaviour
             GameController.gameOver = true;
             GameController.win = false;
         }
-        print(GameController.gameOver);
+       // print(GameController.gameOver);
     }
 
     bool canMove(int x, int y, char c)
@@ -107,7 +107,7 @@ public class enemy : MonoBehaviour
                 
             
 
-            print(move.x + " " + move.y);
+            //print(move.x + " " + move.y);
             transform.position += move;
 
             lastMove = 0.45f;
