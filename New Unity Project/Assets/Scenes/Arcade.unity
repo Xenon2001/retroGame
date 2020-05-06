@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 72832002}
   m_Layer: 0
   m_Name: Cardridge1
-  m_TagString: Untagged
+  m_TagString: Cardridge1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -350,7 +350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72831998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.2, y: 0.5, z: 0}
+  m_LocalPosition: {x: -6.2, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -441,7 +441,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1008,13 +1008,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasObject: {fileID: 1109841283}
-  beginFight: 0
-  toMoveNext: 0
-  IsPlaying: 0
+  moveNext: 0
+  moveToConsole: 0
+  IsPlayingVar: 0
   player: {fileID: 1103171343}
   waypoint1: {fileID: 1659503942}
   waypoint2: {fileID: 179457372}
   moveScript: {fileID: 1103171341}
+  combatScript: {fileID: 72832000}
   zoomSpeed: 2
   animator: {fileID: 241785117}
   Cardridge1: {fileID: 72831998}
@@ -1818,6 +1819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 622169572}
   - component: {fileID: 622169571}
+  - component: {fileID: 622169570}
   m_Layer: 0
   m_Name: ArcadeSofa (1)
   m_TagString: Untagged
@@ -1825,6 +1827,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!61 &622169570
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622169569}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.18968128}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 1.5625}
+    newSize: {x: 3, y: 1.5625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.7219892, y: 0.9063878}
+  m_EdgeRadius: 0
 --- !u!212 &622169571
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2293,7 +2321,7 @@ GameObject:
   - component: {fileID: 1084203172}
   m_Layer: 0
   m_Name: Cardridge2
-  m_TagString: Untagged
+  m_TagString: Cardridge2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2306,7 +2334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084203168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2, y: 0.5, z: 0}
+  m_LocalPosition: {x: -4.2, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2397,7 +2425,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2735,7 +2763,7 @@ GameObject:
   - component: {fileID: 1306378290}
   m_Layer: 0
   m_Name: Cardridge3
-  m_TagString: Untagged
+  m_TagString: Cardridge3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2748,7 +2776,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306378286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2, y: 0.5, z: 0}
+  m_LocalPosition: {x: -2.2, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2839,7 +2867,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
