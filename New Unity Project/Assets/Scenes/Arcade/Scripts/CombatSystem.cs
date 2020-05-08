@@ -36,10 +36,10 @@ public class CombatSystem : MonoBehaviour
 
                 Card card = JsonUtility.FromJson<Card>(json);
 
-                effectUsed = card.effectUsed;
+               // effectUsed = card.effectUsed;
                 wasPlayed = card.wasPlayed;
 
-                if ((!effectUsed) && wasPlayed)
+                if (/*(effectUsed)&&*/  wasPlayed)
                 {
                     string json2 = File.ReadAllText(Application.dataPath + "/game.json");
                     Game game = JsonUtility.FromJson<Game>(json2);
@@ -119,17 +119,16 @@ public class CombatSystem : MonoBehaviour
 
                 Card card = JsonUtility.FromJson<Card>(json);
 
-
                 //scChange.arcadeToGame(card.name);
 
                 Card card2 = new Card();
                 card2.wasPlayed = true;
-                card2.effectUsed = false;
+                //card2.effectUsed = true;
 
 
                 if (nameGot == "Cardridge1")
                 {
-
+                    
                     card2.name = card.name;
                     json = JsonUtility.ToJson(card2);
                     File.WriteAllText(Application.dataPath + "/card1.json", json);
@@ -155,14 +154,44 @@ public class CombatSystem : MonoBehaviour
                     File.WriteAllText(Application.dataPath + "/card3.json", json);
 
                     scChange.arcadeToGame(card.name);
+                }
+            }
+        }
+    }
+    void LateUpdate()
+    {
+        for (int cardIndex = 1; cardIndex <= 3; ++cardIndex)
+        {
+            if (this.name == "Cardridge" + cardIndex.ToString())
+            {
+                string json = File.ReadAllText(Application.dataPath + "/card" + cardIndex.ToString() + ".json");
+                Card card = JsonUtility.FromJson<Card>(json);
+                switch (card.name)
+                {
+                    case "bomberman":
+                        this.gameObject.GetComponent<SpriteRenderer>().sprite = bombermanSprite;
+                        break;
+                    case "minesweeper":
+                        this.gameObject.GetComponent<SpriteRenderer>().sprite = minesweeperSprite;
+                        break;
+                    case "Pong":
+                        this.gameObject.GetComponent<SpriteRenderer>().sprite = pongSprite;
+                        break;
+                    case "Snake":
+                        this.gameObject.GetComponent<SpriteRenderer>().sprite = snakeSprite;
+                        break;
+                    case "SpaceInvaders":
+                        this.gameObject.GetComponent<SpriteRenderer>().sprite = spaceinvadersSprite;
+                        break;
+                    case "PacMan":
+                        this.gameObject.GetComponent<SpriteRenderer>().sprite = pacmanSprite;
+                        break;
 
                 }
             }
-
-
+            
         }
     }
-
     private class Card
     {
         public string name;
@@ -196,7 +225,7 @@ public class CombatSystem : MonoBehaviour
             Card card = new Card();
             card.name = "";
             card.wasPlayed = false;
-            card.effectUsed = false;
+            //card.effectUsed = false;
             json = JsonUtility.ToJson(card);
             File.WriteAllText(Application.dataPath + "/card" + i.ToString() + ".json", json);
         }
@@ -216,32 +245,32 @@ public class CombatSystem : MonoBehaviour
         {
             case 1:
                 card.name = "bomberman";
-                card.effectUsed = false;
+                //card.effectUsed = false;
                 card.wasPlayed = false;
                 break;
             case 2:
                 card.name = "minesweeper";
-                card.effectUsed = false;
+                //card.effectUsed = false;
                 card.wasPlayed = false;
                 break;
             case 3:
                 card.name = "Pong";
-                card.effectUsed = false;
+                //card.effectUsed = false;
                 card.wasPlayed = false;
                 break;
             case 4:
                 card.name = "Snake";
-                card.effectUsed = false;
+                //card.effectUsed = false;
                 card.wasPlayed = false;
                 break;
             case 5:
                 card.name = "SpaceInvaders";
-                card.effectUsed = false;
+                //card.effectUsed = false;
                 card.wasPlayed = false;
                 break;
             case 6:
                 card.name = "PacMan";
-                card.effectUsed = false;
+               // card.effectUsed = false;
                 card.wasPlayed = false;
                 break;
 
