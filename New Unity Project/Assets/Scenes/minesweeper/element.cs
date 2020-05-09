@@ -17,6 +17,13 @@ public class element : MonoBehaviour
     public static int noOfFlags = 0;
     public static bool ok = true;
 
+    void Awake()
+    {
+        noMaxOfMines = 25;
+        noOfMines = 0;
+        noOfFlags = 0;
+        ok = true;
+    }
 
     void Start()
     {
@@ -95,9 +102,6 @@ public class element : MonoBehaviour
 
                 loadTexture(playfield.adjacentMines(x, y));
 
-
-                //Debug.Log("click on: "+ x);
-                //Debug.Log("click on: " + y);
                 playfield.fill(x, y, new bool[playfield.w, playfield.h]);
 
                 if (playfield.isFinished())
@@ -105,7 +109,6 @@ public class element : MonoBehaviour
             }
         }
 
-        print("mines :" +  (noOfMines - noOfFlags));
             
     }
 
@@ -114,10 +117,5 @@ public class element : MonoBehaviour
         return GetComponent<SpriteRenderer>().sprite.texture.name == "default";
     }
 
-
-    void Update()
-    {
-
-    }
 
 }

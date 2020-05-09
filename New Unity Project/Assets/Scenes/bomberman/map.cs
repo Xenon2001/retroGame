@@ -17,6 +17,20 @@ public class map : MonoBehaviour
     {
         return (x >= 0 && x < w) && (y >= 0 && y < h);
     }
+
+    void Awake()
+    {
+        for(int i = 0; i < w; ++i)
+        {
+            for(int j = 0; j < h; ++j)
+            {
+                block x = new block();
+                x.isEmpty = true;
+                grid[i, j] = x;
+            }
+        }
+    }
+
     void Start()
     {
         player = GameObject.FindWithTag("Player");

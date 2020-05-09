@@ -36,8 +36,6 @@ public class playfield : MonoBehaviour
 
     public static bool inside(int x, int y)
     {
-        //Debug.Log("inside test: " + x);
-        //Debug.Log("inside test: " + y);
         return (x >= 0 && x < w && y >= 0 && y < h);
     }
 
@@ -61,8 +59,7 @@ public class playfield : MonoBehaviour
             for (int i = 0; i < 8; i++)
             {
                 int newX = x + dx[i];
-                int newY = y + dy[i];
-                //Debug.Log("new x and y: " + newX + ' ' + newY);
+                int newY = y + dy[i];               
                 if (inside(newX, newY))
                 {                 
            
@@ -83,29 +80,13 @@ public class playfield : MonoBehaviour
             int newY = y + dy[i];
             if(inside(newX, newY))
             {
-                Debug.Log(elements[newX, newY].isMine);
-                Debug.Log(dx[i] + ' ' + dy[i] + ' ');
-
+                
                 if (elements[newX,newY].isMine)
-                    ++k;
-
-                //elements[newX, newY].loadTexture(k);
+                    ++k;               
             }
-            else
-            {
-                Debug.Log("is outside " + dx[i] + ' ' + dy[i]);
-            }   
         }
-
-
-        Debug.Log(k);
-        Debug.Log("_______________________________________________________________________________");
         return k;
-    }
-
-
-
-    
+    }          
 
 
 }

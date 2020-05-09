@@ -15,9 +15,12 @@ public class GameController : MonoBehaviour
 
 
 
-    void Start()
+    void Awake()
     {
-       
+        noOfEnemies = 0;
+        win = false;
+        gameOver = false;
+        activBomb = false;
     }
 
     // Update is called once per frame
