@@ -38,9 +38,9 @@ public class GameScript : MonoBehaviour
         else
         {
             if (score == endScore) //|| collided)
-                scenesChange.gameToArcade("snake", true);
+                scenesChange.gameToArcade("Snake", true);
             else
-                scenesChange.gameToArcade("snake", false);
+                scenesChange.gameToArcade("Snake", false);
         }
 
     }

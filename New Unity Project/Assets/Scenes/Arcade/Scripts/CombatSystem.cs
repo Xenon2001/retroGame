@@ -16,6 +16,7 @@ public class CombatSystem : MonoBehaviour
     public int playerHP, enemyHP;
     public scenesChange scChange;
     string nameGot;
+    public HealthBar HPBar;
 
 
     void Start()
@@ -26,7 +27,7 @@ public class CombatSystem : MonoBehaviour
 
         playerHP = hps.playerHP;
         enemyHP = hps.enemyHP;
-
+        HPBar.SetHealth(playerHP);
         for (int cardIndex = 1; cardIndex <= 3; ++cardIndex)
         {
 
@@ -321,7 +322,7 @@ public class CombatSystem : MonoBehaviour
                 break;
 
         }
-
+        HPBar.SetHealth(playerHP);
         HP x = new HP();
         x.playerHP = playerHP;
         x.enemyHP = enemyHP;
