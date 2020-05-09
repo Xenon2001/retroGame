@@ -62,11 +62,11 @@ public class GameBegin : MonoBehaviour
 
         gameInProgress GIP = JsonUtility.FromJson<gameInProgress>(json);
         IsPlayingVar = GIP.IsPlaying;
-
-        moveScript.animator.SetBool("IsPlaying", IsPlayingVar);
-
+        
         if (IsPlayingVar)
         {
+            animator.SetBool("IsPlaying", true);
+            moveScript.animator.SetFloat("LastVertical", 1);
             moveScript.movement = new Vector2(0, 0);
             moveScript.canMove = false;
             player.position = waypoint2.position;
@@ -100,6 +100,7 @@ public class GameBegin : MonoBehaviour
         }
         else
         {
+            animator.SetBool("IsPlaying", false);
             moveScript.canMove = true;
             transform.position = new Vector3(0, 0, 0);
             cam.transform.position =new Vector3(0, 0,-10f);
@@ -138,92 +139,4 @@ public class GameBegin : MonoBehaviour
             }
         }
     }
-    /*void Awake()
-    {
-        string json = File.ReadAllText(Application.dataPath + "/GameInProgress.json");
-
-        gameInProgress GIP = JsonUtility.FromJson<gameInProgress>(json);
-        IsPlaying = GIP.IsPlaying;
-    }
-    void Start()
-    {
-        cam = Camera.main;
-        moveToConsole = false;
-        T = 0;
-        moveTimer = 1.5f;
-        Cardridge1.SetActive(false);
-        Cardridge2.SetActive(false);
-        Cardridge3.SetActive(false);
-    }
-    void OnTriggerEnter2D(Collider2D col)
-   {
-            canvasObject.SetActive(true);
-            moveToConsole = true;
-    }
-    void OnTriggerExit2D()
-    {
-        canvasObject.SetActive(false);
-        
-    }
-    void Update()
-    {
-        animator.SetBool("IsPlaying", IsPlaying);
-        if(IsPlaying)
-        {
-            player.position = waypoint2.position;
-            transform.position = waypoint1.position;
-            cam.transform.position = player.position + new Vector3(-0.5f, 0.5f, -10);
-            cam.orthographicSize = 2;
-            Cardridge1.SetActive(true);
-            Cardridge2.SetActive(true);
-            Cardridge3.SetActive(true);
-        }
-        else
-        if (moveToConsole)
-        {  
-            moveScript.movement = new Vector2(0, 0);
-            moveScript.canMove = false;
-            
-            T += Time.deltaTime;
-            if (T >= moveTimer||IsPlaying)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, waypoint1.position, 4f * Time.deltaTime);
-                if (!toMoveNext)
-                {
-                    player.position = Vector3.MoveTowards(player.position, new Vector3(0, 0, 0), 3 * Time.deltaTime);
-                    if (player.position != new Vector3(0, 0, 0))
-                        moveScript.movement = new Vector2(0, 1);
-                    else
-                        toMoveNext = true;
-                }
-                else
-                {
-                    cameraZoom();
-                    player.position = Vector3.MoveTowards(player.position, waypoint2.position, 3 * Time.deltaTime);
-                    if (player.position != waypoint2.position)
-                        moveScript.movement = new Vector2(-1, 0);
-                    else
-                    { 
-                        moveScript.movement = new Vector2(0, 0);
-
-                        IsPlaying = true;
-                        gameInProgress GIP = new gameInProgress();
-                        GIP.IsPlaying = true;
-
-                        string json = JsonUtility.ToJson(GIP);
-
-                        File.WriteAllText(Application.dataPath + "/GameInProgress.json", json);
-                    }
-                }
-                
-            }       
-        }
-    }
-    void cameraZoom()
-    {
-
-            cam.transform.position= Vector3.MoveTowards(cam.transform.position, player.position+new Vector3(-0.5f,0.5f,-10), 3*Time.deltaTime);
-            if (cam.orthographicSize>=2)
-            cam.orthographicSize -= zoomSpeed*Time.deltaTime;
-    }*/
 }

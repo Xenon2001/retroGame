@@ -40,7 +40,8 @@ public class playerMovement : MonoBehaviour {
             lastVerticalDir = 1;
         else if (movement.y < 0)
             lastVerticalDir = -1;
-        animator.SetFloat("LastVertical", lastVerticalDir);
+        if (canMove)
+            animator.SetFloat("LastVertical", lastVerticalDir);
         if (movement.sqrMagnitude > 1)
             movement = movement.normalized;
 
