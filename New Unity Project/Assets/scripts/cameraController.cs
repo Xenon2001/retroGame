@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class cameraController : MonoBehaviour
 {
@@ -52,6 +53,7 @@ public class cameraController : MonoBehaviour
     };
 
 
+
     void Update()
     {
 
@@ -63,10 +65,6 @@ public class cameraController : MonoBehaviour
             if (player[i, 0] <= playerPosition.x && playerPosition.x <= player[i,2] &&
                 player[i, 1] <= playerPosition.y && playerPosition.y <= player[i,3] )
             {
-                //Debug.Log(minPosition.x);
-               // Debug.Log(minPosition.y);
-                //Debug.Log(maxPosition.x);
-                //Debug.Log(maxPosition.y);
                 minPosition.x = cameraBounds[i, 0];
                 minPosition.y = cameraBounds[i, 1];
                 maxPosition.x = cameraBounds[i, 2];

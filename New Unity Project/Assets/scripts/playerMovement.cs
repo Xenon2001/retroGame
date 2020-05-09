@@ -13,6 +13,8 @@ public class playerMovement : MonoBehaviour {
     public bool canMove;
     void Start()
     {
+
+
         Scene scene = SceneManager.GetActiveScene();
         if(scene.name == "GamScene")
             rb.transform.position = initPos;
