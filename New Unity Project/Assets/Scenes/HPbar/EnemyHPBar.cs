@@ -1,0 +1,29 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using System.IO;
+
+public class EnemyHPBar : MonoBehaviour
+{
+    public Slider slider;
+    public Text hpAmount;
+
+    void Start()
+    {
+        string Hp = File.ReadAllText(Application.dataPath + "/HPs.json");
+
+        HP hps = JsonUtility.FromJson<HP>(Hp);
+        SetEHealth(hps.enemyHP);
+    }
+    public void SetEHealth(int health)
+    {
+        slider.value = health;
+        hpAmount.text = health + "/100";
+    }
+    public class HP
+    {
+        public int enemyHP;
+        public int playerHP;
+    }
+}
