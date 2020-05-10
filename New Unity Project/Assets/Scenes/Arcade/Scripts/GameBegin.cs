@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System;
 
 public class GameBegin : MonoBehaviour
 {
@@ -46,7 +47,7 @@ public class GameBegin : MonoBehaviour
         string json = File.ReadAllText(Application.dataPath + "/enemyToBattle.json");
 
         enemyToBattle enemy = JsonUtility.FromJson<enemyToBattle>(json);
-        switch (enemy.enemyNr)
+        switch (enemy.currentEnemyNr)
         {
             case "Enemy0":
                 { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy0; animator.SetInteger("EnemyNr", 0); }
@@ -90,11 +91,18 @@ public class GameBegin : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (!IsPlayingVar&&combatScript.playerHP>0/*&&!Defeated*/)
+        string json = File.ReadAllText(Application.dataPath + "/enemyToBattle.json");
+
+        enemyToBattle enemy = JsonUtility.FromJson<enemyToBattle>(json);
+        if (!IsPlayingVar&&combatScript.playerHP>0&& ("Enemy" + (enemy.nextEnemyNr).ToString()) == enemy.currentEnemyNr)
         {
             canvasObject.SetActive(true);
             moveToConsole = true;
         }
+        if (enemy.nextEnemyNr > Char.GetNumericValue(enemy.currentEnemyNr[5])) 
+            print("You've already beaten me");
+        if (enemy.nextEnemyNr < Char.GetNumericValue(enemy.currentEnemyNr[5])) 
+            print("You can't fight me yet");
         
     }
     void OnTriggerExit2D()
@@ -189,6 +197,7 @@ public class GameBegin : MonoBehaviour
 
     public class enemyToBattle
     {
-        public string enemyNr;
+        public string currentEnemyNr;
+        public int nextEnemyNr;
     }
 }

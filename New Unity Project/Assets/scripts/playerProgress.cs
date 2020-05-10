@@ -5,59 +5,68 @@ using System.IO;
 
 public class playerProgress : MonoBehaviour
 {
-    /*void Start()
+   /* void Start()
     {
         enemyToBattle enemy = new enemyToBattle();
-        enemy.enemyNr = "Enemy0";
-
+        enemy.currentEnemyNr = "Enemy0";
         string json = JsonUtility.ToJson(enemy);
-
         File.WriteAllText(Application.dataPath + "/enemyToBattle.json", json);
-
     }*/
     void OnTriggerEnter2D(Collider2D col)
     {
         enemyToBattle enemy = new enemyToBattle();
-        print(col.gameObject.name);
+
         switch (col.gameObject.name)
         {
             case "Arcade00":
-                enemy.enemyNr = "Enemy0";
+                enemy.currentEnemyNr = "Enemy0";
                 break;
             case "Arcade01":
-                enemy.enemyNr = "Enemy1";
+                enemy.currentEnemyNr = "Enemy1";
                 break;
             case "Arcade02":
-                enemy.enemyNr = "Enemy2";
+                enemy.currentEnemyNr = "Enemy2";
                 break;
             case "Arcade10":
-                enemy.enemyNr = "Enemy3";
+                enemy.currentEnemyNr = "Enemy3";
                 break;
             case "Arcade11":
-                enemy.enemyNr = "Enemy4";
+                enemy.currentEnemyNr = "Enemy4";
                 break;
             case "Arcade12":
-                enemy.enemyNr = "Enemy5";
+                enemy.currentEnemyNr = "Enemy5";
                 break;
             case "Arcade20":
-                enemy.enemyNr = "Enemy6";
+                enemy.currentEnemyNr = "Enemy6";
                 break;
             case "Arcade21":
-                enemy.enemyNr = "Enemy7";
+                enemy.currentEnemyNr = "Enemy7";
                 break;
             case "Arcade22":
-                enemy.enemyNr = "Enemy8";
+                enemy.currentEnemyNr = "Enemy8";
                 break;
             case "Arcade23":
-                enemy.enemyNr = "Enemy9";
+                enemy.currentEnemyNr = "Enemy9";
                 break;
+            default:
+                return;
+
         }
         string json = JsonUtility.ToJson(enemy);
         File.WriteAllText(Application.dataPath + "/enemyToBattle.json", json);
     }
+    /*void OnTriggerExit2D()
+    {
+        enemyToBattle enemy = new enemyToBattle();
+        enemy.currentEnemyNr = "Enemy0";
+        string json = JsonUtility.ToJson(enemy);
+        File.WriteAllText(Application.dataPath + "/enemyToBattle.json", json);
+    }*/
+    
     public class enemyToBattle
     {
-        public string enemyNr;
+        public string currentEnemyNr;
+        public int nextEnemyNr;
     }
 }
 /*

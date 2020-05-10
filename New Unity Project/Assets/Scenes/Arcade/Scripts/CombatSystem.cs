@@ -21,6 +21,12 @@ public class CombatSystem : MonoBehaviour
 
     void Start()
     {
+        //enemyToBattle enemy = new enemyToBattle();
+        //string json4 = JsonUtility.ToJson(enemy);
+        //enemy.currentEnemyNr = "Enemy0";
+        //enemy.nextEnemyNr = 0;
+        //File.WriteAllText(Application.dataPath + "/enemyToBattle.json", json4);
+
         string Hp = File.ReadAllText(Application.dataPath + "/HPs.json");
 
         HP hps = JsonUtility.FromJson<HP>(Hp);
@@ -80,11 +86,12 @@ public class CombatSystem : MonoBehaviour
             }
         }
     }
-
+  
     void Update()
     {
-
-        if (playerHP <= 0 || enemyHP <= 0)
+        string json4 = File.ReadAllText(Application.dataPath + "/enemyToBattle.json");
+        enemyToBattle enemy = JsonUtility.FromJson<enemyToBattle>(json4);
+        if (playerHP <= 0 || enemyHP <= 0 || ("Enemy" + (enemy.nextEnemyNr).ToString()) != enemy.currentEnemyNr)
             GameOver();
         else
         {
@@ -192,6 +199,7 @@ public class CombatSystem : MonoBehaviour
             
         }
     }
+
     private class Card
     {
         public string name;
@@ -211,30 +219,15 @@ public class CombatSystem : MonoBehaviour
     {
         public bool IsPlaying;
     }
-    void GameOver()
+
+    public class zona
     {
-        gameInProgress GIP = new gameInProgress();
-        GIP.IsPlaying = false;
-
-        string json = JsonUtility.ToJson(GIP);
-
-        File.WriteAllText(Application.dataPath + "/GameInProgress.json", json);
-
-        for (int i = 1; i <= 3; i++)
-        {
-            Card card = new Card();
-            card.name = "";
-            card.wasPlayed = false;
-            //card.effectUsed = false;
-            json = JsonUtility.ToJson(card);
-            File.WriteAllText(Application.dataPath + "/card" + i.ToString() + ".json", json);
-        }
-        /*
-         if(enemyHP==0)
-         Defeated=true;
-         else
-         movePlayerToSpwanPoint();
-         */
+        public string x;
+    }
+    public class enemyToBattle
+    {
+        public string currentEnemyNr;
+        public int nextEnemyNr;
     }
     void getNewCard(string cardNr)
     {
@@ -329,6 +322,61 @@ public class CombatSystem : MonoBehaviour
         string json = JsonUtility.ToJson(x);
         File.WriteAllText(Application.dataPath + "/HPs.json", json);
 
+    }
+
+    void GameOver()
+    {
+        gameInProgress GIP = new gameInProgress();
+        GIP.IsPlaying = false;
+
+        string json = JsonUtility.ToJson(GIP);
+
+        File.WriteAllText(Application.dataPath + "/GameInProgress.json", json);
+
+        for (int i = 1; i <= 3; i++)
+        {
+            Card card = new Card();
+            card.name = "";
+            card.wasPlayed = false;
+            //card.effectUsed = false;
+            json = JsonUtility.ToJson(card);
+            File.WriteAllText(Application.dataPath + "/card" + i.ToString() + ".json", json);
+        }
+
+        enemyToBattle enemy = new enemyToBattle();
+        zona Zona = new zona();
+
+        if (enemyHP == 0)
+            enemy.nextEnemyNr++;
+        else
+        { enemyHP = 100; respawn(); }
+
+        string json2 = JsonUtility.ToJson(enemy);
+        File.WriteAllText(Application.dataPath + "/enemyToBattle.json", json2);
+    }
+
+    void respawn()
+    {
+        Vector2 spawnPoint = new Vector2(0f, 0f);
+
+        Vector2 zona1 = new Vector2(-10.39f, 11.16f);
+        Vector2 zona2 = new Vector2(308.58f, 21.46f);
+        Vector2 zona3 = new Vector2(556.03f, 35.44f);
+
+
+
+        string json3 = File.ReadAllText(Application.dataPath + "/zona.json");
+
+        zona Zona = JsonUtility.FromJson<zona>(json3);
+
+        if (Zona.x == "zona1")
+            spawnPoint = zona1;
+        if (Zona.x == "zona2")
+            spawnPoint = zona2;
+        if (Zona.x == "zona3")
+            spawnPoint = zona3;
+
+        playerMovement.loadPosition(new Vector3(spawnPoint.x, spawnPoint.y, 0));
     }
 }
 
