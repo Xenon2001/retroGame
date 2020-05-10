@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9036423035059420101}
   - component: {fileID: 9036423035059420103}
   - component: {fileID: 9036423035059420102}
+  - component: {fileID: 1407728934199170324}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -119,8 +120,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  lastVerticalDir: 0
   rb: {fileID: 9036423035059420100}
   animator: {fileID: 9036423035059420102}
+  movement: {x: 0, y: 0}
+  canMove: 0
 --- !u!61 &9036423035059420103
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -166,3 +170,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1407728934199170324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9036423035059420088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e732be9d3af4a64a80c627bcf9794ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

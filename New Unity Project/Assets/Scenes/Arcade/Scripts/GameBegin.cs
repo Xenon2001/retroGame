@@ -19,6 +19,16 @@ public class GameBegin : MonoBehaviour
     public GameObject Cardridge1;
     public GameObject Cardridge2;
     public GameObject Cardridge3;
+    public Sprite Enemy0;
+    public Sprite Enemy1;
+    public Sprite Enemy2;
+    public Sprite Enemy3;
+    public Sprite Enemy4;
+    public Sprite Enemy5;
+    public Sprite Enemy6;
+    public Sprite Enemy7;
+    public Sprite Enemy8;
+    public Sprite Enemy9;
 
     public class gameInProgress
     {
@@ -33,6 +43,42 @@ public class GameBegin : MonoBehaviour
          */
     void Start()
     {
+        string json = File.ReadAllText(Application.dataPath + "/enemyToBattle.json");
+
+        enemyToBattle enemy = JsonUtility.FromJson<enemyToBattle>(json);
+        switch (enemy.enemyNr)
+        {
+            case "Enemy0":
+                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy0; animator.SetInteger("EnemyNr", 0); }
+                break;
+            case "Enemy1":
+                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy1; animator.SetInteger("EnemyNr", 1); }
+                break;
+            case "Enemy2":
+                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy2; animator.SetInteger("EnemyNr", 2); }
+                break;
+            case "Enemy3":
+                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy3; animator.SetInteger("EnemyNr", 3); }
+                break;
+            case "Enemy4":
+                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy4; animator.SetInteger("EnemyNr", 4); }
+                break;
+            case "Enemy5":
+                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy5; animator.SetInteger("EnemyNr", 5); }
+                break;
+            case "Enemy6":
+                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy6; animator.SetInteger("EnemyNr", 6); }
+                break;
+            case "Enemy7":
+                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy7; animator.SetInteger("EnemyNr", 7); }
+                break;
+            case "Enemy8":
+                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy8; animator.SetInteger("EnemyNr", 8); }
+                break;
+            case "Enemy9":
+                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy9; animator.SetInteger("EnemyNr", 9); }
+                break;
+        }
         T = 0;
         moveToConsole = false;
         cam = Camera.main;
@@ -58,6 +104,7 @@ public class GameBegin : MonoBehaviour
     }
     void Update()
     {
+        
         string json = File.ReadAllText(Application.dataPath + "/GameInProgress.json");
 
         gameInProgress GIP = JsonUtility.FromJson<gameInProgress>(json);
@@ -138,5 +185,10 @@ public class GameBegin : MonoBehaviour
                 moveScript.movement = new Vector2(-1, 0); cameraZoom();
             }
         }
+    }
+
+    public class enemyToBattle
+    {
+        public string enemyNr;
     }
 }

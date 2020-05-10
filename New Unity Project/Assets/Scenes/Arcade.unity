@@ -535,7 +535,7 @@ MonoBehaviour:
   playerHP: 0
   enemyHP: 0
   scChange: {fileID: 576490314}
-  HPBar: {fileID: 0}
+  HPBar: {fileID: 1775546540}
   EHPBar: {fileID: 932292723}
 --- !u!212 &72832001
 SpriteRenderer:
@@ -1919,6 +1919,16 @@ MonoBehaviour:
   Cardridge1: {fileID: 72831998}
   Cardridge2: {fileID: 1084203168}
   Cardridge3: {fileID: 1306378286}
+  Enemy0: {fileID: 21300000, guid: d4108802387354a45b801642d7790f5c, type: 3}
+  Enemy1: {fileID: 21300000, guid: f7dab9411045d0f43b4b412bce5a673b, type: 3}
+  Enemy2: {fileID: 21300000, guid: e536ce2be49b2c8469fe911aef2e50b5, type: 3}
+  Enemy3: {fileID: 21300000, guid: 8abb513f29921cd42b2644ac6e79b018, type: 3}
+  Enemy4: {fileID: 21300000, guid: 93757683f693bd543a982434672d9145, type: 3}
+  Enemy5: {fileID: 21300000, guid: 4278d50a3576a624da2ff2591628e287, type: 3}
+  Enemy6: {fileID: 21300000, guid: b42e88396511cf84582237e270c2e003, type: 3}
+  Enemy7: {fileID: 21300000, guid: 808cf5db5e141f44b841f5c765822ab9, type: 3}
+  Enemy8: {fileID: 21300000, guid: 3eac4af52c3e7c244b593030506176aa, type: 3}
+  Enemy9: {fileID: 21300000, guid: 509a9e8cdfe28a54fa3f4b289444f914, type: 3}
 --- !u!61 &241785116
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6146,7 +6156,7 @@ MonoBehaviour:
   playerHP: 0
   enemyHP: 0
   scChange: {fileID: 576490314}
-  HPBar: {fileID: 0}
+  HPBar: {fileID: 1775546540}
   EHPBar: {fileID: 932292723}
 --- !u!212 &1084203171
 SpriteRenderer:
@@ -7375,7 +7385,7 @@ MonoBehaviour:
   playerHP: 0
   enemyHP: 0
   scChange: {fileID: 576490314}
-  HPBar: {fileID: 0}
+  HPBar: {fileID: 1775546540}
   EHPBar: {fileID: 932292723}
 --- !u!212 &1306378289
 SpriteRenderer:

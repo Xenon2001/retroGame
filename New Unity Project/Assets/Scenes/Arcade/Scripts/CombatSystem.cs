@@ -19,7 +19,6 @@ public class CombatSystem : MonoBehaviour
     public HealthBar HPBar;
     public EnemyHPBar EHPBar;
 
-
     void Start()
     {
         string Hp = File.ReadAllText(Application.dataPath + "/HPs.json");
@@ -79,9 +78,7 @@ public class CombatSystem : MonoBehaviour
 
                 }
             }
-
         }
-
     }
 
     void Update()
