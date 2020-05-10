@@ -132,9 +132,19 @@ public class GameBegin : MonoBehaviour
             transform.position = waypoint1.position;
             cam.transform.position = player.position + new Vector3(-0.5f, 0.5f, -10);
             cam.orthographicSize = 2;
-            Cardridge1.SetActive(true);
-            Cardridge2.SetActive(true);
-            Cardridge3.SetActive(true);
+            if (PauseMenu.GameIsPaused)
+            {
+                Cardridge1.SetActive(false);
+                Cardridge2.SetActive(false);
+                Cardridge3.SetActive(false);
+            }
+            else
+            {
+                Cardridge1.SetActive(true);
+                Cardridge2.SetActive(true);
+                Cardridge3.SetActive(true);
+            }
+            
         }
         else if(moveToConsole)
         {

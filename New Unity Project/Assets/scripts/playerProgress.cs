@@ -2,20 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System.Diagnostics.Eventing.Reader;
 
 public class playerProgress : MonoBehaviour
 {
-   /* void Start()
-    {
-        enemyToBattle enemy = new enemyToBattle();
-        enemy.currentEnemyNr = "Enemy0";
-        string json = JsonUtility.ToJson(enemy);
-        File.WriteAllText(Application.dataPath + "/enemyToBattle.json", json);
-    }*/
+
     void OnTriggerEnter2D(Collider2D col)
     {
         enemyToBattle enemy = new enemyToBattle();
-
         switch (col.gameObject.name)
         {
             case "Arcade00":
@@ -55,13 +49,6 @@ public class playerProgress : MonoBehaviour
         string json = JsonUtility.ToJson(enemy);
         File.WriteAllText(Application.dataPath + "/enemyToBattle.json", json);
     }
-    /*void OnTriggerExit2D()
-    {
-        enemyToBattle enemy = new enemyToBattle();
-        enemy.currentEnemyNr = "Enemy0";
-        string json = JsonUtility.ToJson(enemy);
-        File.WriteAllText(Application.dataPath + "/enemyToBattle.json", json);
-    }*/
     
     public class enemyToBattle
     {
@@ -69,11 +56,3 @@ public class playerProgress : MonoBehaviour
         public int nextEnemyNr;
     }
 }
-/*
- * daca a atins collider
- * daca nume collider este arcade1
- * pune sprite-ul coresp inamicului
- * scrie in json ce inamic tb sa bat next
- * lupta incepe doar daca e inamicul numerotat la fel cu cel ce tb next
- * 
- */

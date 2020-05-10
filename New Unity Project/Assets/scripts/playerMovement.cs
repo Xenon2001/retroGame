@@ -8,13 +8,11 @@ public class playerMovement : MonoBehaviour {
     public float speed,lastVerticalDir;
     public Rigidbody2D rb;
     public Animator animator;
-    static Vector3 initPos = new Vector3(-10, 10, 0);
+    static Vector3 initPos/* = new Vector3(-10, 10, 0)*/;
     public Vector2 movement;
     public bool canMove;
     void Start()
     {
-
-
         Scene scene = SceneManager.GetActiveScene();
         if(scene.name == "GamScene")
             rb.transform.position = initPos;

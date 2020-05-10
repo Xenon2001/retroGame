@@ -343,17 +343,19 @@ public class CombatSystem : MonoBehaviour
             File.WriteAllText(Application.dataPath + "/card" + i.ToString() + ".json", json);
         }
 
-        enemyToBattle enemy = new enemyToBattle();
-        zona Zona = new zona();
+        string json1 = File.ReadAllText(Application.dataPath + "/enemyToBattle.json");
+        enemyToBattle enemy = JsonUtility.FromJson<enemyToBattle>(json1);
 
         if (enemyHP <= 0)
-            enemy.nextEnemyNr++;
-        else if(playerHP<=0)
-        { enemyHP = 100; respawn(); playerHP = 100; }
+        { enemy.nextEnemyNr++; /*enemy.currentEnemyNr = enemy.currentEnemyNr;*/ spawnPoint.ifToSpawn(false); enemyHP = 100; }
+        else if (playerHP <= 0)
+        { enemyHP = 100; spawnPoint.ifToSpawn(true); respawn(); playerHP = 100; }
 
         HP x = new HP();
         x.playerHP = playerHP;
         x.enemyHP = enemyHP;
+
+        
 
         string json2 = JsonUtility.ToJson(enemy);
         File.WriteAllText(Application.dataPath + "/enemyToBattle.json", json2);

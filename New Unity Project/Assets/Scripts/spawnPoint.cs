@@ -6,12 +6,16 @@ using System.IO;
 public class spawnPoint : MonoBehaviour
 {
     public Transform target;
+    static bool toSpawn;
 
     public class zona
     {
         public string x;
     }
-
+    public static void ifToSpawn(bool w)
+    {
+        toSpawn = w;
+    }
     void Awake()
     {
         Vector2 spawnPoint = new Vector2(0f, 0f);
@@ -32,7 +36,7 @@ public class spawnPoint : MonoBehaviour
             spawnPoint = zona2;
         if (Zona.x == "zona3")
             spawnPoint = zona3;
-
+        if(toSpawn)
         playerMovement.loadPosition(new Vector3(spawnPoint.x, spawnPoint.y, 0));
 
     }

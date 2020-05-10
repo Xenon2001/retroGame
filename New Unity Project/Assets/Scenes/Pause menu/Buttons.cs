@@ -2,12 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class Buttons : MonoBehaviour
 {
     public PauseMenu function ;
+    public Rigidbody2D rb;
+
     public void MainMenu()
     {
+        lastPos position = new lastPos();
+        position.pos = rb.position;
+        string json = JsonUtility.ToJson(position);
+        File.WriteAllText(Application.dataPath + "/lastPos.json", json);
         Time.timeScale = 1;
         SceneManager.LoadScene("Menu");
     }
@@ -15,5 +22,10 @@ public class Buttons : MonoBehaviour
      public void Resume()
     {
         function.Resume();
+    }
+
+    public class lastPos
+    {
+        public Vector3 pos;
     }
 }

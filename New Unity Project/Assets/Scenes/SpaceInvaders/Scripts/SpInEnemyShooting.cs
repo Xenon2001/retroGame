@@ -34,8 +34,11 @@ public class SpInEnemyShooting : MonoBehaviour
     {
         enemys = GameObject.FindGameObjectsWithTag("SpInEnemy");
         index = Random.Range(0, enemys.Length);
-        shooter = enemys[index];
-        Instantiate(laserPrefab, new Vector3(enemys[index].transform.position.x, enemys[index].transform.position.y, 0f), transform.rotation);
+        if (enemys.Length > 0)
+        {
+            shooter = enemys[index];
+            Instantiate(laserPrefab, new Vector3(enemys[index].transform.position.x, enemys[index].transform.position.y, 0f), transform.rotation);
+        }
     }
     
 }
