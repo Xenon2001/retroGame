@@ -6,7 +6,9 @@ using System;
 
 public class GameBegin : MonoBehaviour
 {
-    public GameObject canvasObject;
+    public GameObject canvasChild0;
+    public GameObject canvasChild1;
+    public GameObject canvasChild2;
     public bool moveNext,moveToConsole,IsPlayingVar;
     float T, moveTimer;
     public Transform player;
@@ -96,18 +98,20 @@ public class GameBegin : MonoBehaviour
         enemyToBattle enemy = JsonUtility.FromJson<enemyToBattle>(json);
         if (!IsPlayingVar&&combatScript.playerHP>0&& ("Enemy" + (enemy.nextEnemyNr).ToString()) == enemy.currentEnemyNr)
         {
-            canvasObject.SetActive(true);
+            canvasChild0.SetActive(true);
             moveToConsole = true;
         }
-        if (enemy.nextEnemyNr > Char.GetNumericValue(enemy.currentEnemyNr[5])) 
-            print("You've already beaten me");
         if (enemy.nextEnemyNr < Char.GetNumericValue(enemy.currentEnemyNr[5])) 
-            print("You can't fight me yet");
-        
+            canvasChild1.SetActive(true);
+        if (enemy.nextEnemyNr > Char.GetNumericValue(enemy.currentEnemyNr[5])) 
+            canvasChild2.SetActive(true);
+
     }
     void OnTriggerExit2D()
     {
-        canvasObject.SetActive(false);
+        canvasChild0.SetActive(false);
+        canvasChild1.SetActive(false);
+        canvasChild2.SetActive(false);
 
     }
     void Update()

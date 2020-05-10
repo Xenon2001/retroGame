@@ -28,7 +28,7 @@ public class scenesChange : MonoBehaviour
 
     }
 
-    void arcadeToMap()
+    public void arcadeToMap()
     {
         string json = File.ReadAllText(Application.dataPath + "/savefile.json");
 
