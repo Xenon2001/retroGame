@@ -9,7 +9,10 @@ public class playerProgress : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        enemyToBattle enemy = new enemyToBattle();
+        string json = File.ReadAllText(Application.dataPath + "/enemyToBattle.json");
+
+        enemyToBattle enemy = JsonUtility.FromJson<enemyToBattle>(json);
+
         switch (col.gameObject.name)
         {
             case "Arcade00":
@@ -46,8 +49,9 @@ public class playerProgress : MonoBehaviour
                 return;
 
         }
-        string json = JsonUtility.ToJson(enemy);
-        File.WriteAllText(Application.dataPath + "/enemyToBattle.json", json);
+        
+        string json1 = JsonUtility.ToJson(enemy);
+        File.WriteAllText(Application.dataPath + "/enemyToBattle.json", json1);
     }
     
     public class enemyToBattle

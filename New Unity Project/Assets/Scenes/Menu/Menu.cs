@@ -41,6 +41,7 @@ public class Menu : MonoBehaviour
         lastPos position = JsonUtility.FromJson<lastPos>(json1);
         playerMovement.loadPosition(position.pos);
         spawnPoint.ifToSpawn(false);
+        PauseMenu.GameIsPaused = false;
         SceneManager.LoadScene(position.scene);
     }
     private class data
