@@ -11,8 +11,11 @@ public class Buttons : MonoBehaviour
 
     public void MainMenu()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+
         lastPos position = new lastPos();
         position.pos = rb.position;
+        position.scene = currentScene.name;
         string json = JsonUtility.ToJson(position);
         File.WriteAllText(Application.dataPath + "/lastPos.json", json);
         Time.timeScale = 1;
@@ -27,5 +30,6 @@ public class Buttons : MonoBehaviour
     public class lastPos
     {
         public Vector3 pos;
+        public string scene;
     }
 }

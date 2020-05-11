@@ -21,11 +21,18 @@ public class CombatSystem : MonoBehaviour
 
     void Start()
     {
-        //enemyToBattle enemy = new enemyToBattle();
-        //string json4 = JsonUtility.ToJson(enemy);
-        //enemy.currentEnemyNr = "Enemy0";
-        //enemy.nextEnemyNr = 0;
-        //File.WriteAllText(Application.dataPath + "/enemyToBattle.json", json4);
+        /*
+         * heal if win-pacman
+         * high damage if win ?depending on time / both take dmg, u less if win -minesweeper
+         * reflect dmg next turn if damaged-pong
+         * damage mare dupa cateva ture-bomberman
+         * take no next damage(dodge)-space inv
+         * damage over time-snake
+         * */
+        enemyToBattle enemy = new enemyToBattle();
+        string json4 = JsonUtility.ToJson(enemy);
+        enemy.currentEnemyNr = "Enemy0";
+        File.WriteAllText(Application.dataPath + "/Effects.json", json4);
 
         string Hp = File.ReadAllText(Application.dataPath + "/HPs.json");
 
@@ -347,7 +354,7 @@ public class CombatSystem : MonoBehaviour
         enemyToBattle enemy = JsonUtility.FromJson<enemyToBattle>(json1);
 
         if (enemyHP <= 0)
-        { enemy.nextEnemyNr++; /*enemy.currentEnemyNr = enemy.currentEnemyNr;*/ spawnPoint.ifToSpawn(false); enemyHP = 100; }
+        { enemy.nextEnemyNr++; spawnPoint.ifToSpawn(false); enemyHP = 100; }
         else if (playerHP <= 0)
         { enemyHP = 100; spawnPoint.ifToSpawn(true); respawn(); playerHP = 100; }
 

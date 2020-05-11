@@ -15,6 +15,11 @@ TagManager:
   - pmPineapple
   - pmEnemy
   - ArcadeCanvas
+  - Cardridge1
+  - Cardridge2
+  - Cardridge3
+  - ArcadeTag
+  - ShopTag
   layers:
   - Default
   - TransparentFX

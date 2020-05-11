@@ -6,7 +6,6 @@ using System.IO;
 
 public class Menu : MonoBehaviour
 {
-    public playerPosGamScene positionScript;
 
     public void PlayGame()
     {
@@ -42,7 +41,7 @@ public class Menu : MonoBehaviour
         lastPos position = JsonUtility.FromJson<lastPos>(json1);
         playerMovement.loadPosition(position.pos);
         spawnPoint.ifToSpawn(false);
-        SceneManager.LoadScene("GamScene");
+        SceneManager.LoadScene(position.scene);
     }
     private class data
     {
@@ -65,5 +64,6 @@ public class Menu : MonoBehaviour
     public class lastPos
     {
         public Vector3 pos;
+        public string scene;
     }
 }

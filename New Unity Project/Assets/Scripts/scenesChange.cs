@@ -23,8 +23,21 @@ public class scenesChange : MonoBehaviour
         string json = JsonUtility.ToJson(Data);
 
         File.WriteAllText(Application.dataPath + "/savefile.json", json);
-
+        
         SceneManager.LoadScene("Arcade");
+
+    }
+    void mapToShop()
+    {
+        data Data = new data();
+        Data.position = player.position;
+
+        Data.position.y -= 2;
+        string json = JsonUtility.ToJson(Data);
+
+        File.WriteAllText(Application.dataPath + "/savefile.json", json);
+
+        SceneManager.LoadScene("Shop");
 
     }
 
@@ -37,6 +50,7 @@ public class scenesChange : MonoBehaviour
         spawnPoint.ifToSpawn(false);
         SceneManager.LoadScene("GamScene");
     }
+
 
     public static void gameToArcade(string name, bool win)
     {
@@ -73,9 +87,12 @@ public class scenesChange : MonoBehaviour
         //print(col.name + " " + scene.name);
         if (scene.name == "GamScene" && col.name == "Player")
         {
-            mapToArcade();
+            if(gameObject.tag == "ArcadeTag")
+                mapToArcade();
+            if (gameObject.tag == "ShopTag")
+                mapToShop();
         }
-        if (scene.name == "Arcade" && col.name == "Player")
+        if ((scene.name == "Arcade"||scene.name=="Shop") && col.name == "Player")
         {
             arcadeToMap();
         }

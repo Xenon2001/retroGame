@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/GamScene.unity
     guid: bb76614bd54a59049a8d2db958208da3
   - enabled: 1
-    path: Assets/Scenes/Arcade.unity
+    path: Assets/Scenes/Arcade/Arcade.unity
     guid: ea229eecd7576c04dab76e6a1180461b
   - enabled: 1
     path: Assets/Scenes/Menu/Menu.unity
@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpaceInvaders/SpaceInvaders.unity
     guid: a80b35eb6b42a614583a1463eb841b4b
+  - enabled: 1
+    path: Assets/Scenes/Shop/Shop.unity
+    guid: 69dcfbb6cce61a045bbaf1eae3cdf208
   m_configObjects: {}
