@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
-        noOfEnemies = 0;
+        noOfEnemies = 6;
         win = false;
         gameOver = false;
         activBomb = false;
