@@ -12,15 +12,16 @@ public class scenesChange : MonoBehaviour
         /*INITIALIZARI EFECTE*/
         effect ef = new effect();
         ef.turn=0;
-        ef.whoToExplode=0;
-        ef.bombermanDamageTurn=-1;
-        ef.whoNoDamage=0;
+        //ef.whoToExplode=0;
+        ef.bombermanDamageTurn1 = ef.bombermanDamageTurn2 = -1;
+        //ef.whoNoDamage=0;
+        ef.noInvincibleTurn1 = ef.noInvincibleTurn2 =- 1;
         ef.whoReflectDamage=0;
-        ef.turnToReflect=-1;
-        ef.whoPoisoned=0;
-        ef.turnToStopPoison=-1;
-    
-    string json = JsonUtility.ToJson(ef);
+        ef.turnToReflect1 = ef.turnToReflect2 = -1;
+        //ef.whoPoisoned=0;
+        ef.turnToStopPoison1= ef.turnToStopPoison2 = -1;
+
+        string json = JsonUtility.ToJson(ef);
         File.WriteAllText(Application.dataPath + "/Effects.json", json);
 
         /*THE ARCADE SCENE WILL RESTART */
@@ -136,13 +137,18 @@ public class scenesChange : MonoBehaviour
     public class effect
     {
         public int turn;
-        public int whoToExplode;
-        public int bombermanDamageTurn;
-        public int whoNoDamage;
+        //public int whoToExplode;
+        public int bombermanDamageTurn1;
+        public int bombermanDamageTurn2;
+        //public int whoNoDamage;
+        public int noInvincibleTurn1;
+        public int noInvincibleTurn2;
         public int whoReflectDamage;
-        public int turnToReflect;
-        public int whoPoisoned;
-        public int turnToStopPoison;
+        public int turnToReflect1;
+        public int turnToReflect2;
+        //public int whoPoisoned;
+        public int turnToStopPoison1;
+        public int turnToStopPoison2;
     }
 
 }

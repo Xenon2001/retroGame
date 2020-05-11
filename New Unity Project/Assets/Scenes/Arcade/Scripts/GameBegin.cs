@@ -52,34 +52,114 @@ public class GameBegin : MonoBehaviour
         switch (enemy.currentEnemyNr)
         {
             case "Enemy0":
-                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy0; animator.SetInteger("EnemyNr", 0); }
+                { 
+                    gameObject.GetComponent<SpriteRenderer>().sprite = Enemy0; animator.SetInteger("EnemyNr", 0); 
+                    combatScript.bonus0 = 10; 
+                    combatScript.bonus1 = 0; 
+                    combatScript.bonus2 = 0; 
+                    combatScript.bonus3 = 0; 
+                    combatScript.bonus4 = 0; 
+                    combatScript.bonus5 = 0; 
+                }
                 break;
             case "Enemy1":
-                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy1; animator.SetInteger("EnemyNr", 1); }
+                { 
+                    gameObject.GetComponent<SpriteRenderer>().sprite = Enemy1; animator.SetInteger("EnemyNr", 1);
+                    combatScript.bonus0 = 0;
+                    combatScript.bonus1 = 10;
+                    combatScript.bonus2 = 0;
+                    combatScript.bonus3 = 0;
+                    combatScript.bonus4 = 0;
+                    combatScript.bonus5 = 0;
+                }
                 break;
-            case "Enemy2":
-                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy2; animator.SetInteger("EnemyNr", 2); }
+            case "Enemy2"://boss1
+                { 
+                    gameObject.GetComponent<SpriteRenderer>().sprite = Enemy2; animator.SetInteger("EnemyNr", 2);
+                    combatScript.bonus0 = 10;
+                    combatScript.bonus1 = 10;
+                    combatScript.bonus2 = 0;
+                    combatScript.bonus3 = 0;
+                    combatScript.bonus4 = 0;
+                    combatScript.bonus5 = 0;
+                }
                 break;
             case "Enemy3":
-                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy3; animator.SetInteger("EnemyNr", 3); }
+                { 
+                    gameObject.GetComponent<SpriteRenderer>().sprite = Enemy3; animator.SetInteger("EnemyNr", 3);
+                    combatScript.bonus0 = 0;
+                    combatScript.bonus1 = 0;
+                    combatScript.bonus2 = 10;
+                    combatScript.bonus3 = 0;
+                    combatScript.bonus4 = 0;
+                    combatScript.bonus5 = 0;
+                }
                 break;
             case "Enemy4":
-                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy4; animator.SetInteger("EnemyNr", 4); }
+                { 
+                    gameObject.GetComponent<SpriteRenderer>().sprite = Enemy4; animator.SetInteger("EnemyNr", 4);
+                    combatScript.bonus0 = 0;
+                    combatScript.bonus1 = 0;
+                    combatScript.bonus2 = 0;
+                    combatScript.bonus3 = 5;
+                    combatScript.bonus4 = 0;
+                    combatScript.bonus5 = 0;
+                }
                 break;
-            case "Enemy5":
-                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy5; animator.SetInteger("EnemyNr", 5); }
+            case "Enemy5"://boss2
+                { 
+                    gameObject.GetComponent<SpriteRenderer>().sprite = Enemy5; animator.SetInteger("EnemyNr", 5);
+                    combatScript.bonus0 = 0;
+                    combatScript.bonus1 = 0;
+                    combatScript.bonus2 = 10;
+                    combatScript.bonus3 = 5;
+                    combatScript.bonus4 = 0;
+                    combatScript.bonus5 = 0;
+                }
                 break;
             case "Enemy6":
-                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy6; animator.SetInteger("EnemyNr", 6); }
+                { 
+                    gameObject.GetComponent<SpriteRenderer>().sprite = Enemy6; animator.SetInteger("EnemyNr", 6);
+                    combatScript.bonus0 = 0;
+                    combatScript.bonus1 = 0;
+                    combatScript.bonus2 = 0;
+                    combatScript.bonus3 = 0;
+                    combatScript.bonus4 = 1;
+                    combatScript.bonus5 = 0;
+                }
                 break;
             case "Enemy7":
-                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy7; animator.SetInteger("EnemyNr", 7); }
+                { 
+                    gameObject.GetComponent<SpriteRenderer>().sprite = Enemy7; animator.SetInteger("EnemyNr", 7);
+                    combatScript.bonus0 = 0;
+                    combatScript.bonus1 = 0;
+                    combatScript.bonus2 = 0;
+                    combatScript.bonus3 = 0;
+                    combatScript.bonus4 = 0;
+                    combatScript.bonus5 = 10;
+                }
                 break;
-            case "Enemy8":
-                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy8; animator.SetInteger("EnemyNr", 8); }
+            case "Enemy8"://boss3
+                {
+                    gameObject.GetComponent<SpriteRenderer>().sprite = Enemy8; animator.SetInteger("EnemyNr", 8);
+                    combatScript.bonus0 = 0;
+                    combatScript.bonus1 = 0;
+                    combatScript.bonus2 = 0;
+                    combatScript.bonus3 = 0;
+                    combatScript.bonus4 = 1;
+                    combatScript.bonus5 = 10;
+                }
                 break;
-            case "Enemy9":
-                { gameObject.GetComponent<SpriteRenderer>().sprite = Enemy9; animator.SetInteger("EnemyNr", 9); }
+            case "Enemy9"://lastboss
+                { 
+                    gameObject.GetComponent<SpriteRenderer>().sprite = Enemy9; animator.SetInteger("EnemyNr", 9); 
+                    combatScript.bonus0 = 0; 
+                    combatScript.bonus1 = 10; 
+                    combatScript.bonus2 = 0; 
+                    combatScript.bonus3 = 5; 
+                    combatScript.bonus4 = 1; 
+                    combatScript.bonus5 = 0; 
+                }
                 break;
         }
         T = 0;
@@ -116,7 +196,6 @@ public class GameBegin : MonoBehaviour
     }
     void Update()
     {
-        
         string json = File.ReadAllText(Application.dataPath + "/GameInProgress.json");
 
         gameInProgress GIP = JsonUtility.FromJson<gameInProgress>(json);

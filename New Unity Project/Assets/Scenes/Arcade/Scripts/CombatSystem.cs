@@ -18,16 +18,25 @@ public class CombatSystem : MonoBehaviour
     string nameGot;
     public HealthBar HPBar;
     public EnemyHPBar EHPBar;
+    public int bonus0;//10
+    public int bonus1;//10
+    public int bonus2;//10
+    public int bonus3;//5
+    public int bonus4;//1
+    public int bonus5;//10
 
     void Start()
     {
-        string json1 = File.ReadAllText(Application.dataPath + "/Effects.json");
-        effect ef = JsonUtility.FromJson<effect>(json1);
-        ef.turn++;
-        string json2 = JsonUtility.ToJson(ef);
-        File.WriteAllText(Application.dataPath + "/Effects.json", json2);
+        if (this.name == "Cardridge1")
+        {
+            string json1 = File.ReadAllText(Application.dataPath + "/Effects.json");
+            effect ef = JsonUtility.FromJson<effect>(json1);
 
+            ef.turn = ef.turn + 1;
 
+            string json2 = JsonUtility.ToJson(ef);
+            File.WriteAllText(Application.dataPath + "/Effects.json", json2);
+        }
         string Hp = File.ReadAllText(Application.dataPath + "/HPs.json");
 
         HP hps = JsonUtility.FromJson<HP>(Hp);
@@ -90,78 +99,83 @@ public class CombatSystem : MonoBehaviour
   
     void Update()
     {
-        string json4 = File.ReadAllText(Application.dataPath + "/enemyToBattle.json");
-        enemyToBattle enemy = JsonUtility.FromJson<enemyToBattle>(json4);
-        if (playerHP <= 0 || enemyHP <= 0 || ("Enemy" + (enemy.nextEnemyNr).ToString()) != enemy.currentEnemyNr)
-            GameOver();
-        else
+        string check = File.ReadAllText(Application.dataPath + "/GameInProgress.json");
+        gameInProgress GIP = JsonUtility.FromJson<gameInProgress>(check);
+        if (GIP.IsPlaying)
         {
-            string Hp = File.ReadAllText(Application.dataPath + "/HPs.json");
-            HP hps = JsonUtility.FromJson<HP>(Hp);
-
-            playerHP = hps.playerHP;
-            enemyHP = hps.enemyHP;
-
-            if (Input.GetMouseButtonDown(0))
+            string json4 = File.ReadAllText(Application.dataPath + "/enemyToBattle.json");
+            enemyToBattle enemy = JsonUtility.FromJson<enemyToBattle>(json4);
+            if (playerHP <= 0 || enemyHP <= 0 || ("Enemy" + (enemy.nextEnemyNr).ToString()) != enemy.currentEnemyNr)
+                GameOver();
+            else
             {
-                Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+                string Hp = File.ReadAllText(Application.dataPath + "/HPs.json");
+                HP hps = JsonUtility.FromJson<HP>(Hp);
 
-                RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
-                if (hit.collider != null)
+                playerHP = hps.playerHP;
+                enemyHP = hps.enemyHP;
+
+                if (Input.GetMouseButtonDown(0))
                 {
-                    nameGot = hit.collider.gameObject.name;
-                }
+                    Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
-                string json = "";
+                    RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+                    if (hit.collider != null)
+                    {
+                        nameGot = hit.collider.gameObject.name;
+                    }
 
-                if (nameGot == "Cardridge1")
-                    json = File.ReadAllText(Application.dataPath + "/card1.json");
+                    string json = "";
 
-                if (nameGot == "Cardridge2")
-                    json = File.ReadAllText(Application.dataPath + "/card2.json");
+                    if (nameGot == "Cardridge1")
+                        json = File.ReadAllText(Application.dataPath + "/card1.json");
 
-                if (nameGot == "Cardridge3")
-                    json = File.ReadAllText(Application.dataPath + "/card3.json");
+                    if (nameGot == "Cardridge2")
+                        json = File.ReadAllText(Application.dataPath + "/card2.json");
 
-
-                Card card = JsonUtility.FromJson<Card>(json);
-
-                //scChange.arcadeToGame(card.name);
-
-                Card card2 = new Card();
-                card2.wasPlayed = true;
-                //card2.effectUsed = true;
+                    if (nameGot == "Cardridge3")
+                        json = File.ReadAllText(Application.dataPath + "/card3.json");
 
 
-                if (nameGot == "Cardridge1")
-                {
-                    
-                    card2.name = card.name;
-                    json = JsonUtility.ToJson(card2);
-                    File.WriteAllText(Application.dataPath + "/card1.json", json);
+                    Card card = JsonUtility.FromJson<Card>(json);
 
-                    scChange.arcadeToGame(card.name);
+                    //scChange.arcadeToGame(card.name);
 
-                }
-                if (nameGot == "Cardridge2")
-                {
+                    Card card2 = new Card();
+                    card2.wasPlayed = true;
+                    //card2.effectUsed = true;
 
-                    card2.name = card.name;
-                    json = JsonUtility.ToJson(card2);
-                    File.WriteAllText(Application.dataPath + "/card2.json", json);
 
-                    scChange.arcadeToGame(card.name);
+                    if (nameGot == "Cardridge1")
+                    {
 
-                }
-                if (nameGot == "Cardridge3")
-                {
+                        card2.name = card.name;
+                        json = JsonUtility.ToJson(card2);
+                        File.WriteAllText(Application.dataPath + "/card1.json", json);
 
-                    card2.name = card.name;
-                    json = JsonUtility.ToJson(card2);
-                    File.WriteAllText(Application.dataPath + "/card3.json", json);
+                        scChange.arcadeToGame(card.name);
 
-                    scChange.arcadeToGame(card.name);
+                    }
+                    if (nameGot == "Cardridge2")
+                    {
+
+                        card2.name = card.name;
+                        json = JsonUtility.ToJson(card2);
+                        File.WriteAllText(Application.dataPath + "/card2.json", json);
+
+                        scChange.arcadeToGame(card.name);
+
+                    }
+                    if (nameGot == "Cardridge3")
+                    {
+
+                        card2.name = card.name;
+                        json = JsonUtility.ToJson(card2);
+                        File.WriteAllText(Application.dataPath + "/card3.json", json);
+
+                        scChange.arcadeToGame(card.name);
+                    }
                 }
             }
         }
@@ -233,13 +247,18 @@ public class CombatSystem : MonoBehaviour
     public class effect
     {
         public int turn;
-        public int whoToExplode;
-        public int bombermanDamageTurn;
-        public int whoNoDamage;
+        //public int whoToExplode;
+        public int bombermanDamageTurn1;
+        public int bombermanDamageTurn2;
+        //public int whoNoDamage;
+        public int noInvincibleTurn1;
+        public int noInvincibleTurn2;
         public int whoReflectDamage;
-        public int turnToReflect;
-        public int whoPoisoned;
-        public int turnToStopPoison;
+        public int turnToReflect1;
+        public int turnToReflect2;
+        //public int whoPoisoned;
+        public int turnToStopPoison1;
+        public int turnToStopPoison2;
     }
     void getNewCard(string cardNr)
     {
@@ -287,105 +306,125 @@ public class CombatSystem : MonoBehaviour
     void useEffect(string gamePlayed, bool won)
     {
         /*
-         * heal if win-pacman x
-         * both take dmg, u less if win -minesweeper X
-         * reflect dmg next turn if damaged-pong x
-         * damage mare dupa cateva ture-bomberman x
-         * take no next damage(dodge)-space inv x
-         * damage over time-snake x
+         * heal-pacman 
+         * both take dmg, winner less -minesweeper 
+         * reflect dmg next turn if damaged-pong 
+         * high dmg after 2 turns-bomberman 
+         * take no next damage-space inv 
+         * low damage over 4 turns-snake 
          */
 
-        /*********TO ADD STACKED DAMAGE/ solve defense problems****************/
+
         string json1 = File.ReadAllText(Application.dataPath + "/Effects.json");
         effect ef = JsonUtility.FromJson<effect>(json1);
 
         int initialPlayerHP = playerHP;
         int initialEnemyHP = enemyHP;
 
-        if (ef.turn == ef.bombermanDamageTurn)
-        {
-            if (ef.whoToExplode == 1)
-            { playerHP -= 30; ef.whoToExplode = 0; ef.bombermanDamageTurn = -1; }
-            if (ef.whoToExplode == 2)
-            { enemyHP -= 30; ef.whoToExplode = 0; ef.bombermanDamageTurn = -1; }
-        }
-        if (ef.turn < ef.turnToStopPoison)
-        {
-            if (ef.whoPoisoned == 1)
-                playerHP -= 5;
-            if (ef.whoPoisoned == 2)
-                enemyHP -= 5;
-        }
-        else
-            ef.turnToStopPoison = -1;
+        int tempPlayerHP = playerHP;
+        int tempEnemyHP = enemyHP;
 
         switch (gamePlayed)
         {
-            case "bomberman":
+
+            case "bomberman"://dupa ce a fost folosita,explodeaza in a3a tura(dupa 2 ture)
                 if (won)
-                { ef.bombermanDamageTurn = ef.turn + 2; ef.whoToExplode = 0; } 
+                { if(ef.bombermanDamageTurn2==-1) ef.bombermanDamageTurn2 = ef.turn + 2;  }
                 else
-                { ef.bombermanDamageTurn = ef.turn + 2; ef.whoToExplode = 0; }
+                { if (ef.bombermanDamageTurn1 == -1) ef.bombermanDamageTurn1 = ef.turn + 2;}
                 break;
-            case "minesweeper":
+           case "minesweeper":
+               if (won)
+               { tempEnemyHP -= 20 + bonus1; tempPlayerHP -= 10 + bonus1; }
+               else
+               { tempPlayerHP -= 20 + bonus1; tempEnemyHP -= 10 + bonus1; }
+               break;
+           case "Pong":
+               if (won)
+               { ef.whoReflectDamage = 1; ef.turnToReflect1 = ef.turn+1; }
+               else
+               { ef.whoReflectDamage = 2; ef.turnToReflect2 = ef.turn+1; }
+               break;
+            case "Snake"://damage-ul se termina in a 5 tura(tine 4 ture dupa ce e folosit)
                 if (won)
-                { enemyHP -= 20; if (ef.whoNoDamage != 2) playerHP -= 10; }
-                else
-                { playerHP -= 20; if (ef.whoNoDamage != 1) enemyHP -= 10; }
-                break;
-            case "Pong":
-                if (won)
-                { ef.whoReflectDamage = 1; ef.turnToReflect = ef.turn + 1; }
-                else
-                { ef.whoReflectDamage = 2; ef.turnToReflect = ef.turn + 1; }
-                break;
-            case "Snake":
-                if (won)
-                { ef.whoPoisoned = 1; ef.turnToStopPoison = ef.turn + 4; }
-                else
-                { ef.whoPoisoned = 2; ef.turnToStopPoison = ef.turn + 4; }
-                break;
-            case "SpaceInvaders":
-                if (won)
-                    ef.whoNoDamage = 1; //the player will not take damage
-                else
-                    ef.whoNoDamage = 2;//the enemy will not take damage
-                break;
-            case "PacMan":
-                if (won)
-                    playerHP += 10;
-                else
-                    enemyHP += 10;
-                break;
+               { ef.turnToStopPoison2 = ef.turn + 4; }
+               else
+               { ef.turnToStopPoison1 = ef.turn + 4; }
+               break;
+           case "SpaceInvaders":
+               if (won)
+                    ef.noInvincibleTurn1 = ef.turn + 1; //the player will not take damage
+               else
+                    ef.noInvincibleTurn2 = ef.turn + 1;//the enemy will not take damage
+               break;
+           case "PacMan":
+               if (won)
+               tempPlayerHP += 10 + bonus5;
+               else
+                   tempEnemyHP += 10 + bonus5;
+               break;
 
         }
-        if (ef.whoNoDamage == 1)
-            if (playerHP < initialPlayerHP)
-            { playerHP = initialPlayerHP; ef.whoNoDamage = 0; }
-        if (ef.whoNoDamage == 2)
-            if (enemyHP < initialEnemyHP)
-            { enemyHP = initialEnemyHP; ef.whoNoDamage = 0; }
 
-        if (ef.whoReflectDamage==1&&ef.turn==ef.turnToReflect)
-            if(playerHP<initialPlayerHP)
-            {
-                enemyHP -= (initialPlayerHP - playerHP);
-                playerHP = initialPlayerHP;
-                ef.turnToReflect = -1;
-                ef.whoReflectDamage = 0;
-            }
-        if (ef.whoReflectDamage == 2&&ef.turn == ef.turnToReflect)
-            if (enemyHP < initialEnemyHP)
-            {
-                playerHP -= (initialEnemyHP - enemyHP);
-                enemyHP = initialEnemyHP;
-                ef.turnToReflect = -1;
-                ef.whoReflectDamage = 0;
-            }
 
+        if (ef.turn < ef.turnToStopPoison1)
+        {
+            ///if (ef.whoPoisoned == 1)
+            tempPlayerHP -= 5 + bonus3;
+        }
+        else
+            ef.turnToStopPoison1 = -1;
+        if (ef.turn < ef.turnToStopPoison2)
+        {
+            ///if (ef.whoPoisoned == 2)
+            tempEnemyHP -= 5 + bonus3;
+        }
+        else
+            ef.turnToStopPoison2 = -1;
+
+        if (ef.turn == ef.bombermanDamageTurn1)
+        ///if (ef.whoToExplode == 1)
+        { tempPlayerHP -= 35 + bonus0; /*ef.whoToExplode = 0;*/ ef.bombermanDamageTurn1 = -1; }
+        if (ef.turn == ef.bombermanDamageTurn2)
+        ///if (ef.whoToExplode == 2)
+        { tempEnemyHP -= 35 + bonus0; /*ef.whoToExplode = 0;*/ ef.bombermanDamageTurn2 = -1; }
+
+       // if (ef.whoNoDamage == 1)
+       if(ef.turn<ef.noInvincibleTurn1+bonus4)
+            { tempPlayerHP = initialPlayerHP; /*ef.whoNoDamage = 0; */}
+       else
+            ef.noInvincibleTurn1 = -1;
+        // if (ef.whoNoDamage == 2)
+        if (ef.turn < ef.noInvincibleTurn2+bonus4)
+            { tempEnemyHP = initialEnemyHP; /*ef.whoNoDamage = 0; */}
+        else
+            ef.noInvincibleTurn2 = -1;
+
+        if (ef.whoReflectDamage == 1 && ef.turn == ef.turnToReflect1)
+        {
+            //if (tempPlayerHP < initialPlayerHP)
+            //{
+            tempEnemyHP -= (initialPlayerHP - tempPlayerHP) + bonus2;
+            tempPlayerHP = initialPlayerHP;
+            //}
+            ef.turnToReflect1 = -1;
+            ef.whoReflectDamage = 0;
+        }
+        if (ef.whoReflectDamage == 2 && ef.turn == ef.turnToReflect2)
+        {
+            //if (tempEnemyHP < initialEnemyHP)
+            //{
+            tempPlayerHP -= (initialEnemyHP - tempEnemyHP) + bonus2;
+            tempEnemyHP = initialEnemyHP;
+            //}
+            ef.turnToReflect2 = -1;
+            ef.whoReflectDamage = 0;
+        }
         string json2 = JsonUtility.ToJson(ef);
         File.WriteAllText(Application.dataPath + "/Effects.json", json2);
 
+        playerHP = tempPlayerHP;
+        enemyHP = tempEnemyHP;
         HPBar.SetHealth(playerHP);
         EHPBar.SetEHealth(enemyHP);
         HP x = new HP();
@@ -393,7 +432,7 @@ public class CombatSystem : MonoBehaviour
         x.enemyHP = enemyHP;
         string json = JsonUtility.ToJson(x);
         File.WriteAllText(Application.dataPath + "/HPs.json", json);
-
+        
     }
 
     void GameOver()
@@ -419,9 +458,17 @@ public class CombatSystem : MonoBehaviour
         enemyToBattle enemy = JsonUtility.FromJson<enemyToBattle>(json1);
 
         if (enemyHP <= 0)
-        { enemy.nextEnemyNr++; spawnPoint.ifToSpawn(false); enemyHP = 100; }
+        { 
+            enemy.nextEnemyNr++; 
+            spawnPoint.ifToSpawn(false); 
+            enemyHP = 100; 
+        }
         else if (playerHP <= 0)
-        { enemyHP = 100; spawnPoint.ifToSpawn(true); respawn(); playerHP = 100; }
+        { 
+            enemyHP = 100; 
+            spawnPoint.ifToSpawn(true); respawn(); 
+            playerHP = 100; 
+        }
 
         HP x = new HP();
         x.playerHP = playerHP;
