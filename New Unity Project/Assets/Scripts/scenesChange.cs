@@ -9,7 +9,21 @@ public class scenesChange : MonoBehaviour
 
     void mapToArcade()
     {
-        /** So the arcade scene will start as usual **/
+        /*INITIALIZARI EFECTE*/
+        effect ef = new effect();
+        ef.turn=0;
+        ef.whoToExplode=0;
+        ef.bombermanDamageTurn=-1;
+        ef.whoNoDamage=0;
+        ef.whoReflectDamage=0;
+        ef.turnToReflect=-1;
+        ef.whoPoisoned=0;
+        ef.turnToStopPoison=-1;
+    
+    string json = JsonUtility.ToJson(ef);
+        File.WriteAllText(Application.dataPath + "/Effects.json", json);
+
+        /*THE ARCADE SCENE WILL RESTART */
         gameInProgress GIP = new gameInProgress();
         GIP.IsPlaying = false;
         string playing = JsonUtility.ToJson(GIP);
@@ -20,9 +34,9 @@ public class scenesChange : MonoBehaviour
         Data.position = player.position;
        
         Data.position.y -= 2;
-        string json = JsonUtility.ToJson(Data);
+        string json1 = JsonUtility.ToJson(Data);
 
-        File.WriteAllText(Application.dataPath + "/savefile.json", json);
+        File.WriteAllText(Application.dataPath + "/savefile.json", json1);
         
         SceneManager.LoadScene("Arcade");
 
@@ -119,6 +133,16 @@ public class scenesChange : MonoBehaviour
     {
         public bool IsPlaying;
     }
-
+    public class effect
+    {
+        public int turn;
+        public int whoToExplode;
+        public int bombermanDamageTurn;
+        public int whoNoDamage;
+        public int whoReflectDamage;
+        public int turnToReflect;
+        public int whoPoisoned;
+        public int turnToStopPoison;
+    }
 
 }

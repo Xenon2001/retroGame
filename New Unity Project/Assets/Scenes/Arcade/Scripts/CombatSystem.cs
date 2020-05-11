@@ -21,18 +21,12 @@ public class CombatSystem : MonoBehaviour
 
     void Start()
     {
-        /*
-         * heal if win-pacman
-         * high damage if win ?depending on time / both take dmg, u less if win -minesweeper
-         * reflect dmg next turn if damaged-pong
-         * damage mare dupa cateva ture-bomberman
-         * take no next damage(dodge)-space inv
-         * damage over time-snake
-         * */
-        enemyToBattle enemy = new enemyToBattle();
-        string json4 = JsonUtility.ToJson(enemy);
-        enemy.currentEnemyNr = "Enemy0";
-        File.WriteAllText(Application.dataPath + "/Effects.json", json4);
+        string json1 = File.ReadAllText(Application.dataPath + "/Effects.json");
+        effect ef = JsonUtility.FromJson<effect>(json1);
+        ef.turn++;
+        string json2 = JsonUtility.ToJson(ef);
+        File.WriteAllText(Application.dataPath + "/Effects.json", json2);
+
 
         string Hp = File.ReadAllText(Application.dataPath + "/HPs.json");
 
@@ -47,17 +41,17 @@ public class CombatSystem : MonoBehaviour
 
             if (this.name == "Cardridge" + cardIndex.ToString())
             {
-                string json = File.ReadAllText(Application.dataPath + "/card" + cardIndex.ToString() + ".json");
+                string json3 = File.ReadAllText(Application.dataPath + "/card" + cardIndex.ToString() + ".json");
 
-                Card card = JsonUtility.FromJson<Card>(json);
+                Card card = JsonUtility.FromJson<Card>(json3);
 
                // effectUsed = card.effectUsed;
                 wasPlayed = card.wasPlayed;
 
                 if (/*(effectUsed)&&*/  wasPlayed)
                 {
-                    string json2 = File.ReadAllText(Application.dataPath + "/game.json");
-                    Game game = JsonUtility.FromJson<Game>(json2);
+                    string json4 = File.ReadAllText(Application.dataPath + "/game.json");
+                    Game game = JsonUtility.FromJson<Game>(json4);
 
                     useEffect(game.name, game.win);
                     getNewCard("card" + cardIndex.ToString());
@@ -236,6 +230,17 @@ public class CombatSystem : MonoBehaviour
         public string currentEnemyNr;
         public int nextEnemyNr;
     }
+    public class effect
+    {
+        public int turn;
+        public int whoToExplode;
+        public int bombermanDamageTurn;
+        public int whoNoDamage;
+        public int whoReflectDamage;
+        public int turnToReflect;
+        public int whoPoisoned;
+        public int turnToStopPoison;
+    }
     void getNewCard(string cardNr)
     {
         Card card = new Card();
@@ -281,46 +286,106 @@ public class CombatSystem : MonoBehaviour
     }
     void useEffect(string gamePlayed, bool won)
     {
+        /*
+         * heal if win-pacman x
+         * both take dmg, u less if win -minesweeper X
+         * reflect dmg next turn if damaged-pong x
+         * damage mare dupa cateva ture-bomberman x
+         * take no next damage(dodge)-space inv x
+         * damage over time-snake x
+         */
+
+        /*********TO ADD STACKED DAMAGE/ solve defense problems****************/
+        string json1 = File.ReadAllText(Application.dataPath + "/Effects.json");
+        effect ef = JsonUtility.FromJson<effect>(json1);
+
+        int initialPlayerHP = playerHP;
+        int initialEnemyHP = enemyHP;
+
+        if (ef.turn == ef.bombermanDamageTurn)
+        {
+            if (ef.whoToExplode == 1)
+            { playerHP -= 30; ef.whoToExplode = 0; ef.bombermanDamageTurn = -1; }
+            if (ef.whoToExplode == 2)
+            { enemyHP -= 30; ef.whoToExplode = 0; ef.bombermanDamageTurn = -1; }
+        }
+        if (ef.turn < ef.turnToStopPoison)
+        {
+            if (ef.whoPoisoned == 1)
+                playerHP -= 5;
+            if (ef.whoPoisoned == 2)
+                enemyHP -= 5;
+        }
+        else
+            ef.turnToStopPoison = -1;
+
         switch (gamePlayed)
         {
             case "bomberman":
                 if (won)
-                    enemyHP -= 10;
+                { ef.bombermanDamageTurn = ef.turn + 2; ef.whoToExplode = 0; } 
                 else
-                    playerHP -= 10;
+                { ef.bombermanDamageTurn = ef.turn + 2; ef.whoToExplode = 0; }
                 break;
             case "minesweeper":
                 if (won)
-                    enemyHP -= 10;
+                { enemyHP -= 20; if (ef.whoNoDamage != 2) playerHP -= 10; }
                 else
-                    playerHP -= 10;
+                { playerHP -= 20; if (ef.whoNoDamage != 1) enemyHP -= 10; }
                 break;
             case "Pong":
                 if (won)
-                    enemyHP -= 10;
+                { ef.whoReflectDamage = 1; ef.turnToReflect = ef.turn + 1; }
                 else
-                    playerHP -= 10;
+                { ef.whoReflectDamage = 2; ef.turnToReflect = ef.turn + 1; }
                 break;
             case "Snake":
                 if (won)
-                    enemyHP -= 10;
+                { ef.whoPoisoned = 1; ef.turnToStopPoison = ef.turn + 4; }
                 else
-                    playerHP -= 10;
+                { ef.whoPoisoned = 2; ef.turnToStopPoison = ef.turn + 4; }
                 break;
             case "SpaceInvaders":
                 if (won)
-                    enemyHP -= 10;
+                    ef.whoNoDamage = 1; //the player will not take damage
                 else
-                    playerHP -= 10;
+                    ef.whoNoDamage = 2;//the enemy will not take damage
                 break;
             case "PacMan":
                 if (won)
-                    enemyHP -= 10;
+                    playerHP += 10;
                 else
-                    playerHP -= 10;
+                    enemyHP += 10;
                 break;
 
         }
+        if (ef.whoNoDamage == 1)
+            if (playerHP < initialPlayerHP)
+            { playerHP = initialPlayerHP; ef.whoNoDamage = 0; }
+        if (ef.whoNoDamage == 2)
+            if (enemyHP < initialEnemyHP)
+            { enemyHP = initialEnemyHP; ef.whoNoDamage = 0; }
+
+        if (ef.whoReflectDamage==1&&ef.turn==ef.turnToReflect)
+            if(playerHP<initialPlayerHP)
+            {
+                enemyHP -= (initialPlayerHP - playerHP);
+                playerHP = initialPlayerHP;
+                ef.turnToReflect = -1;
+                ef.whoReflectDamage = 0;
+            }
+        if (ef.whoReflectDamage == 2&&ef.turn == ef.turnToReflect)
+            if (enemyHP < initialEnemyHP)
+            {
+                playerHP -= (initialEnemyHP - enemyHP);
+                enemyHP = initialEnemyHP;
+                ef.turnToReflect = -1;
+                ef.whoReflectDamage = 0;
+            }
+
+        string json2 = JsonUtility.ToJson(ef);
+        File.WriteAllText(Application.dataPath + "/Effects.json", json2);
+
         HPBar.SetHealth(playerHP);
         EHPBar.SetEHealth(enemyHP);
         HP x = new HP();
