@@ -14,12 +14,13 @@ public class enemy : MonoBehaviour
 
     void Awake()
     {
-        player = GameObject.FindWithTag("Player");
-        map.enemies[GameController.noOfEnemies++] = this;
+
     }
     void Start()
     {
-       // print(this.name + " " + onX + " " + onY);
+        // print(this.name + " " + onX + " " + onY);
+        player = GameObject.FindWithTag("Player");
+        map.enemies[GameController.noOfEnemies++] = this;
         transform.position = new Vector3(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y), 0);
         
     }
