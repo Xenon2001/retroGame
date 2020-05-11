@@ -5,16 +5,11 @@ using UnityEngine;
 public class End : MonoBehaviour
 {
     public GameObject endMenu;
-    private bool end;
 
-    void Update()
+    public void EndScreen()
     {
-        //CONDITIE DE END
-        if (end)
-        {
             endMenu.SetActive(true);
 
-        }
     }
 
 }
