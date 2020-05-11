@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Effects : MonoBehaviour
+public class EnemyEffects : MonoBehaviour
 {
     public GameObject Ef1, Ef2, Ef3, Ef4;
     public Text txt1, txt2, txt3;
 
     public void Effect1(int turns)
     {
-        if(turns>0)
+        if (turns > 0)
         {
             Ef1.SetActive(true);
             txt1.text = turns.ToString();

@@ -32,6 +32,7 @@ public class GameBegin : MonoBehaviour
     public Sprite Enemy7;
     public Sprite Enemy8;
     public Sprite Enemy9;
+    public End endScript;
 
     public class gameInProgress
     {
@@ -170,6 +171,9 @@ public class GameBegin : MonoBehaviour
         Cardridge1.SetActive(false);
         Cardridge2.SetActive(false);
         Cardridge3.SetActive(false);
+
+        if (enemy.nextEnemyNr == 10)
+            endScript.EndScreen();
     }
     void OnTriggerEnter2D(Collider2D col)
     {

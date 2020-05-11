@@ -25,6 +25,8 @@ public class CombatSystem : MonoBehaviour
     public int bonus3;//5
     public int bonus4;//1
     public int bonus5;//10
+    public Effects effectsScript;
+    public EnemyEffects enemyEffectsScript;
 
     void Start()
     {
@@ -346,12 +348,14 @@ public class CombatSystem : MonoBehaviour
         int tempPlayerHP = playerHP;
         int tempEnemyHP = enemyHP;
 
+
+
         switch (gamePlayed)
         {
 
             case "bomberman"://dupa ce a fost folosita,explodeaza in a3a tura(dupa 2 ture)
                 if (won)
-                { if(ef.bombermanDamageTurn2==-1) ef.bombermanDamageTurn2 = ef.turn + 2;  }
+                { if(ef.bombermanDamageTurn2==-1) ef.bombermanDamageTurn2 = ef.turn + 2;}
                 else
                 { if (ef.bombermanDamageTurn1 == -1) ef.bombermanDamageTurn1 = ef.turn + 2;}
                 break;
@@ -374,9 +378,10 @@ public class CombatSystem : MonoBehaviour
                { ef.turnToStopPoison1 = ef.turn + 4; }
                break;
            case "SpaceInvaders":
-               if (won)
-                    ef.noInvincibleTurn1 = ef.turn + 1; //the player will not take damage
-               else
+                if (won)
+                    ef.noInvincibleTurn1 = ef.turn + 1;
+                 //the player will not take damage
+                else
                     ef.noInvincibleTurn2 = ef.turn + 1;//the enemy will not take damage
                break;
            case "PacMan":
@@ -454,7 +459,24 @@ public class CombatSystem : MonoBehaviour
         x.enemyHP = enemyHP;
         string json = JsonUtility.ToJson(x);
         File.WriteAllText(Application.dataPath + "/HPs.json", json);
-        
+
+        if (ef.bombermanDamageTurn1 != -1)
+            effectsScript.Effect1(ef.bombermanDamageTurn1 - ef.turn);
+        if (ef.turnToStopPoison1 != -1)
+            effectsScript.Effect2(ef.turnToStopPoison1 - ef.turn);
+        if (ef.noInvincibleTurn1 != -1)
+            effectsScript.Effect3(ef.noInvincibleTurn1 - ef.turn);
+        if (ef.whoReflectDamage == 1)
+            effectsScript.Effect4(true);
+
+        if (ef.bombermanDamageTurn2 != -1)
+            enemyEffectsScript.Effect1(ef.bombermanDamageTurn2 - ef.turn);
+        if (ef.turnToStopPoison2!= -1)
+            enemyEffectsScript.Effect2(ef.turnToStopPoison2 - ef.turn);
+        if (ef.noInvincibleTurn2 != -1)
+            enemyEffectsScript.Effect3(ef.noInvincibleTurn2 - ef.turn);
+        if (ef.whoReflectDamage == 2)
+            enemyEffectsScript.Effect4(true);
     }
 
     void GameOver()
