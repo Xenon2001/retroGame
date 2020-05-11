@@ -16,6 +16,7 @@ public class CombatSystem : MonoBehaviour
     public int playerHP, enemyHP;
     public scenesChange scChange;
     string nameGot;
+    Transform cardTransform;
     public HealthBar HPBar;
     public EnemyHPBar EHPBar;
     public int bonus0;//10
@@ -96,7 +97,28 @@ public class CombatSystem : MonoBehaviour
             }
         }
     }
-  
+    void OnMouseOver()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+
+        RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+
+        if (hit.collider != null)
+        {
+            cardTransform = hit.collider.gameObject.transform;
+            nameGot = hit.collider.gameObject.name;
+        }
+        if(nameGot == "Cardridge1"|| nameGot == "Cardridge2"|| nameGot == "Cardridge3")
+        {
+            cardTransform.position = Vector3.MoveTowards(cardTransform.position, new Vector3(cardTransform.position.x, 0, 0),Time.deltaTime);
+        }
+    }
+    void OnMouseExit()
+    {
+            cardTransform.position =new Vector3(cardTransform.position.x, -0.3f, 0);
+    }
+
     void Update()
     {
         string check = File.ReadAllText(Application.dataPath + "/GameInProgress.json");
