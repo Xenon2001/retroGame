@@ -260,7 +260,7 @@ public class GameBegin : MonoBehaviour
             Cardridge1.SetActive(false);
             Cardridge2.SetActive(false);
             Cardridge3.SetActive(false);
-            combatScript.enemyHP = 100;
+            /////////////////combatScript.enemyHP = 100;
         }
 
     }

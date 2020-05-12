@@ -504,12 +504,16 @@ public class CombatSystem : MonoBehaviour
         if (enemyHP <= 0)
         { 
             enemy.nextEnemyNr++; 
-            spawnPoint.ifToSpawn(false); 
-            enemyHP = 100; 
+            spawnPoint.ifToSpawn(false);
+            if (enemy.nextEnemyNr == 9)
+                enemyHP = 200;
+            else enemyHP = 100;
         }
         else if (playerHP <= 0)
-        { 
-            enemyHP = 100; 
+        {
+            if (enemy.nextEnemyNr == 9)
+                enemyHP = 200;
+            else enemyHP = 100;
             spawnPoint.ifToSpawn(true); respawn(); 
             playerHP = 100; 
         }

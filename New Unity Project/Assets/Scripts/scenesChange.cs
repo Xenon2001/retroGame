@@ -62,7 +62,6 @@ public class scenesChange : MonoBehaviour
 
         data Data = JsonUtility.FromJson<data>(json);
         playerMovement.loadPosition(Data.position);
-        spawnPoint.ifToSpawn(false);
         SceneManager.LoadScene("GamScene");
     }
 
