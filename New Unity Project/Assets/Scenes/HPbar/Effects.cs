@@ -2,15 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class Effects : MonoBehaviour
 {
     public GameObject Ef1, Ef2, Ef3, Ef4;
     public Text txt1, txt2, txt3;
 
+    void Update()
+    {
+        string json = File.ReadAllText(Application.dataPath + "/GameInProgress.json");
+        gameInProgress GIP = JsonUtility.FromJson<gameInProgress>(json);
+        if(!GIP.IsPlaying)
+        { 
+            Effect1(0);
+            Effect2(0);
+            Effect3(0);
+            Effect4(false);
+        }    
+    }
     public void Effect1(int turns)
     {
-        if(turns>0)
+        
+        if (turns>0)
         {
             Ef1.SetActive(true);
             txt1.text = turns.ToString();
@@ -46,7 +60,7 @@ public class Effects : MonoBehaviour
     }
     public void Effect4(bool active)
     {
-        if (active)
+        if(active)
         {
             Ef4.SetActive(true);
         }
@@ -54,5 +68,10 @@ public class Effects : MonoBehaviour
         {
             Ef4.SetActive(false);
         }
+    }
+
+    public class gameInProgress
+    {
+        public bool IsPlaying;
     }
 }

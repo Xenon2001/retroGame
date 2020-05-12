@@ -19,12 +19,6 @@ public class CombatSystem : MonoBehaviour
     Transform cardTransform;
     public HealthBar HPBar;
     public EnemyHPBar EHPBar;
-    public int bonus0;//10
-    public int bonus1;//10
-    public int bonus2;//10
-    public int bonus3;//5
-    public int bonus4;//1
-    public int bonus5;//10
     public Effects effectsScript;
     public EnemyEffects enemyEffectsScript;
 
@@ -283,6 +277,12 @@ public class CombatSystem : MonoBehaviour
         //public int whoPoisoned;
         public int turnToStopPoison1;
         public int turnToStopPoison2;
+        public int bonus0;//10
+        public int bonus1;//10
+        public int bonus2;//10
+        public int bonus3;//5
+        public int bonus4;//1
+        public int bonus5;//10
     }
     void getNewCard(string cardNr)
     {
@@ -329,16 +329,6 @@ public class CombatSystem : MonoBehaviour
     }
     void useEffect(string gamePlayed, bool won)
     {
-        /*
-         * heal-pacman 
-         * both take dmg, winner less -minesweeper 
-         * reflect dmg next turn if damaged-pong 
-         * high dmg after 2 turns-bomberman 
-         * take no next damage-space inv 
-         * low damage over 4 turns-snake 
-         */
-
-
         string json1 = File.ReadAllText(Application.dataPath + "/Effects.json");
         effect ef = JsonUtility.FromJson<effect>(json1);
 
@@ -348,7 +338,8 @@ public class CombatSystem : MonoBehaviour
         int tempPlayerHP = playerHP;
         int tempEnemyHP = enemyHP;
 
-
+        print("bonus0=" + ef.bonus0);
+        print("bonus1=" + ef.bonus1);
 
         switch (gamePlayed)
         {
@@ -361,9 +352,9 @@ public class CombatSystem : MonoBehaviour
                 break;
            case "minesweeper":
                if (won)
-               { tempEnemyHP -= 20 + bonus1; tempPlayerHP -= 10 + bonus1; }
+               { tempEnemyHP -= 20 + ef.bonus1; tempPlayerHP -= 10 + ef.bonus1; }
                else
-               { tempPlayerHP -= 20 + bonus1; tempEnemyHP -= 10 + bonus1; }
+               { tempPlayerHP -= 20 + ef.bonus1; tempEnemyHP -= 10 + ef.bonus1; }
                break;
            case "Pong":
                if (won)
@@ -386,9 +377,9 @@ public class CombatSystem : MonoBehaviour
                break;
            case "PacMan":
                if (won)
-               tempPlayerHP += 10 + bonus5;
+               tempPlayerHP += 10 + ef.bonus5;
                else
-                   tempEnemyHP += 10 + bonus5;
+                   tempEnemyHP += 10 + ef.bonus5;
                break;
 
         }
@@ -397,32 +388,32 @@ public class CombatSystem : MonoBehaviour
         if (ef.turn < ef.turnToStopPoison1)
         {
             ///if (ef.whoPoisoned == 1)
-            tempPlayerHP -= 5 + bonus3;
+            tempPlayerHP -= 5 + ef.bonus3;
         }
         else
             ef.turnToStopPoison1 = -1;
         if (ef.turn < ef.turnToStopPoison2)
         {
             ///if (ef.whoPoisoned == 2)
-            tempEnemyHP -= 5 + bonus3;
+            tempEnemyHP -= 5 + ef.bonus3;
         }
         else
             ef.turnToStopPoison2 = -1;
 
         if (ef.turn == ef.bombermanDamageTurn1)
         ///if (ef.whoToExplode == 1)
-        { tempPlayerHP -= 35 + bonus0; /*ef.whoToExplode = 0;*/ ef.bombermanDamageTurn1 = -1; }
+        { tempPlayerHP -= 35 + ef.bonus0; /*ef.whoToExplode = 0;*/ ef.bombermanDamageTurn1 = -1; }
         if (ef.turn == ef.bombermanDamageTurn2)
         ///if (ef.whoToExplode == 2)
-        { tempEnemyHP -= 35 + bonus0; /*ef.whoToExplode = 0;*/ ef.bombermanDamageTurn2 = -1; }
+        { tempEnemyHP -= 35 + ef.bonus0; /*ef.whoToExplode = 0;*/ ef.bombermanDamageTurn2 = -1; }
 
        // if (ef.whoNoDamage == 1)
-       if(ef.turn<ef.noInvincibleTurn1+bonus4)
+       if(ef.turn<ef.noInvincibleTurn1+ ef.bonus4)
             { tempPlayerHP = initialPlayerHP; /*ef.whoNoDamage = 0; */}
        else
             ef.noInvincibleTurn1 = -1;
         // if (ef.whoNoDamage == 2)
-        if (ef.turn < ef.noInvincibleTurn2+bonus4)
+        if (ef.turn < ef.noInvincibleTurn2+ ef.bonus4)
             { tempEnemyHP = initialEnemyHP; /*ef.whoNoDamage = 0; */}
         else
             ef.noInvincibleTurn2 = -1;
@@ -431,7 +422,7 @@ public class CombatSystem : MonoBehaviour
         {
             //if (tempPlayerHP < initialPlayerHP)
             //{
-            tempEnemyHP -= (initialPlayerHP - tempPlayerHP) + bonus2;
+            tempEnemyHP -= (initialPlayerHP - tempPlayerHP) + ef.bonus2;
             tempPlayerHP = initialPlayerHP;
             //}
             ef.turnToReflect1 = -1;
@@ -441,7 +432,7 @@ public class CombatSystem : MonoBehaviour
         {
             //if (tempEnemyHP < initialEnemyHP)
             //{
-            tempPlayerHP -= (initialEnemyHP - tempEnemyHP) + bonus2;
+            tempPlayerHP -= (initialEnemyHP - tempEnemyHP) + ef.bonus2;
             tempEnemyHP = initialEnemyHP;
             //}
             ef.turnToReflect2 = -1;
@@ -501,22 +492,33 @@ public class CombatSystem : MonoBehaviour
         string json1 = File.ReadAllText(Application.dataPath + "/enemyToBattle.json");
         enemyToBattle enemy = JsonUtility.FromJson<enemyToBattle>(json1);
 
+
         if (enemyHP <= 0)
         { 
             enemy.nextEnemyNr++; 
             spawnPoint.ifToSpawn(false);
             if (enemy.nextEnemyNr == 9)
                 enemyHP = 200;
-            else enemyHP = 100;
+            else
+                if (enemy.nextEnemyNr == 2 || enemy.nextEnemyNr == 5 || enemy.nextEnemyNr == 8)
+                    enemyHP = 150;
+            else
+                enemyHP = 100;
         }
         else if (playerHP <= 0)
         {
             if (enemy.nextEnemyNr == 9)
                 enemyHP = 200;
-            else enemyHP = 100;
+            else
+                if (enemy.nextEnemyNr == 2 || enemy.nextEnemyNr == 5 || enemy.nextEnemyNr == 8)
+                enemyHP = 150;
+            else
+                enemyHP = 100;
             spawnPoint.ifToSpawn(true); respawn(); 
             playerHP = 100; 
         }
+        else
+            spawnPoint.ifToSpawn(false);
 
         HP x = new HP();
         x.playerHP = playerHP;

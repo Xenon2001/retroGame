@@ -380,6 +380,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: IsPlaying
     m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: EnemyNr
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5727523954077448161}
   m_Solo: 0
@@ -852,6 +855,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: IsPlaying
+    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: EnemyNr
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8926145533881592234}

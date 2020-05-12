@@ -7,7 +7,7 @@ public class spawnPoint : MonoBehaviour
 {
     public Transform target;
     static bool toSpawn;
-
+    public GameObject spawnPointMessage;
     public class zona
     {
         public string x;
@@ -43,6 +43,7 @@ public class spawnPoint : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        spawnPointMessage.SetActive(true);
 
         zona Zona = new zona();
         
@@ -59,5 +60,10 @@ public class spawnPoint : MonoBehaviour
         string json = JsonUtility.ToJson(Zona);
         File.WriteAllText(Application.dataPath + "/zona.json", json);
         
+    }
+
+    void OnTriggerExit2D()
+    {
+        spawnPointMessage.SetActive(false);
     }
 }

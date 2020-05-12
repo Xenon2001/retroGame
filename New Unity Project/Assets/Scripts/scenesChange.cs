@@ -133,6 +133,7 @@ public class scenesChange : MonoBehaviour
     {
         public bool IsPlaying;
     }
+
     public class effect
     {
         public int turn;
