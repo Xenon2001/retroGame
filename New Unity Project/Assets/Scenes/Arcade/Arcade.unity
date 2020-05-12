@@ -652,6 +652,8 @@ MonoBehaviour:
   EHPBar: {fileID: 1452308699}
   effectsScript: {fileID: 282092922}
   enemyEffectsScript: {fileID: 1576657826}
+  basicCursor: {fileID: 2800000, guid: e476230f685b4d3459be6cfeef9ff2f6, type: 3}
+  gameCursor: {fileID: 2800000, guid: 6b11f94387b364d448ef120b9556ef2b, type: 3}
 --- !u!212 &72832001
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7157,6 +7159,8 @@ MonoBehaviour:
   EHPBar: {fileID: 1452308699}
   effectsScript: {fileID: 282092922}
   enemyEffectsScript: {fileID: 1576657826}
+  basicCursor: {fileID: 2800000, guid: e476230f685b4d3459be6cfeef9ff2f6, type: 3}
+  gameCursor: {fileID: 2800000, guid: 6b11f94387b364d448ef120b9556ef2b, type: 3}
 --- !u!212 &1084203171
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8505,6 +8509,8 @@ MonoBehaviour:
   EHPBar: {fileID: 1452308699}
   effectsScript: {fileID: 282092922}
   enemyEffectsScript: {fileID: 1576657826}
+  basicCursor: {fileID: 2800000, guid: e476230f685b4d3459be6cfeef9ff2f6, type: 3}
+  gameCursor: {fileID: 2800000, guid: 6b11f94387b364d448ef120b9556ef2b, type: 3}
 --- !u!212 &1306378289
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12126,7 +12132,7 @@ GameObject:
   - component: {fileID: 1861145486}
   - component: {fileID: 1861145488}
   m_Layer: 0
-  m_Name: BombermanBanner
+  m_Name: Banner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -21,9 +21,12 @@ public class CombatSystem : MonoBehaviour
     public EnemyHPBar EHPBar;
     public Effects effectsScript;
     public EnemyEffects enemyEffectsScript;
+    public Texture2D basicCursor;
+    public Texture2D gameCursor;
 
     void Start()
     {
+        Cursor.visible = false;
         if (this.name == "Cardridge1")
         {
             string json1 = File.ReadAllText(Application.dataPath + "/Effects.json");
@@ -107,11 +110,13 @@ public class CombatSystem : MonoBehaviour
         if(nameGot == "Cardridge1"|| nameGot == "Cardridge2"|| nameGot == "Cardridge3")
         {
             cardTransform.position = Vector3.MoveTowards(cardTransform.position, new Vector3(cardTransform.position.x, 0, 0),Time.deltaTime);
+            Cursor.SetCursor(gameCursor, new Vector2(0, 0), CursorMode.ForceSoftware);
         }
     }
     void OnMouseExit()
     {
-            cardTransform.position =new Vector3(cardTransform.position.x, -0.3f, 0);
+        cardTransform.position =new Vector3(cardTransform.position.x, -0.3f, 0);
+        Cursor.SetCursor(basicCursor, new Vector2(0, 0), CursorMode.ForceSoftware);
     }
 
     void Update()
@@ -126,6 +131,7 @@ public class CombatSystem : MonoBehaviour
                 GameOver();
             else
             {
+                Cursor.visible = true;
                 string Hp = File.ReadAllText(Application.dataPath + "/HPs.json");
                 HP hps = JsonUtility.FromJson<HP>(Hp);
 

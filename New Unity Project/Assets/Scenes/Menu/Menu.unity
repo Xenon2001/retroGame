@@ -934,6 +934,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218843317}
   m_CullTransparentMesh: 0
+--- !u!1 &225887990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 225887992}
+  - component: {fileID: 225887991}
+  m_Layer: 0
+  m_Name: Cursor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &225887991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225887990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb7536ffc4bd6243ab21d615393653d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicCursor: {fileID: 2800000, guid: e476230f685b4d3459be6cfeef9ff2f6, type: 3}
+  gameCursor: {fileID: 2800000, guid: 6b11f94387b364d448ef120b9556ef2b, type: 3}
+--- !u!4 &225887992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225887990}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 358.07336, y: 303.008, z: -705.11206}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &321987704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,12 +1848,15 @@ MonoBehaviour:
     se afla in cladirile Arcade raspandite pe harta in cele 3 zone(fiecare este mai
     bun la un anumit joc, fiind mai dificil)
 
-    -Cand ai gasit o cladire Arcade,
-    intra in ea mergand in fata usii, apoi mergi in fata inamicului astfel incat
-    confruntarea sa inceapa
+    -Controale: WASD/Sageti-Miscare  
+    Mouse click stanga-Selectare Esc-Menu
 
-    -In fiecare runda vei avea 3 cartuse de joc in mana,
-    alege unul si vei juca jocul respectiv,iar in fiecare runda vei primi unul nou
+    -Cand ai gasit o cladire Arcade, intra
+    in ea mergand in fata usii, apoi mergi in fata inamicului astfel incat confruntarea
+    sa inceapa
+
+    -In fiecare runda vei avea 3 cartuse de joc in mana, alege unul
+    si vei juca jocul respectiv,iar in fiecare runda vei primi unul nou
 
     -Fiecare
     joc are un efect unic ,efectele fiind separate in 2 categorii: atac si aparare

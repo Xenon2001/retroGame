@@ -101,6 +101,7 @@ public class scenesChange : MonoBehaviour
         }
         if ((scene.name == "Arcade"||scene.name=="Shop") && col.name == "Player")
         {
+            spawnPoint.ifToSpawn(false);
             arcadeToMap();
         }
     }
