@@ -4,14 +4,7 @@ using UnityEngine;
 
 public class SpInDamage : MonoBehaviour
 {
-    //public GameObject[] enemys;
     private int hp = 1;
-
-
-    void Start()
-    {
-       // enemys = GameObject.FindGameObjectsWithTag("SpInEnemy");
-    }
 
 
     void Update()
@@ -30,6 +23,5 @@ public class SpInDamage : MonoBehaviour
     void Erase()
     {
         Destroy(gameObject);
-        //enemys = GameObject.FindGameObjectsWithTag("SpInEnemy");
     }
 }

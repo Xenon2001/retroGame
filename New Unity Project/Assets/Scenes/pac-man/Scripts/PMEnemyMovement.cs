@@ -11,7 +11,7 @@ public class PMEnemyMovement : MonoBehaviour
     public Vector2 spawnPoint;
     int currentWaypoint;
     public bool toSpawn;
-    // Start is called before the first frame update
+
     void Start()
     {
         T = 0;
@@ -20,7 +20,7 @@ public class PMEnemyMovement : MonoBehaviour
         transform.position = waypoints[currentWaypoint].transform.position;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if(gameObject.GetComponent<SpriteRenderer>().enabled ==false)

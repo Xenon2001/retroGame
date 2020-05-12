@@ -37,13 +37,7 @@ public class GameBegin : MonoBehaviour
     {
         public bool IsPlaying;
     }
-    /*TO ADD AT GAMEOVER
-         if(enemyHP==0)
-         Defeated=true;
-         else
-        { movePlayerToSpwanPoint();
-         playerHP=100;}
-         */
+
 
     void Start()
     {
@@ -313,23 +307,20 @@ public class GameBegin : MonoBehaviour
     public class effect
     {
         public int turn;
-        //public int whoToExplode;
         public int bombermanDamageTurn1;
         public int bombermanDamageTurn2;
-        //public int whoNoDamage;
         public int noInvincibleTurn1;
         public int noInvincibleTurn2;
         public int whoReflectDamage;
         public int turnToReflect1;
         public int turnToReflect2;
-        //public int whoPoisoned;
         public int turnToStopPoison1;
         public int turnToStopPoison2;
-        public int bonus0;//10
-        public int bonus1;//10
-        public int bonus2;//10
-        public int bonus3;//5
-        public int bonus4;//1
-        public int bonus5;//10
+        public int bonus0;
+        public int bonus1;
+        public int bonus2;
+        public int bonus3;
+        public int bonus4;
+        public int bonus5;
     }
 }

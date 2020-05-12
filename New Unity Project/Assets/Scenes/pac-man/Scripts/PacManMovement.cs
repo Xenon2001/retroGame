@@ -43,7 +43,7 @@ public class PacManMovement : MonoBehaviour
         }
         else
         {
-            if (score == endScore )//|| killed)
+            if (score == endScore )
                 scenesChange.gameToArcade("PacMan", true);
             else
                 scenesChange.gameToArcade("PacMan", false);

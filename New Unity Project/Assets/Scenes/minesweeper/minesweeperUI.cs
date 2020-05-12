@@ -12,8 +12,5 @@ public class minesweeperUI : MonoBehaviour
     void Update()
     {
         NoOfMines.text = "Mines: " + (element.noOfMines - element.noOfFlags).ToString();
-
-        
-
     }
 }

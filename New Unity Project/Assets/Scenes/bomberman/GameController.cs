@@ -23,7 +23,6 @@ public class GameController : MonoBehaviour
         activBomb = false;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
 

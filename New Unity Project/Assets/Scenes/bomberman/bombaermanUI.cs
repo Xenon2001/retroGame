@@ -15,8 +15,6 @@ public class bombaermanUI : MonoBehaviour
 
         s = Mathf.RoundToInt(s);
 
-        //print((s / 60).ToString() + ":" + (s % 60).ToString());
-
 
         if (micro)
             return "0:" + s;

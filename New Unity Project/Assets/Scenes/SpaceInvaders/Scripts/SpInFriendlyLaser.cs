@@ -12,9 +12,4 @@ public class SpInFriendlyLaser : MonoBehaviour
         Destroy(gameObject, 1.5f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

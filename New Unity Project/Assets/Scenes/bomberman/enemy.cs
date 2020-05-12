@@ -18,7 +18,6 @@ public class enemy : MonoBehaviour
     }
     void Start()
     {
-        // print(this.name + " " + onX + " " + onY);
         player = GameObject.FindWithTag("Player");
         map.enemies[GameController.noOfEnemies++] = this;
         transform.position = new Vector3(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y), 0);
@@ -32,7 +31,6 @@ public class enemy : MonoBehaviour
             GameController.gameOver = true;
             GameController.win = false;
         }
-       // print(GameController.gameOver);
     }
 
     bool canMove(int x, int y, char c)
@@ -87,7 +85,6 @@ public class enemy : MonoBehaviour
             else
                 newY += dir;
 
-            ///print("x, y : " + x + "  " + y + "newX, newY : " + newX + "  " + newY);
                 
 
             if (map.inside(newX, newY) && map.grid[newX,newY].isEmpty)
@@ -107,8 +104,6 @@ public class enemy : MonoBehaviour
             }
                 
             
-
-            //print(move.x + " " + move.y);
             transform.position += move;
 
             lastMove = 0.45f;

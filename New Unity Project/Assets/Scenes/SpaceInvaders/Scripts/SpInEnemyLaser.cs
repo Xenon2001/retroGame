@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class SpInEnemyLaser : MonoBehaviour
 {
-    // Start is called before the first frame update
 
-            private float maxSpeed = 10;
+    private float maxSpeed = 10;
 
     void Start()
     {
@@ -14,9 +13,4 @@ public class SpInEnemyLaser : MonoBehaviour
         Destroy(gameObject, 1.5f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

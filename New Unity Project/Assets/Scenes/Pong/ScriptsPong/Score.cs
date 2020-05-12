@@ -11,13 +11,12 @@ public class Score : MonoBehaviour
     private int Bat_2_Score = 0;
     private bool ok;
     private bool ook;
-    // Start is called before the first frame update
+
     void Start()
     {
         minge = GameObject.Find("Ball");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (minge.transform.position.x >= 14f && Bat_1_Score < 5)

@@ -51,13 +51,11 @@ public class map : MonoBehaviour
                     return false;
                 for (int i = 1; i <= Enemy.minRange / 2; ++i)
                 {
-                    //top and right
                     int newX = x + ((Enemy.onX) ? i : 0);
                     int newY = y + ((Enemy.onY) ? i : 0);
                     if (newX == X && newY == Y)
                         return false;
 
-                    //left and down
                     newX = x - ((Enemy.onX) ? i : 0);
                     newY = y - ((Enemy.onY) ? i : 0);
                     if (newX == X && newY == Y)
@@ -202,9 +200,7 @@ public class map : MonoBehaviour
 
         if (GameController.activBomb && (x != GameController.pos.x || y != GameController.pos.y))
         {
-            //print("before: " + grid[(int)GameController.pos.x, (int)GameController.pos.y].gameObject.GetComponent<CircleCollider2D>().enabled);
             grid[(int)GameController.pos.x, (int)GameController.pos.y].gameObject.GetComponent<CircleCollider2D>().enabled = true;
-            //print("after: " + grid[(int)GameController.pos.x, (int)GameController.pos.y].gameObject.GetComponent<CircleCollider2D>().enabled);
         }
 
         if(GameController.activBomb && GameController.bombTimer < 0)

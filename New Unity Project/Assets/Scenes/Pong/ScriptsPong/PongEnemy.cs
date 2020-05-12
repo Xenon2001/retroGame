@@ -6,13 +6,12 @@ public class PongEnemy : MonoBehaviour
 {
     public float speed = 6f;
     private GameObject ball;
-    // Start is called before the first frame update
+
     void Start()
     {
         ball = GameObject.Find("Ball");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (ball.transform.position.x > 0f)

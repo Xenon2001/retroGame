@@ -51,10 +51,9 @@ public class CombatSystem : MonoBehaviour
 
                 Card card = JsonUtility.FromJson<Card>(json3);
 
-               // effectUsed = card.effectUsed;
                 wasPlayed = card.wasPlayed;
 
-                if (/*(effectUsed)&&*/  wasPlayed)
+                if (wasPlayed)
                 {
                     string json4 = File.ReadAllText(Application.dataPath + "/game.json");
                     Game game = JsonUtility.FromJson<Game>(json4);
@@ -158,11 +157,8 @@ public class CombatSystem : MonoBehaviour
 
                     Card card = JsonUtility.FromJson<Card>(json);
 
-                    //scChange.arcadeToGame(card.name);
-
                     Card card2 = new Card();
                     card2.wasPlayed = true;
-                    //card2.effectUsed = true;
 
 
                     if (nameGot == "Cardridge1")
@@ -236,12 +232,12 @@ public class CombatSystem : MonoBehaviour
     private class Card
     {
         public string name;
-        public bool effectUsed, wasPlayed;
+        public bool effectUsed=false, wasPlayed;
     }
     private class Game
     {
-        public string name;
-        public bool win;
+        public string name="";
+        public bool win=false;
     }
     public class HP
     {
@@ -265,24 +261,21 @@ public class CombatSystem : MonoBehaviour
     public class effect
     {
         public int turn;
-        //public int whoToExplode;
         public int bombermanDamageTurn1;
         public int bombermanDamageTurn2;
-        //public int whoNoDamage;
         public int noInvincibleTurn1;
         public int noInvincibleTurn2;
         public int whoReflectDamage;
         public int turnToReflect1;
         public int turnToReflect2;
-        //public int whoPoisoned;
         public int turnToStopPoison1;
         public int turnToStopPoison2;
-        public int bonus0;//10
-        public int bonus1;//10
-        public int bonus2;//10
-        public int bonus3;//5
-        public int bonus4;//1
-        public int bonus5;//10
+        public int bonus0;
+        public int bonus1;
+        public int bonus2;
+        public int bonus3;
+        public int bonus4;
+        public int bonus5;
     }
     void getNewCard(string cardNr)
     {
@@ -293,32 +286,26 @@ public class CombatSystem : MonoBehaviour
         {
             case 1:
                 card.name = "bomberman";
-                //card.effectUsed = false;
                 card.wasPlayed = false;
                 break;
             case 2:
                 card.name = "minesweeper";
-                //card.effectUsed = false;
                 card.wasPlayed = false;
                 break;
             case 3:
                 card.name = "Pong";
-                //card.effectUsed = false;
                 card.wasPlayed = false;
                 break;
             case 4:
                 card.name = "Snake";
-                //card.effectUsed = false;
                 card.wasPlayed = false;
                 break;
             case 5:
                 card.name = "SpaceInvaders";
-                //card.effectUsed = false;
                 card.wasPlayed = false;
                 break;
             case 6:
                 card.name = "PacMan";
-               // card.effectUsed = false;
                 card.wasPlayed = false;
                 break;
 
@@ -338,13 +325,10 @@ public class CombatSystem : MonoBehaviour
         int tempPlayerHP = playerHP;
         int tempEnemyHP = enemyHP;
 
-        print("bonus0=" + ef.bonus0);
-        print("bonus1=" + ef.bonus1);
-
         switch (gamePlayed)
         {
 
-            case "bomberman"://dupa ce a fost folosita,explodeaza in a3a tura(dupa 2 ture)
+            case "bomberman":
                 if (won)
                 { if(ef.bombermanDamageTurn2==-1) ef.bombermanDamageTurn2 = ef.turn + 2;}
                 else
@@ -362,7 +346,7 @@ public class CombatSystem : MonoBehaviour
                else
                { ef.whoReflectDamage = 2; ef.turnToReflect2 = ef.turn+1; }
                break;
-            case "Snake"://damage-ul se termina in a 5 tura(tine 4 ture dupa ce e folosit)
+            case "Snake":
                 if (won)
                { ef.turnToStopPoison2 = ef.turn + 4; }
                else
@@ -371,9 +355,8 @@ public class CombatSystem : MonoBehaviour
            case "SpaceInvaders":
                 if (won)
                     ef.noInvincibleTurn1 = ef.turn + 1;
-                 //the player will not take damage
                 else
-                    ef.noInvincibleTurn2 = ef.turn + 1;//the enemy will not take damage
+                    ef.noInvincibleTurn2 = ef.turn + 1;
                break;
            case "PacMan":
                if (won)
@@ -387,54 +370,42 @@ public class CombatSystem : MonoBehaviour
 
         if (ef.turn < ef.turnToStopPoison1)
         {
-            ///if (ef.whoPoisoned == 1)
             tempPlayerHP -= 5 + ef.bonus3;
         }
         else
             ef.turnToStopPoison1 = -1;
         if (ef.turn < ef.turnToStopPoison2)
         {
-            ///if (ef.whoPoisoned == 2)
             tempEnemyHP -= 5 + ef.bonus3;
         }
         else
             ef.turnToStopPoison2 = -1;
 
         if (ef.turn == ef.bombermanDamageTurn1)
-        ///if (ef.whoToExplode == 1)
-        { tempPlayerHP -= 35 + ef.bonus0; /*ef.whoToExplode = 0;*/ ef.bombermanDamageTurn1 = -1; }
+        { tempPlayerHP -= 35 + ef.bonus0; ef.bombermanDamageTurn1 = -1; }
         if (ef.turn == ef.bombermanDamageTurn2)
-        ///if (ef.whoToExplode == 2)
-        { tempEnemyHP -= 35 + ef.bonus0; /*ef.whoToExplode = 0;*/ ef.bombermanDamageTurn2 = -1; }
+        { tempEnemyHP -= 35 + ef.bonus0; ef.bombermanDamageTurn2 = -1; }
 
-       // if (ef.whoNoDamage == 1)
        if(ef.turn<ef.noInvincibleTurn1+ ef.bonus4)
-            { tempPlayerHP = initialPlayerHP; /*ef.whoNoDamage = 0; */}
+            { tempPlayerHP = initialPlayerHP; }
        else
             ef.noInvincibleTurn1 = -1;
-        // if (ef.whoNoDamage == 2)
         if (ef.turn < ef.noInvincibleTurn2+ ef.bonus4)
-            { tempEnemyHP = initialEnemyHP; /*ef.whoNoDamage = 0; */}
+            { tempEnemyHP = initialEnemyHP; }
         else
             ef.noInvincibleTurn2 = -1;
 
         if (ef.whoReflectDamage == 1 && ef.turn == ef.turnToReflect1)
         {
-            //if (tempPlayerHP < initialPlayerHP)
-            //{
             tempEnemyHP -= (initialPlayerHP - tempPlayerHP) + ef.bonus2;
             tempPlayerHP = initialPlayerHP;
-            //}
             ef.turnToReflect1 = -1;
             ef.whoReflectDamage = 0;
         }
         if (ef.whoReflectDamage == 2 && ef.turn == ef.turnToReflect2)
         {
-            //if (tempEnemyHP < initialEnemyHP)
-            //{
             tempPlayerHP -= (initialEnemyHP - tempEnemyHP) + ef.bonus2;
             tempEnemyHP = initialEnemyHP;
-            //}
             ef.turnToReflect2 = -1;
             ef.whoReflectDamage = 0;
         }
@@ -484,7 +455,6 @@ public class CombatSystem : MonoBehaviour
             Card card = new Card();
             card.name = "";
             card.wasPlayed = false;
-            //card.effectUsed = false;
             json = JsonUtility.ToJson(card);
             File.WriteAllText(Application.dataPath + "/card" + i.ToString() + ".json", json);
         }

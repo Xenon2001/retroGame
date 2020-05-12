@@ -7,11 +7,6 @@ public class SpInPlayerLaser : MonoBehaviour
     private float cooldownTimer = 0;
     private float fireDelay = 1f;
     public GameObject laserPrefab;
-    void Start()
-    {
-      
-    }
-
 
     void Update()
     {

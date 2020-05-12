@@ -18,19 +18,12 @@ public class block : MonoBehaviour
 
     public void loadNewSprite(int i)
     {
-        /// 0 bomb 
-        /// 1 empty
-        /// 2 destroyable wall
-        print(i);
         GetComponent<SpriteRenderer>().sprite = 
             (i == 0) ? bombSprite : (i == 1) ? emptySprite : destroyableSprite; 
     }
 
     void Start()
     {
-
-        
-        //print(this.name);
 
         int x = Mathf.RoundToInt(transform.position.x);
         int y = Mathf.RoundToInt(transform.position.y);

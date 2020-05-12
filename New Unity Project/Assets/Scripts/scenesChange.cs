@@ -12,13 +12,10 @@ public class scenesChange : MonoBehaviour
         /*INITIALIZARI EFECTE*/
         effect ef = new effect();
         ef.turn=0;
-        //ef.whoToExplode=0;
         ef.bombermanDamageTurn1 = ef.bombermanDamageTurn2 = -1;
-        //ef.whoNoDamage=0;
         ef.noInvincibleTurn1 = ef.noInvincibleTurn2 =- 1;
         ef.whoReflectDamage=0;
         ef.turnToReflect1 = ef.turnToReflect2 = -1;
-        //ef.whoPoisoned=0;
         ef.turnToStopPoison1= ef.turnToStopPoison2 = -1;
 
         string json = JsonUtility.ToJson(ef);
@@ -84,10 +81,7 @@ public class scenesChange : MonoBehaviour
     {
         sceneData data = new sceneData();
 
-        //data.enemyHP = CombatSystem.enemyHP;
-        //data.HP = CombatSystem.HP;
         data.playerPosition = player.position;
-        //data.enemyPosition = CombatSystem.enemy.transform.position;
 
         string json = JsonUtility.ToJson(data);
         File.WriteAllText(Application.dataPath + "/gameState.json", json);
@@ -98,7 +92,6 @@ public class scenesChange : MonoBehaviour
     {
         
         Scene scene = SceneManager.GetActiveScene();
-        //print(col.name + " " + scene.name);
         if (scene.name == "GamScene" && col.name == "Player")
         {
             if(gameObject.tag == "ArcadeTag")
@@ -137,16 +130,13 @@ public class scenesChange : MonoBehaviour
     public class effect
     {
         public int turn;
-        //public int whoToExplode;
         public int bombermanDamageTurn1;
         public int bombermanDamageTurn2;
-        //public int whoNoDamage;
         public int noInvincibleTurn1;
         public int noInvincibleTurn2;
         public int whoReflectDamage;
         public int turnToReflect1;
         public int turnToReflect2;
-        //public int whoPoisoned;
         public int turnToStopPoison1;
         public int turnToStopPoison2;
     }
