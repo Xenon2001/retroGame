@@ -6,10 +6,21 @@ using System.IO;
 public class scenesChange : MonoBehaviour
 {
     public Transform player;
+    bool isCoroutineExecuting;
+    public Animator transition;
+    public playerMovement moveScript;
 
     void mapToArcade()
     {
-        /*INITIALIZARI EFECTE*/
+        SoundManager.instance.StopSound();
+
+        /*Showing the loading transition*/
+        moveScript.canMove = false;
+        moveScript.canMove2 = false;
+        moveScript.movement = new Vector2(0, 0);
+        transition.SetBool("ZoneChange", true);
+
+        /*INITIALIZE EFFECTS*/
         effect ef = new effect();
         ef.turn=0;
         ef.bombermanDamageTurn1 = ef.bombermanDamageTurn2 = -1;
@@ -35,12 +46,28 @@ public class scenesChange : MonoBehaviour
         string json1 = JsonUtility.ToJson(Data);
 
         File.WriteAllText(Application.dataPath + "/savefile.json", json1);
-        
-        SceneManager.LoadScene("Arcade");
+        StartCoroutine(mapToArcadeCor());
 
+    }
+    IEnumerator mapToArcadeCor()
+    {
+        if (isCoroutineExecuting)
+            yield break;
+        isCoroutineExecuting = true;
+        yield return new WaitForSeconds(3f);
+        transition.SetBool("ZoneChange", false);
+        moveScript.canMove = true;
+        moveScript.canMove2 = true;
+        SceneManager.LoadScene("Arcade");
+        isCoroutineExecuting = false;
     }
     void mapToShop()
     {
+        moveScript.canMove = false;
+        moveScript.canMove2 = false;
+        moveScript.movement = new Vector2(0, 0);
+        transition.SetBool("ZoneChange", true);
+
         data Data = new data();
         Data.position = player.position;
 
@@ -48,9 +75,19 @@ public class scenesChange : MonoBehaviour
         string json = JsonUtility.ToJson(Data);
 
         File.WriteAllText(Application.dataPath + "/savefile.json", json);
-
+        StartCoroutine(mapToShopCor());
+    }
+    IEnumerator mapToShopCor()
+    {
+        if (isCoroutineExecuting)
+            yield break;
+        isCoroutineExecuting = true;
+        yield return new WaitForSeconds(3f);
+        transition.SetBool("ZoneChange", false);
+        moveScript.canMove = true;
+        moveScript.canMove2 = true;
         SceneManager.LoadScene("Shop");
-
+        isCoroutineExecuting = false;
     }
 
     public void arcadeToMap()

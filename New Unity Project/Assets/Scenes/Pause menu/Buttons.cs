@@ -26,7 +26,6 @@ public class Buttons : MonoBehaviour
     {
         function.Resume();
     }
-
     public class lastPos
     {
         public Vector3 pos;

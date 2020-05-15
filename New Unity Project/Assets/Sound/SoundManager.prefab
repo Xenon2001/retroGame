@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &692438342995213620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 692438342995213578}
+  - component: {fileID: 692438342995213621}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &692438342995213578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692438342995213620}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &692438342995213621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692438342995213620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284085c45fb3f4b4caf3b6bada60af46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Zone1Music
+    soundClip: {fileID: 8300000, guid: a2ba59242c1d5f242893e9435d2caf15, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 1
+  - name: Zone2Music
+    soundClip: {fileID: 8300000, guid: 65a12e87d14e3f64c947160150be7a80, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 1
+  - name: Zone3Music
+    soundClip: {fileID: 8300000, guid: 114f81eb9e4fb274b81a14d1beed1406, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 1
+  - name: MenuMusic
+    soundClip: {fileID: 8300000, guid: bd594789c1b76c44fa9a5fa7a7fbb0c0, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 1
+  - name: ShopMusic
+    soundClip: {fileID: 8300000, guid: 9221aa0d28b40c8439fdc18dda2cbb24, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 1
+  - name: BossMusic0
+    soundClip: {fileID: 8300000, guid: 3e33785b12b5ccd4b96af655a30c6b4a, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 1
+  - name: BossMusic1
+    soundClip: {fileID: 8300000, guid: 3128ebee84c7f3a4d960af01c308f737, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 1
+  - name: BossMusic2
+    soundClip: {fileID: 8300000, guid: f6ed0ddfc797e654b93fafaeea8aa315, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 1
+  - name: BossMusic3
+    soundClip: {fileID: 8300000, guid: cba54cbd1bc27fe46a43194765d1c353, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 1
+  - name: BossMusic4
+    soundClip: {fileID: 8300000, guid: 46f38df6170faa24988f78682409c95e, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 1
+  - name: BossMusic5
+    soundClip: {fileID: 8300000, guid: 431bffabfd39af649b57d0634b81b49e, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 1
+  - name: BossMusic6
+    soundClip: {fileID: 8300000, guid: 6e35a1ac3e655b641b0cf12ed33e3861, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 1
+  - name: BossMusic7
+    soundClip: {fileID: 8300000, guid: a38afd084e63da74bbaffce784fc1fbb, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 1
+  - name: BossMusic8
+    soundClip: {fileID: 8300000, guid: 63be8a508afcf3342ad17886037a9751, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 1
+  - name: BossMusic9intro
+    soundClip: {fileID: 8300000, guid: 4e5ac84406c471444863e056651cc039, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 0
+  - name: BossMusic9
+    soundClip: {fileID: 8300000, guid: 3b788cdec86b0ae4abb26c4ac1f7e069, type: 3}
+    source: {fileID: 0}
+    soundVolume: 1
+    toLoop: 1
+  masterMixer: {fileID: 24300002, guid: 6a8f7449797cd06439c5ad53e45657a8, type: 2}

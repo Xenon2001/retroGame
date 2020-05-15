@@ -6,9 +6,17 @@ using System.IO;
 
 public class Menu : MonoBehaviour
 {
+   // public SoundManager DJ;
 
+    void Start()
+    {
+        SoundManager.instance.StopSound();
+        SoundManager.instance.PlaySound("MenuMusic");
+        //DJ.PlaySound("MenuMusic");
+    }
     public void PlayGame()
     {
+        SoundManager.instance.StopSound();
         HP hp = new HP();
         hp.playerHP = 100;
         hp.enemyHP = 100;
@@ -37,6 +45,7 @@ public class Menu : MonoBehaviour
 
     public void ContinueGame()
     {
+        SoundManager.instance.StopSound();
         string json1 = File.ReadAllText(Application.dataPath + "/lastPos.json");
         lastPos position = JsonUtility.FromJson<lastPos>(json1);
         playerMovement.loadPosition(position.pos);

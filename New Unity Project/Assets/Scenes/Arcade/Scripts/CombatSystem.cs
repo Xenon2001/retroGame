@@ -480,6 +480,9 @@ public class CombatSystem : MonoBehaviour
                     enemyHP = 150;
             else
                 enemyHP = 100;
+
+            if (playerHP < 1)
+                playerHP = 1;
         }
         else if (playerHP <= 0)
         {

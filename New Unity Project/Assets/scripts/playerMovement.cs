@@ -11,12 +11,14 @@ public class playerMovement : MonoBehaviour {
     static Vector3 initPos;
     public Vector2 movement;
     public bool canMove;
+    public bool canMove2;
+
     void Start()
     {
         Scene scene = SceneManager.GetActiveScene();
         if(scene.name == "GamScene")
             rb.transform.position = initPos;
-        canMove = true;
+        canMove = canMove2 = true;
         lastVerticalDir = 0;
     }
 
@@ -31,9 +33,11 @@ public class playerMovement : MonoBehaviour {
             movement.y = Input.GetAxisRaw("Vertical");
             movement.x = Input.GetAxisRaw("Horizontal");
         }
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
-        
+        if (canMove2)
+        {
+            animator.SetFloat("Horizontal", movement.x);
+            animator.SetFloat("Vertical", movement.y);
+        }
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
         if (movement.y > 0)
