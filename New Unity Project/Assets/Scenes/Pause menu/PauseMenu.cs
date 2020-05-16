@@ -10,14 +10,37 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public AudioMixer masterMixer;
     public Slider volumeSlider;
-    public Transform dropdownMenu;
+    public Dropdown resDropdown;
+    public Toggle fullscreenToggle;
+    Resolution[] resolutions;
     void Start()
     {
         float value;
         masterMixer.GetFloat("Volume", out value);
         volumeSlider.value = value;
-        int quality = QualitySettings.GetQualityLevel();
-        dropdownMenu.GetComponent<Dropdown>().value = quality;
+
+        resolutions = Screen.resolutions;
+        resDropdown.ClearOptions();
+
+        List<string> resOptions = new List<string>();
+
+        int currentResolution = 0;
+        for (int i = 0; i < resolutions.Length; i++)
+        { 
+            string option = resolutions[i].width + "x" + resolutions[i].height;
+            resOptions.Add(option);
+
+            if(resolutions[i].width==Screen.currentResolution.width
+                &&resolutions[i].height==Screen.currentResolution.height)
+            {
+                currentResolution = i;
+            }
+        }
+        resDropdown.AddOptions(resOptions);
+        resDropdown.value = currentResolution;
+        resDropdown.RefreshShownValue();
+
+        fullscreenToggle.isOn = Screen.fullScreen;
 
 }
     void Update()
@@ -52,8 +75,14 @@ public class PauseMenu : MonoBehaviour
     {
         masterMixer.SetFloat("Volume", volume);
     }
-    public void SetQuality(int qualityLevel)
+
+    public void SetResolution(int resolutionIndex)
     {
-        QualitySettings.SetQualityLevel(qualityLevel);
+        Resolution newResolution = resolutions[resolutionIndex];
+        Screen.SetResolution(newResolution.width, newResolution.height, Screen.fullScreen);
+    }
+    public void SetFullscreen(bool isFullScreen)
+    {
+        Screen.fullScreen = isFullScreen;
     }
 }

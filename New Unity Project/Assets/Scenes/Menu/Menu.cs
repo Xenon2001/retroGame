@@ -6,13 +6,11 @@ using System.IO;
 
 public class Menu : MonoBehaviour
 {
-   // public SoundManager DJ;
 
     void Start()
     {
         SoundManager.instance.StopSound();
         SoundManager.instance.PlaySound("MenuMusic");
-        //DJ.PlaySound("MenuMusic");
     }
     public void PlayGame()
     {

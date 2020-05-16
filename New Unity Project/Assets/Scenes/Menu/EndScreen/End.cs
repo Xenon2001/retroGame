@@ -8,8 +8,8 @@ public class End : MonoBehaviour
 
     public void EndScreen()
     {
-            endMenu.SetActive(true);
-
+        endMenu.SetActive(true);
+        Cursor.visible = true;
     }
 
 }

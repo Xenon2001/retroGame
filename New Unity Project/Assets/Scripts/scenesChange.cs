@@ -14,12 +14,6 @@ public class scenesChange : MonoBehaviour
     {
         SoundManager.instance.StopSound();
 
-        /*Showing the loading transition*/
-        moveScript.canMove = false;
-        moveScript.canMove2 = false;
-        moveScript.movement = new Vector2(0, 0);
-        transition.SetBool("ZoneChange", true);
-
         /*INITIALIZE EFFECTS*/
         effect ef = new effect();
         ef.turn=0;
@@ -54,6 +48,13 @@ public class scenesChange : MonoBehaviour
         if (isCoroutineExecuting)
             yield break;
         isCoroutineExecuting = true;
+
+        /*Showing the loading transition*/
+        moveScript.canMove = false;
+        moveScript.canMove2 = false;
+        moveScript.movement = new Vector2(0, 0);
+        transition.SetBool("ZoneChange", true);
+
         yield return new WaitForSeconds(3f);
         transition.SetBool("ZoneChange", false);
         moveScript.canMove = true;

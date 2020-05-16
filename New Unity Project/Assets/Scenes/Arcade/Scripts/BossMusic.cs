@@ -12,16 +12,16 @@ public class BossMusic : MonoBehaviour
         string enemyJson = File.ReadAllText(Application.dataPath + "/enemyToBattle.json");
         enemyToBattle enemy = JsonUtility.FromJson<enemyToBattle>(enemyJson);
 
-        if(("Enemy" + (enemy.nextEnemyNr).ToString()) == enemy.currentEnemyNr)
-        if(col.name=="Player")
-        if (!SoundManager.instance.SoundIsPlaying("BossMusic" + enemy.currentEnemyNr[5]) && !SoundManager.instance.SoundIsPlaying("BossMusic9intro"))
-            PlayBossMusic();
+        if (("Enemy" + (enemy.nextEnemyNr).ToString()) == enemy.currentEnemyNr)
+        {
+            if (col.name == "Player")
+                if (!SoundManager.instance.SoundIsPlaying("BossMusic" + enemy.currentEnemyNr[5]) && !SoundManager.instance.SoundIsPlaying("BossMusic9intro"))
+                    PlayBossMusic();
+        }
+        else
+            SoundManager.instance.StopSound();
     }
 
-    void OnTriggerExit2D()
-    {
-        FindObjectOfType<SoundManager>().StopSound();
-    }
 
     void PlayBossMusic()
     {

@@ -8,15 +8,14 @@ public class HPRestore : MonoBehaviour
 {
     public HealthBar playerHPScript;
     public GameObject canvasObject;
-    //public SoundManager DJ;
 
     void Start()
     {
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Shop")
         {
-            FindObjectOfType<SoundManager>().StopSound();
-            FindObjectOfType<SoundManager>().PlaySound("ShopMusic");
+            SoundManager.instance.StopSound();
+            SoundManager.instance.PlaySound("ShopMusic");
         }
     }
 
@@ -27,7 +26,9 @@ public class HPRestore : MonoBehaviour
 
         if (Hp.playerHP < 100)
         {
-            canvasObject.SetActive(true); Hp.playerHP = 100;
+            if (gameObject.name == "Shopkeeper"||gameObject.name=="BuffedShopkeeper")
+                canvasObject.SetActive(true); 
+            Hp.playerHP = 100;
             string json2 = JsonUtility.ToJson(Hp);
             File.WriteAllText(Application.dataPath + "/HPs.json", json2);
             playerHPScript.SetHealth(100);
