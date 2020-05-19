@@ -47,7 +47,7 @@ public class SoundManager : MonoBehaviour
             s.source.Stop();
     }
 
-    //returns whether or not is the specified sound playing
+    //returns whether or not the specified sound is playing
     public bool SoundIsPlaying(string name)
     {
         SoundLibrary s = Array.Find(sounds, sound => sound.name == name); 
