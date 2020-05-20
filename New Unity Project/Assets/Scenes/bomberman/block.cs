@@ -39,18 +39,18 @@ public class block : MonoBehaviour
             case 0:
                 GetComponent<SpriteRenderer>().sprite = explosionCenterSprite;
                 break;
-            case 4:
-                GetComponent<SpriteRenderer>().sprite = explosionTopSprite;
-                break;
             case 1:
-                GetComponent<SpriteRenderer>().sprite = explosionRightSprite;
+                GetComponent<SpriteRenderer>().sprite = explosionLeftSprite;
                 break;
             case 2:
                 GetComponent<SpriteRenderer>().sprite = explosionBottomSprite;
                 break;
             case 3:
-                GetComponent<SpriteRenderer>().sprite = explosionLeftSprite;
+                GetComponent<SpriteRenderer>().sprite = explosionRightSprite;
                 break;
+            case 4:
+                GetComponent<SpriteRenderer>().sprite = explosionTopSprite;
+                break;  
         }
     }
 

@@ -35,6 +35,8 @@ public class Menu : MonoBehaviour
         spawnPoint.ifToSpawn(true);
 
         SceneManager.LoadScene("GamScene");
+
+        Cursor.visible = false;
     }
     public void QuitGame()
     {
@@ -50,6 +52,8 @@ public class Menu : MonoBehaviour
         spawnPoint.ifToSpawn(false);
         PauseMenu.GameIsPaused = false;
         SceneManager.LoadScene(position.scene);
+
+        Cursor.visible = false;
     }
     private class data
     {

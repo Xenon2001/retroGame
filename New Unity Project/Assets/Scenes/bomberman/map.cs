@@ -96,6 +96,12 @@ public class map : MonoBehaviour
 
         grid[(int)v.x, (int)v.y].explosion(0);
 
+        if (Mathf.RoundToInt(player.transform.position.x) == (int)v.x && Mathf.RoundToInt(player.transform.position.y) == (int)v.y)
+        {
+            GameController.gameOver = true;
+            GameController.win = false;
+        }
+
         for (int i = 0; i < 4; ++i)
         {
             for(int j = 1; j <= 2; ++j)
@@ -153,7 +159,7 @@ public class map : MonoBehaviour
 
             }
         }
-        GameController.explosionTime = 1f;
+        GameController.explosionTime = 0.5f;
     }
 
     void Update()

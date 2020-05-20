@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
     public static int noOfEnemies;
 
     public static float gameTime = 180f;
-    public static float explosionTime = 1f;
+    public static float explosionTime = 0.5f;
     public static bool gameOver;
     public static bool win;
     public static bool activBomb;

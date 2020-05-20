@@ -109,12 +109,14 @@ public class CombatSystem : MonoBehaviour
         }
         if(nameGot == "Cardridge1"|| nameGot == "Cardridge2"|| nameGot == "Cardridge3")
         {
+            cardTransform.gameObject.GetComponent<BoxCollider2D>().size = new Vector2(1.5f, 3f);
             cardTransform.position = Vector3.MoveTowards(cardTransform.position, new Vector3(cardTransform.position.x, 0, 0),Time.deltaTime);
             Cursor.SetCursor(gameCursor, new Vector2(0, 0), CursorMode.ForceSoftware);
         }
     }
     void OnMouseExit()
     {
+        cardTransform.gameObject.GetComponent<BoxCollider2D>().size = new Vector2(1.5f, 1.5f);
         cardTransform.position =new Vector3(cardTransform.position.x, -0.3f, 0);
         Cursor.SetCursor(basicCursor, new Vector2(0, 0), CursorMode.ForceSoftware);
     }
