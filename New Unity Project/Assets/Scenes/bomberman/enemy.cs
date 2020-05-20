@@ -85,9 +85,18 @@ public class enemy : MonoBehaviour
             else
                 newY += dir;
 
-                
+            bool notOnBomb = true;
 
-            if (map.inside(newX, newY) && map.grid[newX,newY].isEmpty)
+            if (GameController.activBomb)
+            {
+                int PlayerX = Mathf.RoundToInt(GameController.pos.x);
+                int PlayerY = Mathf.RoundToInt(GameController.pos.y);
+
+                notOnBomb = !((newX == PlayerX) && (newY == PlayerY));
+            }
+
+
+            if (map.inside(newX, newY) && map.grid[newX,newY].isEmpty && notOnBomb)
             {
 
                 move = new Vector3((onX) ? dir : 0, (onY) ? dir : 0, 0);
@@ -97,7 +106,7 @@ public class enemy : MonoBehaviour
                 dir *= -1;
                 newX = x + ((onX) ? dir : 0);
                 newY = y + ((onY) ? dir : 0);
-                if (map.inside(newX, newY) && map.grid[newX, newY].isEmpty)
+                if (map.inside(newX, newY) && map.grid[newX, newY].isEmpty && notOnBomb)
                 {
                     move = new Vector3((onX) ? dir : 0, (onY) ? dir : 0, 0);
                 }

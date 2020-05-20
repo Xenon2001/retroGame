@@ -90,43 +90,12 @@ public class map : MonoBehaviour
 
     void BOOM(Vector2 v)
     {
+
         int[] dx = new int[4] { 1, 0, -1, 0 };
         int[] dy = new int[4] { 0, 1, 0, -1 };
 
+        grid[(int)v.x, (int)v.y].explosion(0);
 
-        Mathf.RoundToInt(player.transform.position.y);
-
-        foreach (enemy Enemy in enemies)
-        {
-            if (Enemy != null)
-            {
-                int x = (int)Enemy.transform.position.x;
-                int y = (int)Enemy.transform.position.y;
-
-                if (x == (int)v.x && y == (int)v.y)
-                {
-                    Destroy(Enemy);
-
-                    Enemy.GetComponent<SpriteRenderer>().sprite = null;
-                    Enemy.GetComponent<CircleCollider2D>().enabled = false;
-                    Enemy.GetComponent<BoxCollider2D>().enabled = false;
-
-                    GameController.noOfEnemies--;
-                    if (GameController.noOfEnemies == 0 && GameController.gameTime > 0)
-                    {
-                        GameController.gameOver = true;
-                        GameController.win = true;
-                    }
-
-                }
-            }
-
-        }
-        if(Mathf.RoundToInt(player.transform.position.x) == (int)v.x && Mathf.RoundToInt(player.transform.position.y) == (int)v.y)
-        {
-            GameController.gameOver = true;
-            GameController.win = false;
-        }
         for (int i = 0; i < 4; ++i)
         {
             for(int j = 1; j <= 2; ++j)
@@ -140,7 +109,7 @@ public class map : MonoBehaviour
                 }
                 else
                 {
-                    if(grid[newX, newY].isDestroyable)
+                    if (grid[newX, newY].isDestroyable)
                     {
                         removeDestroyableWall(newX, newY);
                         j = 3;
@@ -179,11 +148,12 @@ public class map : MonoBehaviour
 
                         }
                     }
-
+                    grid[newX, newY].explosion(i + 1);
                 }
 
             }
         }
+        GameController.explosionTime = 1f;
     }
 
     void Update()
@@ -207,12 +177,23 @@ public class map : MonoBehaviour
         {
             BOOM(GameController.pos);
             grid[(int)GameController.pos.x, (int)GameController.pos.y].gameObject.GetComponent<CircleCollider2D>().enabled = false;
-            grid[(int)GameController.pos.x,(int)GameController.pos.y].loadNewSprite(1);
             GameController.activBomb = false;
             GameController.bombTimer = 2f;
 
         }
 
+        if(GameController.explosionTime < 0)
+        {
+            for(int i = 0; i < w; ++i)
+            {
+                for(int j = 0; j < h; ++j)
+                {
+                    if (grid[i, j].exploded)
+                        grid[i, j].loadNewSprite(1);
+                    grid[i, j].exploded = false;
+                }
+            }
+        }
 
 
     }

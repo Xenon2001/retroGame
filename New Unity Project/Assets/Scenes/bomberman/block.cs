@@ -8,11 +8,18 @@ public class block : MonoBehaviour
     public bool isEmpty;
     public bool isDestroyable;
     public bool isUndestroyable;
+    public bool exploded;
 
     public Sprite emptySprite;
     public Sprite bombSprite;
     public Sprite destroyableSprite;
     public Sprite undestroyableSprite;
+
+    public Sprite explosionCenterSprite;
+    public Sprite explosionLeftSprite;
+    public Sprite explosionRightSprite;
+    public Sprite explosionTopSprite;
+    public Sprite explosionBottomSprite;
 
     public static GameObject player;
 
@@ -20,6 +27,31 @@ public class block : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = 
             (i == 0) ? bombSprite : (i == 1) ? emptySprite : destroyableSprite; 
+    }
+
+    public void explosion(int i)
+    {
+
+        exploded = true;
+
+        switch (i)
+        {
+            case 0:
+                GetComponent<SpriteRenderer>().sprite = explosionCenterSprite;
+                break;
+            case 4:
+                GetComponent<SpriteRenderer>().sprite = explosionTopSprite;
+                break;
+            case 1:
+                GetComponent<SpriteRenderer>().sprite = explosionRightSprite;
+                break;
+            case 2:
+                GetComponent<SpriteRenderer>().sprite = explosionBottomSprite;
+                break;
+            case 3:
+                GetComponent<SpriteRenderer>().sprite = explosionLeftSprite;
+                break;
+        }
     }
 
     void Start()

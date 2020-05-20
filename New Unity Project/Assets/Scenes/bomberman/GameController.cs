@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
     public static int noOfEnemies;
 
     public static float gameTime = 180f;
+    public static float explosionTime = 1f;
     public static bool gameOver;
     public static bool win;
     public static bool activBomb;
@@ -27,6 +28,8 @@ public class GameController : MonoBehaviour
     {
 
         gameTime -= Time.deltaTime;
+        if (explosionTime >= 0)
+            explosionTime -= Time.deltaTime;
         if(gameTime < 0)
         {
             gameOver = true;
