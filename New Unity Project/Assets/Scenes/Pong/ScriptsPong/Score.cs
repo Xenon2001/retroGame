@@ -19,7 +19,7 @@ public class Score : MonoBehaviour
 
     void Update()
     {
-        if (minge.transform.position.x >= 14f && Bat_1_Score < 5)
+        if (minge.transform.position.x >= 14f && Bat_1_Score < 3)
         {
             if (!ok)
             {
@@ -29,7 +29,7 @@ public class Score : MonoBehaviour
 
         }
         else ok = false;
-        if (minge.transform.position.x <= -14f && Bat_2_Score < 5)
+        if (minge.transform.position.x <= -14f && Bat_2_Score < 3)
         {
             if (!ook)
             {
@@ -39,14 +39,14 @@ public class Score : MonoBehaviour
         }
         else ook = false;
 
-        if (Bat_1_Score < 5 && Bat_2_Score < 5)
+        if (Bat_1_Score < 3 && Bat_2_Score < 3)
         {
             Scoreboard.text = Bat_1_Score + " - " + Bat_2_Score;
             
         }
         else
         {
-            if (Bat_1_Score >= 5)
+            if (Bat_1_Score >= 3)
                 scenesChange.gameToArcade("Pong", true);
             else
                 scenesChange.gameToArcade("Pong", false);

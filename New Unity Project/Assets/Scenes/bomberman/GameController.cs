@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
+        gameTime = 180f;
         noOfEnemies = 0;
         win = false;
         gameOver = false;

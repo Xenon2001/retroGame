@@ -958,6 +958,11 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7127317981971429377, guid: d930243a334966e40ba7314759c29aee,
+        type: 3}
+      propertyPath: speed
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7127317981971429378, guid: d930243a334966e40ba7314759c29aee,
         type: 3}
       propertyPath: m_Name

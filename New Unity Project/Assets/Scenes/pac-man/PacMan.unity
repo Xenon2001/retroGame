@@ -5113,7 +5113,7 @@ MonoBehaviour:
   - {fileID: 1237674935}
   - {fileID: 939247309}
   - {fileID: 1419377894}
-  enemySpeed: 3
+  enemySpeed: 3.5
   spawnCooldown: 10
   spawnPoint: {x: 1.15, y: 0.8}
   toSpawn: 1
@@ -8437,7 +8437,7 @@ MonoBehaviour:
   - {fileID: 1480522246}
   - {fileID: 1820975452}
   - {fileID: 1864285834}
-  enemySpeed: 3
+  enemySpeed: 3.5
   spawnCooldown: 10
   spawnPoint: {x: -1.15, y: 0.8}
   toSpawn: 1
@@ -17188,7 +17188,7 @@ MonoBehaviour:
   - {fileID: 1237674935}
   - {fileID: 939247309}
   - {fileID: 1419377894}
-  enemySpeed: 3
+  enemySpeed: 3.5
   spawnCooldown: 10
   spawnPoint: {x: 0, y: 0.8}
   toSpawn: 1

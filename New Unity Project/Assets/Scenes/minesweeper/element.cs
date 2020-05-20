@@ -12,14 +12,14 @@ public class element : MonoBehaviour
     public Sprite mineTexture;
     public Sprite flagTexture;
     public Sprite defaultTexture;
-    public static int noMaxOfMines = 25;
+    public static int noMaxOfMines = 20;
     public static int noOfMines = 0;
     public static int noOfFlags = 0;
     public static bool ok = true;
 
     void Awake()
     {
-        noMaxOfMines = 25;
+        noMaxOfMines = 20;
         noOfMines = 0;
         noOfFlags = 0;
         ok = true;

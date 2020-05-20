@@ -12,10 +12,6 @@ public class enemy : MonoBehaviour
 
     public GameObject player;
 
-    void Awake()
-    {
-
-    }
     void Start()
     {
         player = GameObject.FindWithTag("Player");
