@@ -28,7 +28,7 @@ public class SpInEnemyMovement : MonoBehaviour
                     GetComponent<Rigidbody2D>().velocity = new Vector2(speed, 0);
                 ok = true;
                 transform.position = new Vector3(transform.position.x, transform.position.y - fallAmount, 0f);
-                speed += 0.05f;
+                speed += 0.04f;
             }
         }
         else ok = false;
