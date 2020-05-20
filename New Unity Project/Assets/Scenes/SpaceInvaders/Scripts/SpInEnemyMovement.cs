@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class SpInEnemyMovement : MonoBehaviour
 {
-    public float speed = 0.1f;
-    public int k = 0;
-    public float fallAmount = 1f;
+    public float speed;
+    public int k;
+    public float fallAmount;
     private bool ok;
     void Start()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(speed,0);
+        speed = 1f;
+        k = 0;
+        fallAmount = 0.5f;
+        GetComponent<Rigidbody2D>().velocity = new Vector2(speed, 0);
     }
 
     void Update()
@@ -22,13 +25,13 @@ public class SpInEnemyMovement : MonoBehaviour
             if (!ok)
             {
                 k++;
-                if(k%2==1)
+                if (k % 2 == 1)
                     GetComponent<Rigidbody2D>().velocity = new Vector2(-speed, 0);
                 else
                     GetComponent<Rigidbody2D>().velocity = new Vector2(speed, 0);
                 ok = true;
                 transform.position = new Vector3(transform.position.x, transform.position.y - fallAmount, 0f);
-                speed += 0.04f;
+                speed += 0.05f;
             }
         }
         else ok = false;

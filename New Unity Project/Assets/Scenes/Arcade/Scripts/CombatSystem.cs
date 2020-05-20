@@ -344,9 +344,9 @@ public class CombatSystem : MonoBehaviour
                 break;
            case "minesweeper":
                if (won)
-               { tempEnemyHP -= 20 + ef.bonus1; tempPlayerHP -= 10 + ef.bonus1; }
+               { tempEnemyHP -= 20 + ef.bonus1; tempPlayerHP -= 10; }
                else
-               { tempPlayerHP -= 20 + ef.bonus1; tempEnemyHP -= 10 + ef.bonus1; }
+               { tempPlayerHP -= 20 + ef.bonus1; tempEnemyHP -= 10; }
                break;
            case "Pong":
                if (won)

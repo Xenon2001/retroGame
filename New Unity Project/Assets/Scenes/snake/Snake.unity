@@ -342,8 +342,8 @@ MonoBehaviour:
   foodScript: {fileID: 2058495323}
   eaten: 0
   score: 0
-  endScore: 10
-  snakeLength: 10
+  endScore: 20
+  snakeLength: 30
   Border: 10.12
   SnakeBody: []
 --- !u!1 &1342158932
