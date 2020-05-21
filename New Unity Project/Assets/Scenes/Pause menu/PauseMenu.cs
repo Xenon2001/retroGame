@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using System.Linq;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -19,7 +20,10 @@ public class PauseMenu : MonoBehaviour
         masterMixer.GetFloat("Volume", out value);
         volumeSlider.value =Mathf.Pow(10f,value/20f);
 
-        resolutions = Screen.resolutions;
+        resolutions = Screen.resolutions.Select(resolution => new Resolution 
+        { width = resolution.width, height = resolution.height }).Distinct().ToArray();
+        //only selects the distinct resolutions without the refresh rates
+
         resDropdown.ClearOptions();
 
         List<string> resOptions = new List<string>();
