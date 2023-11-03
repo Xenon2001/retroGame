@@ -2,7 +2,5 @@
 RPG game based on popular retro games
 
 Gameplay:
-[![Watch the video](https://img.youtube.com/vi/<VIDEO_ID>/hqdefault.jpg)](https://www.youtube.com/embed/ucieDzZNDXk?si=IQZIR3pQuPLMOXaJ)
+https://github.com/teofilmunteanu/retroGame/assets/53564633/d8efb6ba-5da8-4d3e-b3d9-a89b8c1a9f81
 
-[<img src="https://img.youtube.com/vi/ucieDzZNDXk?si=IQZIR3pQuPLMOXaJ/hqdefault.jpg" width="600" height="300"
-/>](https://www.youtube.com/embed/ucieDzZNDXk?si=IQZIR3pQuPLMOXaJ)
